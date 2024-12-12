@@ -5,6 +5,7 @@ date: 2024-11-24
 type: landing
 
 sections:
+
   - block: hero
     content:
       title: |
@@ -29,7 +30,7 @@ sections:
           - post
         publication_type: ''
     design:
-      view: compact
+      view: list
       columns: '1'
 
   - block: portfolio
@@ -90,15 +91,6 @@ sections:
         publication_type: ''
     design:
       view: citation
-      columns: '2'
-
-  - block: markdown
-    content:
-      title:
-      subtitle:
-      text: |
-        {{% cta cta_link="./people/" cta_text="Meet the team →" %}}
-    design:
       columns: '2'
 
   - block: contact
