@@ -5,6 +5,24 @@ date: 2024-11-24
 type: landing
 
 sections:
+
+  - block: hero
+    content:
+      title: Sustainable Power Systems Laboratory
+      image:
+        # Reference an image in your `assets/media/` folder
+        filename: img/pylons.jpg
+      text: |-
+        <br>
+        <br>
+        <br> 
+    design:
+      # Choose an optional background color, gradient, image, or video
+      background:
+        gradient_end: '#1976d2'
+        gradient_start: '#004ba0'
+        text_color_light: true
+
   - block: markdown
     content:
       title: About us
@@ -13,7 +31,7 @@ sections:
     design:
       # See Page Builder docs for all section customization options.
       # Choose how many columns the section has. Valid values: '1' or '2'.
-      columns: '1'
+      columns: '2'
  
   - block: collection
     content:
@@ -26,7 +44,7 @@ sections:
         publication_type: ''
     design:
       view: compact
-      columns: '1'
+      columns: '2'
 
   - block: portfolio
     id: projects
