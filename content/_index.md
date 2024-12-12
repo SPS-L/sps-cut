@@ -9,8 +9,7 @@ sections:
     content:
       title: About us
       subtitle: … and what we do
-      text: The [group](people/) is led by Dr. {{% mention "p.-aristidou" %}} and is part of the [Department of Electrical Engineering and Computer Engineering and Informatics](https://www.cut.ac.cy/faculties/fet/eecei/?languageId=1) at the Cyprus University of Technology. <br> 
-      We work on making future electric power systems sustainable, secure, and resilient. Our research brings together mathematical tools from the areas of numerical analysis and optimization, with high performance computational tools and machine learning techniques, to tackle modern power system problems.
+      text: The [group](people/) is led by Dr. {{% mention "p.-aristidou" %}} and is part of the [Department of Electrical Engineering and Computer Engineering and Informatics](https://www.cut.ac.cy/faculties/fet/eecei/?languageId=1) at the Cyprus University of Technology. <br> We work on making future electric power systems sustainable, secure, and resilient. Our research brings together mathematical tools from the areas of numerical analysis and optimization, with high performance computational tools and machine learning techniques, to tackle modern power system problems.
     design:
       # See Page Builder docs for all section customization options.
       # Choose how many columns the section has. Valid values: '1' or '2'.
@@ -20,7 +19,7 @@ sections:
     content:
       title: Recent Posts
       text: ""
-      count: 5
+      count: 3
       filters:
         folders:
           - post
