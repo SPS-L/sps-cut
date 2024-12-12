@@ -10,7 +10,7 @@ sections:
       title: |
         About us
       image:
-        filename: logo2.png
+        filename: pylon2.png
       text: |
         <br>
         
