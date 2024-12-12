@@ -19,3 +19,33 @@
   package = "netlify-plugin-hugo-cache-resources"
   [plugins.inputs]
     debug = true
+
+[[redirects]]
+  from = "/open-positions"
+  to = "/categories/open-positions/"
+  status = 302
+
+[[redirects]]
+  from = "/jhub"
+  to = "https://jhub.sps-lab.org/"
+  status = 302
+
+[[redirects]]
+  from = "/jhub-nordic"
+  to = "https://jhub.sps-lab.org/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FSPS-L%2FNordic_JhubStart&urlpath=lab%2Ftree%2FNordic_JhubStart%2FExecute.ipynb&branch=main"
+  status = 302
+  
+[[redirects]]
+  from = "/jhub-sync-mach"
+  to = "https://jhub.sps-lab.org/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FSPS-L%2FSync_mach_Octave&urlpath=lab%2Ftree%2FSync_mach_Octave%2F&branch=main"
+  status = 302
+
+[[redirects]]
+  from = "/jhub-econ-oper"
+  to = "https://jhub.sps-lab.org/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FSPS-L%2FEconomic-Operation-examples&urlpath=lab%2Ftree%2FEconomic-Operation-examples%2FED_example.ipynb&branch=main"
+  status = 302 
+
+[[redirects]]
+  from = "/jhub-5-bus"
+  to = "https://jhub.sps-lab.org/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FSPS-L%2F5_bus_test_system&urlpath=lab%2Ftree%2F5_bus_test_system%2FCase+2.ipynb&branch=main"
+  status = 302 
