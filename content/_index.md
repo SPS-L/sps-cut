@@ -35,7 +35,7 @@ sections:
       page_type: post
     design:
       view: card
-      columns: '1'
+      columns: '2'
   
   - block: markdown
     content:
@@ -68,7 +68,7 @@ sections:
         publication_type: ''
     design:
       view: citation
-      columns: '1'
+      columns: '2'
 
   - block: markdown
     content:
@@ -77,5 +77,40 @@ sections:
       text: |
         {{% cta cta_link="./people/" cta_text="Meet the team →" %}}
     design:
-      columns: '1'
+      columns: '2'
+
+  - block: contact
+    id: contact
+    content:
+      title: Contact
+      subtitle: ''
+      text: ''
+      # Contact details - edit or remove options as needed
+      email: info@sps-lab.org
+      phone: +357 25 002618
+      address:
+        street: 33 Saripoloy str
+        city: Limassol
+        region: 
+        postcode: '3036'
+        country: Cyprus
+        country_code: CY
+      coordinates:
+        latitude: '34.6752303'
+        longitude: '33.0432417'
+      directions: Enter Ttofis building, head to 5th floor, office 521B
+      # Automatically link email and phone or display them just as text?
+      autolink: true
+      # Choose an email form provider (netlify/formspree)
+      form:
+        provider: netlify
+        formspree:
+          # If using Formspree, enter your Formspree form ID
+          id: ''
+        netlify:
+          # Enable CAPTCHA challenge to reduce spam?
+          captcha: false
+    design:
+      # Choose how many columns the section has. Valid values: '1' or '2'.
+      columns: '2'
 ---
