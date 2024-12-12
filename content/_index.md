@@ -36,9 +36,8 @@ sections:
     id: news
     content:
       title: Recent News
-      subtitle: "[All news>>](./news)"
-      text: |-
-        {{< readfromfile "/content/newslist.dat" 5 >}} 
+      subtitle: 
+      text: 
     design:
       # See Page Builder docs for all section customization options.
       # Choose how many columns the section has. Valid values: '1' or '2'.
