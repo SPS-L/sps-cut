@@ -1,0 +1,11 @@
+mkl==2024.2.2
+pandapower
+pyramses
+pyomo
+ipopt
+glpk
+coincbc
+pypsa
+networkx
+cartopy
+jupyterlab
