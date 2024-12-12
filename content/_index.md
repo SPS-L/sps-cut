@@ -39,6 +39,19 @@ sections:
   
   - block: collection
     content:
+      title: Recent Posts
+      text: ""
+      count: 5
+      filters:
+        folders:
+          - post
+        publication_type: ''
+    design:
+      view: compact
+      columns: '2'
+  
+  - block: collection
+    content:
       title: Latest Publications
       text: ""
       count: 5
