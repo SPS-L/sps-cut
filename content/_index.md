@@ -9,9 +9,8 @@ sections:
     content:
       title: |
         About us
-        ... and what we do
       image:
-        filename: welcome.jpg
+        filename: 
       text: |
         <br>
         
