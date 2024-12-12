@@ -7,7 +7,6 @@ type: landing
 sections:
 
   - block: markdown
-    id: about
     content:
       title: About us
       subtitle: … and what we do
