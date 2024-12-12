@@ -36,7 +36,7 @@ sections:
     id: news
     content:
       title: Recent News
-      subtitle: [All news>>](./news)
+      subtitle: "[All news>>](./news)"
       text: |-
         {{< readfromfile "/content/newslist.dat" 5 >}} 
     design:
