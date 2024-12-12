@@ -6,22 +6,6 @@ type: landing
 
 sections:
 
-  - block: hero
-    content:
-      title: Sustainable Power Systems Laboratory
-      text: |-
-        <br>
-        <br>
-        <br> 
-    design:
-      # Choose an optional background color, gradient, image, or video
-      background:
-        image: "img/pylons.jpg"
-        size: cover   # Options: cover, contain, auto
-        position: center  # Options: top, center, bottom
-        repeat: no-repeat # Options: repeat, no-repeat
-        text_color_light: true
-
   - block: markdown
     content:
       title: About us
@@ -36,8 +20,9 @@ sections:
     id: news
     content:
       title: Recent News
-      subtitle: 
-      text: 
+      subtitle: "[All news>>](./news)"
+      text: |-
+        {{< readfromfile "/content/newslist.dat" 5 >}} 
     design:
       # See Page Builder docs for all section customization options.
       # Choose how many columns the section has. Valid values: '1' or '2'.
