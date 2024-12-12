@@ -9,9 +9,6 @@ sections:
   - block: hero
     content:
       title: Sustainable Power Systems Laboratory
-      image:
-        # Reference an image in your `assets/media/` folder
-        filename: img/pylons.jpg
       text: |-
         <br>
         <br>
@@ -19,8 +16,10 @@ sections:
     design:
       # Choose an optional background color, gradient, image, or video
       background:
-        gradient_end: '#1976d2'
-        gradient_start: '#004ba0'
+        image: "img/pylons.jpg"
+        size: cover   # Options: cover, contain, auto
+        position: center  # Options: top, center, bottom
+        repeat: no-repeat # Options: repeat, no-repeat
         text_color_light: true
 
   - block: markdown
