@@ -10,7 +10,7 @@ sections:
       title: |
         About us
       image:
-        filename: pylon2.jpg
+        filename: welcome.jpg
       text: |
         <br>
         
@@ -81,15 +81,6 @@ sections:
       directions: Enter Ttofis building, head to 5th floor, office 521B
       # Automatically link email and phone or display them just as text?
       autolink: true
-      # Choose an email form provider (netlify/formspree)
-      form:
-        provider: netlify
-        formspree:
-          # If using Formspree, enter your Formspree form ID
-          id: ''
-        netlify:
-          # Enable CAPTCHA challenge to reduce spam?
-          captcha: false
     design:
       # Choose how many columns the section has. Valid values: '1' or '2'.
       columns: '2'
