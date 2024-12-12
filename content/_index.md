@@ -90,7 +90,7 @@ sections:
       flip_alt_rows: false
   
   - block: collection
-  - id: publications
+    id: publications
     content:
       title: Latest Publications
       text: ""
