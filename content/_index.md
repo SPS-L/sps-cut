@@ -5,20 +5,16 @@ date: 2024-11-24
 type: landing
 
 sections:
-
-  - block: hero
+  - block: markdown
     content:
-      title: |
-        About us
-      image:
-        filename: welcome.jpg
-      text: |
-        <br>
-        
-        The [group](people/) is led by Dr. {{% mention "p.-aristidou" %}} and is part of the [Department of Electrical Engineering and Computer Engineering and Informatics](https://www.cut.ac.cy/faculties/fet/eecei/?languageId=1) at the Cyprus University of Technology.
-        
-        We work on making future electric power systems sustainable, secure, and resilient. Our research brings together mathematical tools from the areas of numerical analysis and optimization, with high performance computational tools and machine learning techniques, to tackle modern power system problems.
-  
+      title: About us
+      subtitle: … and what we do
+      text: The [group](people/) is led by Dr. {{% mention "p.-aristidou" %}} and is part of the [Department of Electrical Engineering and Computer Engineering and Informatics](https://www.cut.ac.cy/faculties/fet/eecei/?languageId=1) at the Cyprus University of Technology. <br> 
+      We work on making future electric power systems sustainable, secure, and resilient. Our research brings together mathematical tools from the areas of numerical analysis and optimization, with high performance computational tools and machine learning techniques, to tackle modern power system problems.
+    design:
+      # See Page Builder docs for all section customization options.
+      # Choose how many columns the section has. Valid values: '1' or '2'.
+      columns: '1'
  
   - block: collection
     content:
@@ -30,7 +26,7 @@ sections:
           - post
         publication_type: ''
     design:
-      view: list
+      view: compact
       columns: '1'
 
   - block: portfolio
@@ -76,7 +72,7 @@ sections:
       # Choose how many columns the section has. Valid values: '1' or '2'.
       columns: '2'
       # Choose a listing view
-      view: card
+      view: Showcase
       # For Showcase view, flip alternate rows?
       flip_alt_rows: false
   
