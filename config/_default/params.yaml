@@ -15,16 +15,16 @@ appearance:
 
 marketing:
   seo:
-    site_type: Organization
+    site_type: EducationalOrganization
     local_business_type: ''
     org_name: ''
-    description: 'A highly-customizable Hugo research group theme powered by Wowchemy website builder.'
-    twitter: 'GetResearchDev'
+    description: 'Sustainable Power Systems Lab @ Cyprus University of Technology.'
+    twitter: ''
   analytics:
-    google_analytics: ''
+    google_analytics: 'UA-28054540-2'
     baidu_tongji: ''
     google_tag_manager: ''
-    microsoft_clarity: ''
+    microsoft_clarity: 'pcqepsc319'
   verification:
     google: ''
     baidu: ''
@@ -45,7 +45,7 @@ header:
 
 footer:
   copyright:
-    notice: '© {year} Me. This work is licensed under {license}'
+    notice: '© {year} SPS-Lab. This work is licensed under {license}'
     license:
       enable: true
       allow_derivatives: false
@@ -65,14 +65,19 @@ features:
   syntax_highlighter:
     enable: false
     extra_languages:
-      - r
       - latex
+      - python
+      - bash
+      - fortran
+      - powershell
+      - bibtex
+      - cpp
   math:
     enable: false
   privacy_pack:
     enable: false
   repository:
-    url: 'https://github.com/<username>/<repository>'
+    url: 'https://github.com/SPS-L/sps-cut/'
     content_dir: content
     branch: main
   avatar:
