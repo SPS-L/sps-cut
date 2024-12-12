@@ -31,11 +31,17 @@ sections:
         <br>
         <br>
     design:
+      css_class: dark
       # Choose an optional background color, gradient, image, or video
       background:
-        gradient_end: '#1976d2'
-        gradient_start: '#004ba0'
-        text_color_light: true
+        image:
+          # Add your image background to `assets/media/`.
+          filename: img/pylons.jpg
+          filters:
+            brightness: 1.0
+          size: cover
+          position: center
+          parallax: true
 
   - block: markdown
     id: about
