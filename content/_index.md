@@ -6,6 +6,37 @@ type: landing
 
 sections:
 
+  - block: hero
+    content:
+      title: Sustainable Power Systems Laboratory
+      image:
+        # Reference an image in your `assets/media/` folder
+        filename: 
+      # Add your Call-To-Action (CTA) button and optional icon
+      cta:
+        label: 
+        url: 
+        #icon_pack: fas
+        #icon: download
+      # Optionally, add an alternative CTA link
+      cta_alt:
+        label: 
+        url: 
+      # Optionally, add a note under the Call-To-Action button
+      cta_note:
+        label:       
+      # Add your Hero text here
+      text: |-
+        <br>      
+        <br>
+        <br>
+    design:
+      # Choose an optional background color, gradient, image, or video
+      background:
+        gradient_end: '#1976d2'
+        gradient_start: '#004ba0'
+        text_color_light: true
+
   - block: markdown
     id: about
     content:
