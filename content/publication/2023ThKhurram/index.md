@@ -1,5 +1,5 @@
 +++
-title = "Resilient Operation of Microgrids: Optimisation Models for Steady-State and Transiently Secure Operation "
+title = "Anomaly Detection in Electric Power Systems using Machine Learning Methods"
 date = "2023-03-01"
 authors = ["A. Khurram"]
 tags = ["anomaly detection", "signal processing", "machine learning", "empirical wavelet transform", "feature ensemble", "Voltage Security"]
