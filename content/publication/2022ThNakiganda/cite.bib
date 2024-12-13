@@ -1,20 +1,23 @@
-@phdthesis{2015ThAristidou,
- abstract = {Dynamic simulation studies are used to analyze the behavior of power systems after a disturbance has occurred. Over the last decades, they have become indispensable to anyone involved in power system planning, control, operation, and security. Transmission system operators depend on fast and accurate dynamic simulations to train their personnel, analyze large sets of scenarios, assess the security of the network in real-time, and schedule the day ahead operation. In addition, those designing future power systems depend on dynamic simulations to evaluate proposed reinforcements, whether these involve adding new transmission lines, increasing renewable energy sources, or implementing new control schemes. 
+@phdthesis{2022ThNakiganda,
+           month = {June},
+           title = {Resilient Operation of Microgrids: Optimisation Models for Steady-State and Transiently Secure Operation},
+          school = {University of Leeds},
+          author = {Agnes Marjorie Nakiganda},
+            year = {2022},
+        keywords = {Convex Optimization, Distributionally Robust Optimisation, Frequency Security, Investment Planning, Low-Inertia Systems, Microgrids, Operational Planning, Resilience, Stochastic Optimisation, Unscheduled Islanding, Voltage Security},
+             url = {https://etheses.whiterose.ac.uk/30991/},
+        abstract = {Recent years have seen electric power systems transitioned to become more sustainable through the incorporation of Renewable
+Energy Resources (RES), such as wind and solar. RESs interfaced to the grid via fast-acting Power Electronic (PE) converters are therefore gradually replacing conventional generators. Unlike Synchronous Generators (SGs) that have well-defined mechanisms for frequency and voltage support provision, Converter-Interfaced Generators (CIGs)  lack these support features inherently. This leads to more volatile system dynamic response when faced with contingencies due to the lack of reactive power support and the low inertia levels. The large excursions in frequency and voltage during such events affect the operational stability and security, potentially resulting in cascading failures and total system collapse. Therefore, there is a great necessity for mechanisms to increase the resilience of power systems. 
 
-Even though almost all computers are now parallel, power system dynamic simulators are still based on monolithic, circuit-based, single-process algorithms. This is mainly due to legacy code, written in the 80's, that is still today in the core of the most important commercial tools and does not allow them to fully exploit the parallel computational resources of modern computers. 
 
-In this thesis, two parallel algorithms belonging to the family of Domain Decomposition Methods are developed to tackle the computational complexity of power system dynamic simulations. The first proposed algorithm is focused on accelerating the dynamic simulation of large interconnected systems; while, the second algorithm aims at accelerating dynamic simulations of large combined transmission and distribution systems. 
+In this respect, Microgrids (MGs) present a revolutionary step in the electric power system infrastructure and operation due to their ability to split from the bulk network and form self-sufficient islands. MGs can enhance the system resilience by forming islands during extreme conditions in the bulk grid, thus ensuring power supply continuity to customers. However, this can only be achieved if MG security is ensured before, during and after an islanding event. The MG should be able to survive the system transients, preventing generator disconnections due to action of device protection systems -- a scenario that can result in cascading disconnections.
 
-Both proposed algorithms employ non-overlapping decomposition schemes to partition the power system model and expose parallelism. Then, divide-and-conquer techniques are utilized and adapted to exploit this parallelism. These algorithms allow the full usage of parallel processing resources available in modern, inexpensive, multi-core machines to accelerate the dynamic simulations. In addition, some numerical acceleration techniques are proposed to further speed-up the parallel simulations with little or no impact on accuracy. 
 
-All the techniques proposed and developed in this thesis have been thoroughly tested on academic systems, a large real-life system, and a realistic system representative of the continental European synchronous grid. The investigations were performed on a large multi-core machine, set up for the needs of this work, as well as on two multi-core laptops computers.},
- author = {Aristidou, P.},
- doi = {10.13140/RG.2.1.1119.1527},
- month = {6},
- projects = {mod sim; pyramses},
- school = {PhD thesis at Université de Liège},
- title = {Time-domain simulation of large electric power systems using domain-decomposition and parallel processing methods},
- url = {http://orbi.ulg.ac.be/handle/2268/183353},
- year = {2015}
+This thesis proposes a set of optimisation-based algorithms for investment and operation planning of MGs that ensure the security in grid-connected mode, islanded mode, as well as the transitions between the two. The first part of the thesis investigates various formulations of Optimal Power Flow-based (OPF) planning models for MGs. Convex relaxations, restrictions and approximations are investigated for tractability and their applicability to MG networks is assessed. Moreover, the issues of uncertainty due RES and load demand variations are analysed and tackled using two proposed methods, a stochastic approach incorporating machine learning clustering techniques and a distributionally robust technique using linear decision rules. Finally, the proposed MG optimisation models are then enhanced to include security requirements for both steady-state operation as well as transient frequency and voltage response during islanding. 
+
+
+Using an analytical formulation for the transient frequency response metrics, an iterative bound-tightening strategy is first proposed to solve a MG planning model consisting of both static and transient security metrics. The same problem is also tackled with a decomposition-based approach using dual cutting planes and sensitivities to frequency support parameters of the different generators. Finally, a dynamic optimisation approach with sequential transient constraint transcription based on time-domain simulations of the MG operation is proposed, incorporating security constraints for both frequency and voltage transient operation in an operational planning problem. All three algorithms investigate both infrastructural enhancement and operational flexibility mechanisms that can be adopted to enhance system performance. Moreover, the algorithms developed ensure cost effective and secure operation of the MG in the pre-islanding, post-islanding and during the event-triggered unscheduled transition to islanded state. 
+
+
+The proposed algorithms are tested on MG networks with both CIGs and SGs. The computations and simulations are performed on benchmark low-voltage and medium-voltage distribution networks, as well as the real MG network of Alderney Island.}
 }
-
