@@ -1,7 +1,7 @@
 +++
 title = "A Decomposition Strategy for Inertia-Aware Microgrid Planning Models"
 date = "2024-12-17"
-authors = ["A. M. Nakiganda","S. Dehghan","P. Aristidou"]
+authors = ["A. Nakiganda","S. Dehghan","P. Aristidou"]
 tags = ["Microgrid (MG)", "Inertia", "Converter-Interfaced Generators (CIG)", "Dynamic security constraints", "Transient frequency response", "Frequency nadir", "Rate-of-Change of Frequency (RoCoF)", "Investment planning", "Dual cutting planes", "Optimization problem","ietgtd"]
 publication_types = ["article-journal"]
 publication = "_IET Generation, Transmission & Distribution_"

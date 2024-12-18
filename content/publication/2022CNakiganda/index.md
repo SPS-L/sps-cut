@@ -1,7 +1,7 @@
 +++
 title = "A Data-Driven Optimisation Model for Designing Islanded Microgrids"
 date = "2022-06-01"
-authors = ["A. M Nakiganda","S. Dehghan","P. Aristidou"]
+authors = ["A. Nakiganda","S. Dehghan","P. Aristidou"]
 tags = [""]
 publication_types = ["paper-conference"]
 publication = "_2022 17th International Conference on Probabilistic Methods Applied to Power Systems (PMAPS)_"
