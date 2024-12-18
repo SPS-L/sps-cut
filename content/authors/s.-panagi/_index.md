@@ -10,7 +10,7 @@ authors:
 superuser: false
 
 # Role/position
-role: PhD Candidate (CUT)
+role: PhD Candidate @ CUT
 
 # Organizations/Affiliations
 organizations:
