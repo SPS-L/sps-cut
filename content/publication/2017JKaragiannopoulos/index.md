@@ -2,7 +2,7 @@
 title = "Hybrid approach for planning and operating active distribution grids"
 date = "2017-01-01"
 authors = ["S. Karagiannopoulos","P. Aristidou","G. Hug"]
-tags = ["distributed power generation","load flow","load forecasting","power distribution planning","power generation planning","power grids","power system security","load forecasting","local control schemes","overvoltage problems","undervoltage problems","the cigre lv benchmark grid","characteristic curves","network security","optimal set-points","distributed generator injection","opf","ac optimal power flow","distribution networks","ders","distributed energy resources","active distribution grid planning","active distribution grid operation"]
+tags = ["distributed power generation","load flow","load forecasting","power distribution planning","power generation planning","power grids","power system security","load forecasting","local control schemes","overvoltage problems","undervoltage problems","the cigre lv benchmark grid","characteristic curves","network security","optimal set-points","distributed generator injection","opf","ac optimal power flow","distribution networks","ders","distributed energy resources","active distribution grid planning","active distribution grid operation","ietgtd"]
 publication_types = ["article-journal"]
 publication = "_IET Generation, Transmission & Distribution_"
 publication_short = ""
