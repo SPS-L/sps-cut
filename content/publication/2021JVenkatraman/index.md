@@ -26,7 +26,6 @@ caption = ""
 award = "true"
 +++
 
-colorbluetextbf(TPRWS Best Paper Award)colorblack
 {{< rawhtml >}}
-<div data-badge-details="right" data-badge-type="medium-donut" data-doi="10.1109/TPWRS.2021.3062974" data-hide-no-mentions="true" class="altmetric-embed"></div>
+<a href="https://plu.mx/plum/a/?doi=10.1109/TPWRS.2021.3062974" class="plumx-details"></a>
 {{< /rawhtml >}}

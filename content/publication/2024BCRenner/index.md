@@ -24,3 +24,6 @@ image = ""
 caption = ""
 +++
 
+{{< rawhtml >}}
+<a href="https://plu.mx/plum/a/?doi=10.1049/PBPO231E_ch2" class="plumx-details"></a>
+{{< /rawhtml >}}

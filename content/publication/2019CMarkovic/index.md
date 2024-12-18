@@ -26,7 +26,6 @@ caption = ""
 award = "true"
 +++
 
-colorbluetextbf(High Quality Paper award)colorblack
 {{< rawhtml >}}
-<div data-badge-details="right" data-badge-type="medium-donut" data-doi="10.1109/PTC.2019.8810640" data-hide-no-mentions="true" class="altmetric-embed"></div>
+<a href="https://plu.mx/plum/a/?doi=10.1109/PTC.2019.8810640" class="plumx-details"></a>
 {{< /rawhtml >}}

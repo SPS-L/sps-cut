@@ -26,17 +26,5 @@ caption = ""
 +++
 
 {{< rawhtml >}}
-<div data-badge-details="right" data-badge-type="medium-donut" data-doi="10.1109/TSG.2015.2410171" data-hide-no-mentions="true" class="altmetric-embed"></div>
-{{< /rawhtml >}}
-
-{{< rawhtml >}}
-<a href="https://plu.mx/plum/a/?doi=10.1109/TSG.2015.2410171" class="plumx-summary"></a>
-{{< /rawhtml >}}
-
-{{< rawhtml >}}
 <a href="https://plu.mx/plum/a/?doi=10.1109/TSG.2015.2410171" class="plumx-details"></a>
-{{< /rawhtml >}}
-
-{{< rawhtml >}}
-<a href="https://plu.mx/plum/a/?doi=10.1109/TSG.2015.2410171" class="plumx-plum-print-popup"></a>
 {{< /rawhtml >}}

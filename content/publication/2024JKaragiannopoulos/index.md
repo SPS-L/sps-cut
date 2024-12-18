@@ -26,5 +26,5 @@ caption = ""
 +++
 
 {{< rawhtml >}}
-<div class='altmetric-embed' data-badge-type='donut' data-doi="10.1016/j.egyai.2024.100342"></div>
+<a href="https://plu.mx/plum/a/?doi=10.1016/j.egyai.2024.100342" class="plumx-details"></a>
 {{< /rawhtml >}}
