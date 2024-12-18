@@ -45,6 +45,12 @@ social:
 - icon: envelope
   icon_pack: fas
   link: 'mailto:mm.jafari@edu.cut.ac.cy'
+- icon: google-scholar
+  icon_pack: ai
+  link: https://scholar.google.com/citations?user=iB-JAxAAAAAJ
+- icon: linkedin 
+  icon_pack: fab 
+  link: 'https://www.linkedin.com/in/mehran-jafari-9a741495/'
 
 
 
