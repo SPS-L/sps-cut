@@ -10,12 +10,12 @@ authors:
 superuser: false
 
 # Role/position
-role: PhD Candidate (Alumni)
+role: PhD Candidate @ UoL (Alumni)
 
 # Organizations/Affiliations
 organizations:
-- name: University of Leeds
-  url: "https://www.leeds.ac.uk/"
+- name: 
+  url: 
 
 # Short bio (displayed in user profile at end of posts)
 bio: 
@@ -53,4 +53,4 @@ user_groups:
 - Alumni
 ---
 
-My research work comprised of developing monitoring system based on machine learning techniques that detects anomalies in the power networks using high resolution data from phasor measurement units (PMU). The project utilizes big data analytic methods to gain insight into state of the power system using real time assessments.
+Ambreen graduated from University of Leeds in 2023 under the supervision of Dr. {{% mention "p.-aristidou" %}}.

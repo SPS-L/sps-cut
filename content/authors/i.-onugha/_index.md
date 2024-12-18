@@ -10,12 +10,12 @@ authors:
 superuser: false
 
 # Role/position
-role: PhD Candidate (Alumni)
+role: PhD Candidate @ UoL (Alumni)
 
 # Organizations/Affiliations
 organizations:
-- name: University of Leeds
-  url: "https://www.leeds.ac.uk/"
+- name: 
+  url: 
 
 # Short bio (displayed in user profile at end of posts)
 bio: 
@@ -49,6 +49,9 @@ social:
 - icon: twitter
   icon_pack: fab
   link: https://twitter.com/aaiphie
+- icon: linkedin
+  icon_pack: fab
+  link: 'https://www.linkedin.com/in/ifeoma-onugha-ph-d-miet-1a6a8847/'
   
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: ""
@@ -59,6 +62,4 @@ user_groups:
 - Alumni
 ---
 
-I received my B.Eng and M.Eng degrees from the Federal University of Technology Owerri, Nigeria in 2007 and 2017 respectively. I am working towards a Ph.D. degree at the University of Leeds, Engand UK.
-
-I am working towards implementing robust approaches in consumer centric markets with consideration to socio-economic impacts on the consumers equipped with DERs.
+Ifeoma graduated from University of Leeds in 2022 under the supervision of Dr. {{% mention "p.-aristidou" %}}.

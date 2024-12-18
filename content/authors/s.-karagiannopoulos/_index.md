@@ -22,9 +22,9 @@ bio:
 
 # List each interest with a dash
 interests:
-- active distribution networks
-- voltage control
-- data-driven methods
+- Active distribution networks
+- Voltage control
+- Data-driven methods
 
 education:
   courses:
@@ -59,4 +59,4 @@ user_groups:
 - Alumni
 ---
 
-Agnes graduated from ETH in 2019 under the co-supervision of Dr. {{% mention "p.-aristidou" %}}.
+Stavros graduated from ETH in 2019 under the co-supervision of Dr. {{% mention "p.-aristidou" %}}.

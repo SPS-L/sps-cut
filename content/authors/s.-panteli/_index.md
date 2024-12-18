@@ -10,12 +10,12 @@ authors:
 superuser: false
 
 # Role/position
-role: Graduate
+role: Research Assistant @ CUT (Alumni)
 
 # Organizations/Affiliations
 organizations:
-- name: Cyprus University of Technology
-  url: "https://cut.ac.cy"
+- name: 
+  url: 
 
 # Short bio (displayed in user profile at end of posts)
 bio: 
@@ -49,4 +49,4 @@ user_groups:
 - Alumni
 ---
 
-I am currently an undergraduate student at the Cyprus University of Technology. For my final-year project I'm working on assessing the impact of high EV penetration on the Cyprus electricity grid.
+Sokratis graduated from Cyprus University of Technology in 2021 under the supervision of Dr. {{% mention "p.-aristidou" %}}.

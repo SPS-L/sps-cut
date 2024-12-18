@@ -10,12 +10,12 @@ authors:
 superuser: false
 
 # Role/position
-role:  Assistant Professor (King Abdulaziz University)
+role:  PhD Candidate @ UoL (Alumni)
 
 # Organizations/Affiliations
 organizations:
-- name: King Abdulaziz University
-  url: "https://www.kau.edu.sa/home_ENGLISH.aspx"
+- name: 
+  url: 
 
 # Short bio (displayed in user profile at end of posts)
 bio: 
@@ -61,6 +61,6 @@ user_groups:
 - Alumni
 ---
 
-I am an Assistant Professor at the [King Abdulaziz University](https://www.kau.edu.sa/home_ENGLISH.aspx). My current research interests include distributed control and time-delay systems with application to microgrids and power systems.
+Sultan graduated from University of Leeds in 2020 under the co-supervision of Dr. {{% mention "p.-aristidou" %}}.
 
 

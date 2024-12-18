@@ -10,11 +10,11 @@ authors:
 superuser: false
 
 # Role/position
-role:  Lecturer
+role:  Postdoctoral Researcher @ UoL (Alumni)
 
 # Organizations/Affiliations
 organizations:
-- name: Newcastle University
+- name: 
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
@@ -58,4 +58,4 @@ user_groups:
 - Alumni
 ---
 
-Shahab worked on the project CRESUM-HYRES between 2018-2021.
+Shahab worked on the project CRESUM-HYRES between 2018-2021 under the guidance of Dr. {{% mention "p.-aristidou" %}}.
