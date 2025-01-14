@@ -47,9 +47,9 @@ The following course knowledge is a prerequisite for this course:
 
 Due to special circumstances, this year the lectures are taking place online. This might be modified according to the requirements and the regulations.
 
-- Theory delivered through lectures (in class ≈ 32 hours)
+- Theory delivered through lectures (in class ≈ 22 hours)
 - Practical examples ( 10 hours)
-- Hardware laboratory work (in lab ≈ 12 hours)
+- Hardware laboratory work (in lab ≈ 8 hours)
     1. Synchronous Motors/Generators
     2. Asynchronous Motors/Generators
 - Software laboratory work (in lab ≈ 12 hours)
