@@ -48,15 +48,24 @@ The following course knowledge is a prerequisite for this course:
 Due to special circumstances, this year the lectures are taking place online. This might be modified according to the requirements and the regulations.
 
 - Theory delivered through lectures (in class ≈ 32 hours)
-- Practical examples (online ≈ 12 hours)
-- Hardware laboratory work (in lab ≈ 8 hours)
+- Practical examples ( 10 hours)
+- Hardware laboratory work (in lab ≈ 12 hours)
     1. Synchronous Motors/Generators
+    2. Asynchronous Motors/Generators
+- Software laboratory work (in lab ≈ 12 hours)
+    1. Synchronous Generator modelling
+    2. Voltage stability analysis
+    3. Dynamics
+    4. Economic operation
 - [Moodle Link](https://elearning.cut.ac.cy/course/view.php?id=1874)
 
 ## Assessment
 
 | Assessment type | % of grade |
 |-----------------|------------|
-| Assignments (software-based) | 25         |
-| Mini project (literature-based) | 25          |
+| Software labs (participation and delivery of reports) | 20         |
+| Hardware labs (participation and delivery of reports) | 10         |
+| Research paper presentation | 20          |
 | Final exam      | 50         |
+
+Mandatory to get 40% at the final exam to pass.
