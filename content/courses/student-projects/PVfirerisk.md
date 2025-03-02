@@ -15,9 +15,11 @@ weight: 12
 ---
 
 ## Project Rationale  
+
 The global shift toward renewable energy has accelerated the adoption of photovoltaic (PV) systems. However, the electrical and fire risks associated with PV installations—including arc faults, ground faults, and material flammability—require rigorous safety protocols. While international standards like IEC 62446 and the UK’s *IET Code of Practice for Grid-Connected Solar PV Systems* provide foundational guidelines, regional adaptations are critical due to geographic, climatic, and structural differences.  
 
 Cyprus, with its high solar irradiance and rapid PV adoption, faces unique challenges:  
+
 - **Climate**: Extreme heat, UV exposure, and seasonal dust storms may degrade PV components faster than in temperate regions.  
 - **Building materials**: Predominantly concrete and stone structures with flat roofs influence installation practices and fire spread dynamics.  
 - **Regulatory gaps**: Cyprus lacks localized fire safety guidelines tailored to PV systems, relying instead on EU directives that may not address regional specifics.  
@@ -28,21 +30,25 @@ This project bridges this gap by analyzing global fire safety recommendations, c
 
 ## Project Objectives  
 ### Document Analysis  
+
 - Review the provided reference documents (BRE’s *Fire and Solar PV Systems Literature Review*; RISCAuthority’s *RC62 Recommendations*) to extract core fire safety principles, including causes of PV fires (e.g., DC arc faults, connector failures), mitigation strategies (e.g., arc-fault detection, insulation resistance monitoring), and firefighter safety protocols (e.g., shutdown procedures, safe distances).  
 
 ### Literature Review  
+
 - Identify additional recommendations from EU Mediterranean countries (e.g., Greece, Italy) and arid regions (e.g., UAE, Australia) with similar climates.  
 - Investigate Cyprus-specific factors, including local building codes, common PV installation practices, and environmental stressors (e.g., salt corrosion in coastal areas).  
 
 ### Cyprus Context Assessment  
+
 - Collaborate with BB7 to analyze case studies of PV installations in Cyprus and evaluate risks posed by high ambient temperatures, dust accumulation, and prevalent roof designs.  
 
 ### Adaptation of Recommendations  
+
 - Propose revisions to international guidelines for Cyprus, such as enhanced DC isolator specifications for heat resilience, maintenance schedules accounting for dust-induced insulation degradation, and firefighter training modules addressing flat-roof access challenges.  
 
 ### Validation  
-- Simulate fire risks using software tools (e.g., PVsyst, MATLAB) and present findings to BB7 and local fire safety authorities for feedback.  
 
+- Simulate fire risks using software tools (e.g., PVsyst, MATLAB) and present findings to BB7 and local fire safety authorities for feedback.  
 
 
 ## Deliverables  
