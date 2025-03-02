@@ -4,11 +4,11 @@ linktitle: PVFire
 toc: true
 type: docs
 date: "2025-02-05T00:00:00Z"
-draft: true
+draft: false
 menu:
   student-projects:
     parent: Overview
-    weight: 12
+    weight: 13
 
 # Prev/next pager order (if `docs_section_pager` enabled in `params.toml`)
 weight: 12
@@ -62,6 +62,7 @@ This project bridges this gap by analyzing global fire safety recommendations, c
 
 
 ## Student Profile  
+
 - **Academic Background**: Undergraduate in Electrical Engineering.  
 - **Skills**: Knowledge of PV system design, proficiency in data analysis tools (Excel, MATLAB), and ability to translate technical guidelines into practical recommendations.  
 - **Language**: Fluency in Freek and English.  
@@ -70,6 +71,7 @@ This project bridges this gap by analyzing global fire safety recommendations, c
 
 
 ## Collaboration Opportunities with BB7  
+
 1. **Internship**: 2-month paid summer internship at BB7’s Larnaca office (remote working for 3 days per week), focusing on PV installation audits and fire risk assessments.  
 2. **Mentorship**: Bi-weekly meetings with BB7’s engineering team for technical guidance.  
 3. **Fieldwork**: Site visits to PV installations across Cyprus to observe real-world challenges.  
@@ -78,12 +80,12 @@ This project bridges this gap by analyzing global fire safety recommendations, c
 
 
 ## How to Apply  
+
 Submit your CV and academic transcript to [petros.aristidou@cut.ac.cy](mailto:petros.aristidou@cut.ac.cy) by **01 April 2025**. Shortlisted candidates will be invited for an interview with BB7’s technical team.  
 
 **Contact**:  
+
 - Dr. Petros Aristidou (Academic Supervisor) | [petros.aristidou@cut.ac.cy](mailto:petros.aristidou@cut.ac.cy)  
 - Dr. Lefteris Koutsoloukas (BB7 Advisor) | [Lefteriskoutsoloukas@bbseven.com](mailto:Lefteriskoutsoloukas@bbseven.com)  
-
-
 
 **Join us in shaping a safer, sustainable future for Cyprus’s solar energy landscape!** 🌞🔥  
