@@ -2,7 +2,7 @@
 title = "Comparison of Fast Frequency Response Methods in the Low-Inertia Grid of Cyprus"
 date = "2024-12-19"
 authors = ["A.Argyrou","S. Panagi","P. Aristidou"]
-tags = ["Renewable energy sources","Power system dynamics","Load shedding","Power system stability","Synchronous generators","Stability analysis","Steady-state","Security" "Frequency synchronization","Frequency control"]
+tags = ["Renewable energy sources","Power system dynamics","Load shedding","Power system stability","Synchronous generators","Stability analysis","Steady-state","Security","Frequency synchronization","Frequency control"]
 publication_types = ["paper-conference"]
 publication = "2024 3rd International Conference on Energy Transition in the Mediterranean Area (SyNERGY MED)"
 publication_short = ""
