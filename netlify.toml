@@ -24,7 +24,12 @@
   from = "/open-positions"
   to = "/categories/open-positions/"
   status = 302
-
+  
+[[redirects]]
+  from = "/meet"
+  to = "https://teams.microsoft.com/l/meetup-join/19%3ameeting_Mjc4MmI0MGItMjcxOC00OWQzLTliNWItZDlkNzlmNWVjOWRi%40thread.v2/0?context=%7b%22Tid%22%3a%228f7698bc-b1b4-439f-b259-0213401d1cfb%22%2c%22Oid%22%3a%22acee87ef-d88f-4dc1-a312-1e9893f75d96%22%7d"
+  status = 302
+  
 [[redirects]]
   from = "/jhub"
   to = "https://jhub.sps-lab.org/"
