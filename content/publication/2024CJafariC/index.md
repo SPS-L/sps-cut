@@ -1,17 +1,17 @@
 +++
-title = "A Modelica IBM Implementation for Fast Simulation of Digital Controllers in Power Systems"
-date = "2024-09-01"
+title = "Handling of Computationally Demanding Digital Controllers in Power System Dynamic Simulations"
+date = "2024-12-19"
 authors = ["M. Jafari","G. Bureau","M. Chiaramello","A. Guironnet","P. Panciatici","P. Aristidou"]
 tags = ["heuristic algorithms","power system dynamics","dynamics","force","power system stability","control systems","stability analysis","interpolation-based method","discrete events","time-domain simulations","digital controllers","modelica"]
 publication_types = ["paper-conference"]
-publication = "_2024 Open Source Modelling and Simulation of Energy Systems (OSMSES)_"
+publication = "_2024 3rd International Conference on Energy Transition in the Mediterranean Area (SyNERGY MED)_"
 publication_short = ""
-abstract = "The behaviour of modern power systems is more and more dictated by smart digital controllers responsible for ensuring the security, optimal operation, and stability of the systems. For the development, testing, and validation of these controllers, it is necessary to model and simulate different scenarios in power system dynamic analysis. However, digital controllers introduce discontinuities during the dynamic simulation that force the solver to reduce the time step taken to land on the discontinuity and restart the simulation. Therefore, the simulation of systems containing many digital controllers becomes very time-consuming. The Interpolation-based method (IBM) provides a fast but accurate approach for the dynamic simulation of power systems with multiple digital controllers without the need to reduce the time steps. This paper presents a fixed-step implementation of IBM in Modelica that allows to embed this method in the Modelica controller model without the need to modify the solver algorithm. The performance of the method is showcased on a single-machine infinite-bus test system."
+abstract = "Nowadays Smart grids utilize digital controllers to guarantee the reliable and efficient operation of their components. However, the numerical simulation of these types of controllers is challenging due to the numerous discrete time events introduced. The interpolation-based method (IBM) can effectively simulate smart digital controllers alongside the differential-algebraic equations of the system under control. Compared to the traditional step-reduction method (SRM) that reduces the time step for each time event during the simulation, IBM allows the use of variable time steps and solves the system while ensuring simulation accuracy. However, in the case of computationally demanding controllers, the computational performance of IBM suffers significantly. In this paper, a modified version of IBM is introduced, which can handle computationally demanding controllers in dynamic simulation of power systems. The performance of the proposed method is assessed and compared to SRM and IBM by simulating a test system with different controllers."
 summary = ""
 featured = false
 projects = ["mod-sim"]
 slides = ""
-doi = "10.1109/OSMSES62085.2024.10668990"
+doi = "10.1109/SyNERGYMED62435.2024.10799370"
 url_code = ""
 url_dataset = ""
 url_poster = ""
@@ -26,5 +26,5 @@ caption = ""
 +++
 
 {{< rawhtml >}}
-<a href="https://plu.mx/plum/a/?doi=10.1109/OSMSES62085.2024.10668990" class="plumx-details"></a>
+<a href="https://plu.mx/plum/a/?doi=10.1109/SyNERGYMED62435.2024.10799370" class="plumx-details"></a>
 {{< /rawhtml >}}
