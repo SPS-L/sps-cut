@@ -1,17 +1,17 @@
 +++
-title = "A Modelica IBM Implementation for Fast Simulation of Digital Controllers in Power Systems"
-date = "2024-09-01"
+title = "Decoupled interpolation-based method for numerical simulation of digital controllers"
+date = "2024-06-17"
 authors = ["M. Jafari","G. Bureau","M. Chiaramello","A. Guironnet","P. Panciatici","P. Aristidou"]
 tags = ["heuristic algorithms","power system dynamics","dynamics","force","power system stability","control systems","stability analysis","interpolation-based method","discrete events","time-domain simulations","digital controllers","modelica"]
 publication_types = ["paper-conference"]
-publication = "_2024 Open Source Modelling and Simulation of Energy Systems (OSMSES)_"
+publication = "_2024 IEEE International Systems Conference (SysCon)_"
 publication_short = ""
-abstract = "The behaviour of modern power systems is more and more dictated by smart digital controllers responsible for ensuring the security, optimal operation, and stability of the systems. For the development, testing, and validation of these controllers, it is necessary to model and simulate different scenarios in power system dynamic analysis. However, digital controllers introduce discontinuities during the dynamic simulation that force the solver to reduce the time step taken to land on the discontinuity and restart the simulation. Therefore, the simulation of systems containing many digital controllers becomes very time-consuming. The Interpolation-based method (IBM) provides a fast but accurate approach for the dynamic simulation of power systems with multiple digital controllers without the need to reduce the time steps. This paper presents a fixed-step implementation of IBM in Modelica that allows to embed this method in the Modelica controller model without the need to modify the solver algorithm. The performance of the method is showcased on a single-machine infinite-bus test system."
+abstract = "All modern electric power systems employ digital controllers to ensure their secure and optimized operation. The time-domain simulation of such systems requires the solution of a set of hybrid (both continuous and discrete variables) differential-algebraic equations. This is not an easy task, since the discontinuities introduced by the digital controllers lead to constant time-step reductions and an increased computational burden. A method that is able to effectively perform such simulations with no time step reduction is the interpolation-based method (IBM). In this paper, we extend the IBM into the decoupled interpolation-based method to increase the computational performance while maintaining the same high simulation accuracy. The performance and accuracy of the proposed methods is employed on several small and medium system models."
 summary = ""
 featured = false
 projects = ["mod-sim"]
 slides = ""
-doi = "10.1109/OSMSES62085.2024.10668990"
+doi = "10.1109/SysCon61195.2024.10553479"
 url_code = ""
 url_dataset = ""
 url_poster = ""
@@ -26,5 +26,5 @@ caption = ""
 +++
 
 {{< rawhtml >}}
-<a href="https://plu.mx/plum/a/?doi=10.1109/OSMSES62085.2024.10668990" class="plumx-details"></a>
+<a href="https://plu.mx/plum/a/?doi=10.1109/SysCon61195.2024.10553479" class="plumx-details"></a>
 {{< /rawhtml >}}
