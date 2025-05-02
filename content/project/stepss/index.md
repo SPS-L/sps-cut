@@ -4,13 +4,13 @@ summary: STATIC AND TRANSIENT ELECTRIC POWER SYSTEMS SIMULATION
 tags:
 - Software tools
 - Dynamics
-date: "2023-12-25T00:00:00Z"
+date: "2025-05-01T00:00:00Z"
 
 # Optional external URL for project (replaces project detail page).
 external_link: 
 
 image:
-  caption: Photo by Toa Heftiba on Unsplash
+  caption: Photo by Thierry Van Cutsem
   focal_point: Smart
 ---
 
@@ -22,7 +22,7 @@ The STEPSS software is made up of three modules:
 - RAMSES (for RApid Multiprocessor Simulation of Electric power Systems) simulates the dynamic evolution of the power system in response to disturbances/actions specified by the user
 - CODEGEN (for CODE GENerator) translates a model described by the user in a text file into its equivalent in FORTRAN 2003 language. The latter has to be compiled and linked to a user-defined executable version RAMSES.
 
-[Download STEPSS.jar](./STEPSS.jar)
-[Download Guide for use of Codegen in STEPSS](https://youtu.be/q5EFn2pdkCg)
-[Download Documentation](./stepss_doc.pdf)
-[Download License](./licence.pdf)
+- [Download STEPSS.jar](./STEPSS.jar)
+- [Video Guide for use of Codegen in STEPSS](https://youtu.be/q5EFn2pdkCg)
+- [Download Documentation](./stepss_doc.pdf)
+- [Download License](./licence.pdf)
