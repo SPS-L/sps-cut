@@ -11,10 +11,11 @@ summary = ""
 featured = false
 projects = ["low-inertia"]
 slides = ""
+doi = "10.1109/ISGTEurope52324.2021.9639957"
 url_code = ""
 url_dataset = ""
 url_poster = ""
-url_slides = ""
+url_slides = "2021CNakigandab_slides.pdf"
 url_source = ""
 url_video = ""
 math = true
@@ -25,4 +26,8 @@ caption = ""
 award = "true"
 +++
 
-colorbluetextbf(Best Paper Award)colorblack
+Best Paper Award
+
+{{< rawhtml >}}
+<a href="https://plu.mx/plum/a/?doi=10.1109/ISGTEurope52324.2021.9639957" class="plumx-details"></a>
+{{< /rawhtml >}}
