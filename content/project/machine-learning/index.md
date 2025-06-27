@@ -13,7 +13,7 @@ profile: false  # Show author profile?
 external_link: 
 
 image:
-  caption: Photo by Pietro Jeng on Unsplash
+  caption: 
   focal_point: Smart
 ---
 
