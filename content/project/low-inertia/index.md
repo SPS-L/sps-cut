@@ -12,11 +12,9 @@ profile: false  # Show author profile?
 external_link: 
 
 image:
-  caption: Photo by Mariana Proença on Unsplash
+  caption: 
   focal_point: Smart
 ---
-
-## Low-Inertia Grids: Enhanced Description
 
 The transition to power systems dominated by renewable energy sources (RES) such as wind and solar presents unprecedented challenges for grid stability, reliability, and resilience. Traditionally, grid frequency stability has relied on the physical inertia provided by large synchronous generators—hydro, steam, or gas turbines—which store kinetic energy in their rotating masses. This inertia acts as a buffer, slowing frequency changes in the event of sudden generation or load imbalances and giving time for frequency control mechanisms to respond.
 

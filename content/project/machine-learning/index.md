@@ -17,8 +17,6 @@ image:
   focal_point: Smart
 ---
 
-## Extended Description  
-
 The Data-Driven Power System Methods research theme explores how modern machine-learning and statistical-learning techniques can be harnessed to operate, control, and plan increasingly complex electrical grids. Our work spans the entire data pipeline—from measurement acquisition to real-time decision making—with a particular emphasis on distribution networks where high penetrations of distributed energy resources (DERs) such as photovoltaics, wind turbines, battery storage, and electric vehicles are rapidly changing power‐flow patterns.  
 
 ### Focus Areas

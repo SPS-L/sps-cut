@@ -11,11 +11,9 @@ profile: false  # Show author profile?
 external_link: 
 
 image:
-  caption: Photo from [paper](/publication/2019jmarkovic/)
+  caption: 
   focal_point: Smart
 ---
-
-## Modeling and Simulation at SPS-Lab: Extended and Enhanced Description
 
 The **Modeling and Simulation** research theme at the Sustainable Power Systems Lab (SPS-Lab) addresses the growing complexity of modern electric power systems by developing advanced computational tools and methodologies that integrate numerical analysis, power system modeling, and state-of-the-art simulation techniques. As power grids evolve—incorporating large-scale renewable integration, distributed energy resources (DERs), and smart digital controllers—the need for accurate, scalable, and real-time simulation frameworks becomes increasingly critical.
 
