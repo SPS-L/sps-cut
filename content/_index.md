@@ -140,6 +140,18 @@ sections:
     design:
       view: citation
       columns: '2'
+  
+  - block: logos
+    content:
+      title: "Funding Sources"
+      text: "Thanks to the following sponsors for making our research possible!"
+      # Image path relative to assets/media/ folder
+      logo_folder: 'sponsors/'
+    design:
+      card:
+        # Card background color (CSS class)
+        css_class: "bg-primary-700"
+        css_style: ""
 
   - block: contact
     id: contact
