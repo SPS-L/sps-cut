@@ -148,10 +148,7 @@ sections:
       # Image path relative to assets/media/ folder
       logo_folder: 'sponsors/'
     design:
-      card:
-        # Card background color (CSS class)
-        css_class: "bg-primary-700"
-        css_style: ""
+      columns: '1'  
 
   - block: contact
     id: contact
