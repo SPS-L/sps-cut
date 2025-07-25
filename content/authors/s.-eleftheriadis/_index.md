@@ -25,6 +25,7 @@ interests:
 - Power System Stability
 - Frequency Analysis
 - Active Distribution Network Planning
+- Smart Grids
 
 education:
   courses:
@@ -54,4 +55,4 @@ user_groups:
 - PhD Candidates
 ---
 
-Stefanos Eleftheriadis received his B.Sc. in Electrical  Engineering from the Cyprus University of Technology in 2025. He currently works for Sustainable Power System Lab of Cyprus Universty of Technology. His main area of research is control of power systems.
+Stefanos Eleftheriadis received his B.Sc. in Electrical  Engineering from the Cyprus University of Technology in 2025. He currently works for Sustainable Power System Lab of Cyprus Universty of Technology.His primary research interests include smart grids, power system stability and frequency analysis. His main area of research is control of power systems.
