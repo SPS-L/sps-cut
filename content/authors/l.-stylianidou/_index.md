@@ -10,7 +10,7 @@ authors:
 superuser: false
 
 # Role/position
-role: Research Associate @ CUT
+role: Research Assistant @ CUT
 
 # Organizations/Affiliations
 organizations:
@@ -48,7 +48,7 @@ email: "LouizaStylianidou@eac.com.cy"
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- Research Associates
+- Research Assistants
 ---
 
 Louiza Stylianidou is an undergraduate student in the Department of Electrical Engineering and Computer Engineering at the Cyprus University of Technology. She is currently working on her diploma thesis under the supervision of Dr. Petros Aristidou, focusing on the impact of electric vehicle (EV) chargers on the low voltage distribution network. Her research involves modeling and analyzing the effects of EV integration on voltage stability, power quality, and the overall performance of distribution systems. In parallel with her studies, she is employed at the Distribution System Operator (DSO) of the Electricity Authority of Cyprus (EAC), where she gains practical experience in the operation and planning of electrical networks. Her main interests include power system distribution analysis, the integration of renewable and electric mobility technologies, and the development of smart grid solutions.
