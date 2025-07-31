@@ -27,7 +27,6 @@ interests:
 - Integration of electric vehicles and renewable energy sources
 - Smart grid technologies and applications
 - Power system stability and control
--
 
 education:
   courses:
