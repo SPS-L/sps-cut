@@ -58,4 +58,4 @@
 [[redirects]]
   from = "/llm"
   to = "http://176.227.235.8:3000/"
-  status = 200
+  status = 302
