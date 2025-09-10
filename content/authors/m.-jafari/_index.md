@@ -10,7 +10,7 @@ authors:
 superuser: false
 
 # Role/position
-role: PhD Candidate @ CUT
+role: PhD Candidate @ CUT (Alumni)
 
 # Organizations/Affiliations
 organizations:
@@ -30,7 +30,7 @@ education:
   courses:
   - course: PhD in Electronic and Electrical Engineering
     institution: Cyprus University of Technology, CY
-    year: Ongoing
+    year: 2025
   - course: MSc in Electronic and Electrical Engineering (Power Systems Engineering)
     institution: Semnan University, IR
     year: 2019
@@ -60,7 +60,7 @@ email: ""
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- PhD Candidates
+- Alumni
 ---
 
-Mehran is currently a PhD student at the [Cyprus University of technology](https://www.cut.ac.cy/). He received both his bachelor and master of science degree from Semnan University in 2016 and 2019, respectively. His research concerns numerical methods for power systems simulations. However, he is also interested in economic optimization of renewable energy networks such as virtual power plants.
+Mehran received his PhD from the [Cyprus University of technology](https://www.cut.ac.cy/). He received both his bachelor and master of science degree from Semnan University in 2016 and 2019, respectively. His research concerns numerical methods for power systems simulations. However, he is also interested in economic optimization of renewable energy networks such as virtual power plants.
