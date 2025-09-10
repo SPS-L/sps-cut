@@ -1,10 +1,10 @@
 ---
 # Display name
-title: Chrysovalantis Spanias
+title: Ignasi Ventura Nadal
 
 # Username (this should match the folder name and the name on publications)
 authors:
-- "C. Spanias"
+- "I. V. Nadal"
 
 # Is this the primary user of the site?
 superuser: false
