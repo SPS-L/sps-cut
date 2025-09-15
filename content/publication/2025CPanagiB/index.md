@@ -1,6 +1,6 @@
 +++
 title = "Impact of Uncontrolled Electric Vehicle Charging on Unbalanced Suburban Low-Voltage Networks"
-date = "2025-01-01"
+date = "2025-09-15"
 authors = ["S. Panagi","P. Therapontos","C. Spanias","P. Aristidou"]
 tags = ["Electric Vehicle", "unbalanced operation", "Monte-Carlo"]
 publication_types = ["paper-conference"]
@@ -24,7 +24,3 @@ highlight = true
 image = ""
 caption = ""
 +++
-
-{{< rawhtml >}}
-<a href="https://plu.mx/plum/a/?doi=10.1049/icp.2024.2088" class="plumx-details"></a>
-{{< /rawhtml >}}

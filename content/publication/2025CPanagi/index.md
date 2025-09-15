@@ -1,6 +1,6 @@
 +++
 title = "Optimal Operation of Electric Vehicles to Enhance the Flexibility Provision in Active Distribution Grids"
-date = "2025-01-01"
+date = "2025-06-01"
 authors = ["S. Panagi","P. Therapontos","C. Spanias","P. Aristidou"]
 tags = ["Electric Vehicle", "Flexibility", "Optimal Operation", "Optimization", "Optimal Power Flow", "Active Distribution Grids"]
 publication_types = ["paper-conference"]
@@ -24,7 +24,3 @@ highlight = true
 image = ""
 caption = ""
 +++
-
-{{< rawhtml >}}
-<a href="https://plu.mx/plum/a/?doi=10.1049/icp.2024.2088" class="plumx-details"></a>
-{{< /rawhtml >}}
