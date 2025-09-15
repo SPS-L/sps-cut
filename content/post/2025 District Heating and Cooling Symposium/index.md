@@ -1,14 +1,14 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "2024 SyNERGY MED Conference"
+title: "2025 District Heating and Cooling Symposium"
 subtitle: ""
 summary: ""
-authors: ["s.-panagi"]
+authors: ["mohammadhn98"]
 tags: []
 categories: ['blog']
-date: 2024-10-26T00:08:48+03:00
-lastmod: 2024-10-26T00:08:48+03:00
+date: 2025-09-15T00:08:48+03:00
+lastmod: 2025-09-15T00:08:48+03:00
 featured: false
 draft: false
 
@@ -29,16 +29,21 @@ image:
 projects: ["DENSE"]
 ---
 
-The SPS Lab proudly participated with three publications in the 2024 SyNERGY Conference, held in Cyprus. This prestigious event brought together academics, industry professionals, and researchers from around the globe to discuss the latest advancements in energy systems and sustainability. 
+The SPS Lab proudly participated with two PhD students in the 2025 District Heating and Cooling Symposium, held in Genk, Belgium.
+This leading international event gathered academics, industry experts, and practitioners to exchange knowledge and showcase the latest innovations in district heating and cooling technologies. The symposium served as a platform for discussing sustainable solutions, innovative system designs, and pathways toward decarbonized energy infrastructure.
 
-## Comparison of Fast Frequency Response Methods in the Low-Inertia Grid of Cyprus
+## DENSE Doctoral Gathering
 
-We are thrilled to share that Andreas Argyrou, a talented bachelor student and past member of our lab, presented our paper titled "Comparison of Fast Frequency Response Methods in the Low-Inertia Grid of Cyprus" at this esteemed conference. The presentation highlighted the lab’s contribution to addressing frequency stability challenges in modern power grids, focusing on practical solutions for low-inertia systems with high renewable energy penetration.
+As part of the symposium, the DENSE doctoral network organized a dedicated session where each doctoral candidate presented their ongoing research and future directions. This gathering provided an excellent opportunity for students to share progress, exchange ideas, and strengthen collaboration across different projects. This project has received funding from the EU’s Horizon Europe Framework Programme (HORIZON) under the GA n. 101120278 - DENSE.
 
-### About the Research 
+### A Data-Driven Control of Active Distribution Networks — Mohammad Hashemnezhad (DC3)
 
-Modern electric power systems increasingly face frequency security challenges due to the high penetration of renewable energy sources (RES). The reduction of synchronous generators, combined with the limited ability of RES to provide frequency support, forces system operators to curtail RES or depend on Under Frequency Load Shedding schemes. Our research explored Fast Frequency Reserves (FFR) as a potential solution to strengthen frequency support in low-inertia systems. FFR can effectively mitigate critical issues such as the Rate of Change of Frequency (RoCoF), frequency nadir, and post-fault steady-state frequency. The study presented, analyzed, implemented, and compared five FFR control methods, assessing their effectiveness in alleviating frequency stability concerns.
+Mohammad Hashemnezhad presented his research on data-driven, decentralized control strategies for voltage regulation in active distribution networks (ADNs). His approach combines multi-agent reinforcement learning (MARL) with a deep neural network safety layer to ensure safe operation under uncertainty, and a graph neural network (GNN)-based power flow estimator to replace conventional solvers with a faster, scalable alternative. The results, tested on a modified IEEE 33-bus network with real load and PV data, show significant improvements in maintaining voltages within safe limits while reducing power losses
 
-The co-authors of this work are Savvas Panagi and Professor Dr. Petros Aristidou, whose guidance, collaboration, and support were instrumental in the success of this research. This project has received funding from the EU’s Horizon Europe Framework Programme (HORIZON) under the GA n. 101120278 - DENSE.
+## Grey-Box Thermal Modeling for Building Applications — Savvas Panagi (DC6)
+
+Savvas Panagi presented his work on tuning grey-box models for thermal building applications, which aim to balance physical interpretability with data-driven adaptability. His study evaluates different model structures (from simple 1R1C to more complex 4R3C networks) and highlights the trade-offs between accuracy, computational cost, and parameter plausibility. Among them, the 3R2C model emerged as the most stable, providing reliable performance with moderate complexity. His future work will extend these models to enable optimal operation of heat pumps in active distribution grids
+
 
 ![jpg](image.jpg)
+
