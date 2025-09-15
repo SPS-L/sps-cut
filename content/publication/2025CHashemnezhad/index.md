@@ -1,17 +1,17 @@
 +++
-title = "Impact of Fast Frequency Response on Renewable Energy Source Curtailment and Load Shedding"
-date = "2024-07-01"
-authors = ["S. Panagi","A. Lazari","V. Koutsoloukas","P. Aristidou"]
-tags = ["frequency response","load shedding","power distribution fault","power system security","renewable energy sources","islanded systems","CIRED24"]
+title = "Safe Multi-Agent Reinforcement Learning Volt-Var Optimization in Active Distribution Networks"
+date = "2025-09-15"
+authors = ["M. Hashemnezhad","P. Aristidou"]
+tags = ["Volt-Var Optimization (VVO)","Active Distribution Networks (ADNs)","Multi-Agent Reinforcement Learning (MARL)","PV Inverter Control","Voltage Stability Safety Layer","MADDPG"]
 publication_types = ["paper-conference"]
-publication = "CIRED 2024 Vienna Workshop"
+publication = "ISGT 2025 Malta"
 publication_short = ""
-abstract = "System operators in low-inertia power systems often have to curtail renewable energy sources (RES) and employ strict under-frequency load shedding (UFLS) schemes to ensure frequency security after an event leading to loss of generation. This approach limits the maximum RES penetration in a system and results to the loss of load. To tackle these problems, fast frequency response (FFR) schemes can be used to limit the frequency Nadir after a disturbance and decrease the need for RES curtailments and UFLS. This article provides insights on the interaction between the Kinetic Energy (KE), Frequency Containment Reserves (FCR), and Nadir after a disturbance, which are the driving mechanisms leading to RES curtailment. Then, it analyses the impact of FFR on the Nadir and its ability to alleviate RES curtailment problems. The low-inertia, islanded, Cyprus dynamic model is used to quantify the results and showcase the impact on a real system."
+abstract = "Volt-Var Optimization (VVO) plays a critical role in Active Distribution Networks (ADNs) by ensuring voltage stability and minimizing power losses, particularly with the increasing integration of distributed photovoltaic (PV) systems. In this paper, we propose a decentralized control framework using Multi-Agent Reinforcement Learning (MARL), enabling PV inverters to independently control their reactive power to minimize power losses while maintaining voltage within safe operational limits. To mitigate unsafe actions, such as voltage violations and line overloading, a pre-trained Deep Neural Network (DNN) is integrated as a safety layer. The DNN projects unsafe MARL-generated actions into a feasible space, ensuring operational safety. Our approach is evaluated on a modified 33- bus medium-voltage test network across three scenarios: (1) a base case with no control, (2) MARL without a safety layer, and (3) MARL with a safety layer. The results demonstrate that MARL with the safety layer achieves the greatest reduction in power losses while ensuring voltage stability across all buses. This study underscores the potential of combining MARL with safety mechanisms to enhance the reliability and efficiency of ADNs."
 summary = ""
 featured = false
 projects = ['dense']
 slides = ""
-doi = "10.1049/icp.2024.2088"
+doi = 
 url_code = ""
 url_dataset = ""
 url_poster = ""
@@ -25,6 +25,5 @@ image = ""
 caption = ""
 +++
 
-{{< rawhtml >}}
-<a href="https://plu.mx/plum/a/?doi=10.1049/icp.2024.2088" class="plumx-details"></a>
-{{< /rawhtml >}}
+
+
