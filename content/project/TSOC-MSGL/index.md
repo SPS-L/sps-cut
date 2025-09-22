@@ -18,7 +18,7 @@ external_link:
 image:
   caption: Disturbance event
   focal_point: Frequency
-***
+---
 
 
 ## Summary
