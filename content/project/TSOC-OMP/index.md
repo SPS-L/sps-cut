@@ -77,3 +77,8 @@ The TSOC-OMP project has contributed to:
 ## Related Publications
 
 The project findings have been published in peer-reviewed journals, including research on [Fast Frequency Response sizing for low-inertia power systems](/publication/2025jpanagi/), demonstrating the practical application of the developed methodologies in real-world power system operation.
+
+## Industrial contacts
+
+- Vrahimis Koutsoloukas (TSOC)
+- Antonis Lazari (TSOC)
