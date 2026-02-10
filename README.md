@@ -2,12 +2,11 @@
 
 [![Website](https://img.shields.io/badge/Website-sps--lab.org-blue)](https://sps-lab.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE.md)
-[![Hugo](https://img.shields.io/badge/Hugo-0.135.0-orange)](https://gohugo.io/)
-[![Netlify](https://img.shields.io/badge/Deployed%20on-Netlify-00AD9F)](https://netlify.com/)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d124bf2a-a5f3-423c-bb15-95d6a3737dc0/deploy-status)](https://app.netlify.com/projects/sps-cut/deploys)
 
 ## About
 
-The **Sustainable Power Systems Laboratory (SPS Lab)** is a research group led by Dr. Petros Aristidou at the [Department of Electrical Engineering and Computer Engineering and Informatics](https://www.cut.ac.cy/faculties/fet/eecei/?languageId=1) at the Cyprus University of Technology.
+The **Sustainable Power Systems Laboratory (SPS Lab)** is a research group led by Dr. Petros Aristidou at the [Department of Electrical Engineering and Computer Sciense and Engineering](https://www.cut.ac.cy/faculties/fet/eecei/?languageId=1) at the Cyprus University of Technology.
 
 Our mission is to make future electric power systems sustainable, secure, and resilient. We combine mathematical tools from numerical analysis and optimization with high-performance computational tools and machine learning techniques to tackle modern power system challenges.
 
