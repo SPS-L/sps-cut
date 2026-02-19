@@ -4,7 +4,7 @@ linktitle: PVFire
 toc: true
 type: docs
 date: "2025-02-05T00:00:00Z"
-draft: false
+draft: true
 menu:
   student-projects:
     parent: Overview

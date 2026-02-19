@@ -3,7 +3,7 @@ title: Protection analysis in low-inertia Distribution Grids with Renewables
 linktitle: DN Protection
 date: '2024-04-24'
 type: book
-draft: false
+draft: true
 weight: 60
 ---
 

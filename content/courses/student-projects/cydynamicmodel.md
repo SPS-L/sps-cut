@@ -3,7 +3,7 @@ title: Dynamic security of the Cyprus low-inertia transmission system
 linktitle: CY Low Inertia
 date: '2024-04-24'
 type: book
-draft: false
+draft: true
 weight: 40
 ---
 

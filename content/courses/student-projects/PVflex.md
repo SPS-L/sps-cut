@@ -3,7 +3,7 @@ title: Monitoring and control of PV systems
 linktitle: PVFlex
 date: '2024-04-24'
 type: book
-draft: false
+draft: true
 weight: 50
 ---
 
