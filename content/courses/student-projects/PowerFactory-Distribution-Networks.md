@@ -1,16 +1,9 @@
 ---
 title: PowerFactory-Based Modeling of Distribution Networks (LV/MV) as a Preparation for Future Studies
 linktitle: PowerFactory Distribution Networks
-toc: true
-type: docs
-date: "2026-02-10T00:00:00Z"
+date: '2026-02-15'
+type: book
 draft: false
-menu:
-  student-projects:
-    parent: Overview
-    weight: 13
-
-# Prev/next pager order (if `docs_section_pager` enabled in `params.toml`)
 weight: 13
 ---
 
