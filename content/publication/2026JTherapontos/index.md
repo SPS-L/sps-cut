@@ -1,6 +1,6 @@
 +++
 title = "Coordinated curtailment of uncontrollable distributed energy resources in isolated power systems"
-date = "2025-01-01"
+date = "2026-01-27"
 authors = ["P. Therapontos", "S. Panagi", "C.A. Charalambous", "P. Aristidou"]
 tags = ["RES curtailments", "Isolated electricity grids", "Low inertia systems"]
 publication_types = ["article-journal"]
@@ -28,3 +28,4 @@ caption = ""
 {{< rawhtml >}}
 <a href="https://plu.mx/plum/a/?doi=10.1016/j.seja.2025.100097" class="plumx-details"></a>
 {{< /rawhtml >}}
+
