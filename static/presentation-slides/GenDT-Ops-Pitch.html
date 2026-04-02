@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="slides-format" content="viewport">
+  <title>GenDT-Ops Pitch</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-bg: #F9F7F4;
+      --color-bg-deep: #F0EDE8;
+      --color-surface: #FFFFFF;
+      --color-text: #23373B;
+      --color-text-secondary: #3d5154;
+      --color-text-muted: #6b7c7e;
+      --color-accent-1: #EB811B;
+      --color-accent-2: #14B2A6;
+      --color-accent-3: #23373B;
+      --color-glass-bg: rgba(255,255,255,0.85);
+      --color-glass-border: rgba(0,0,0,0.07);
+      --color-vignette: rgba(0,0,0,0.04);
+      --font-display: 'Fira Sans', sans-serif;
+      --font-body: 'Fira Sans', sans-serif;
+    }
+  </style>
+  <style>
+    :root { --color-bg: #F9F7F4; --color-text: #23373B; --glow-color-rgb: 235,129,27; }
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { background: var(--color-bg); margin: 0; }
+    body { font-family: 'Fira Sans', sans-serif; color: var(--color-text); overflow: hidden; height: 100vh; width: 100vw; }
+    .deck { width: 100vw; height: 100vh; position: relative; }
+    .slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: var(--color-bg); display: flex; flex-direction: column; align-items: center; justify-content: center; opacity: 0; transform: scale(0.97); transition: opacity 0.6s ease, transform 0.6s ease; pointer-events: none; overflow: hidden; }
+    .slide.active { opacity: 1; transform: scale(1); pointer-events: all; }
+    .slide > .content { position: relative; z-index: 2; width: 100%; max-width: 1100px; padding: clamp(1.2rem,3vw,3rem); }
+    .nav-controls { position: fixed; bottom: 22px; left: 50%; transform: translateX(-50%); display: flex; align-items: center; gap: 14px; z-index: 100; background: rgba(255,255,255,0.88); backdrop-filter: blur(10px); padding: 8px 20px; border-radius: 40px; border: 1px solid rgba(0,0,0,0.09); box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+    .nav-btn { width: 34px; height: 34px; border: none; background: transparent; color: #EB811B; border-radius: 50%; font-size: 1.2rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s; }
+    .nav-btn:hover { background: rgba(235,129,27,0.1); }
+    .slide-dots { display: flex; gap: 7px; }
+    .slide-dots .dot { width: 9px; height: 9px; border-radius: 50%; background: rgba(0,0,0,0.15); cursor: pointer; transition: background 0.3s, transform 0.3s; }
+    .slide-dots .dot.active { background: #EB811B; transform: scale(1.3); }
+    .slide-counter { font-size: 0.75rem; color: #6b7c7e; min-width: 38px; text-align: center; font-family: 'Fira Sans', sans-serif; }
+    .reveal { opacity: 0; transform: translateY(16px); }
+    .gradient-mesh { position: absolute; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
+    .blob { position: absolute; border-radius: 50%; filter: blur(70px); }
+    @keyframes float-slow { 0% { transform: translate(0,0) scale(1); } 33% { transform: translate(50px,-40px) scale(1.1); } 66% { transform: translate(-30px,35px) scale(0.92); } 100% { transform: translate(0,0) scale(1); } }
+    @keyframes float-drift { 0% { transform: translate(0,0); } 50% { transform: translate(-45px,-55px); } 100% { transform: translate(0,0); } }
+    .blob:nth-child(1) { animation: float-slow 12s ease-in-out infinite; }
+    .blob:nth-child(2) { animation: float-drift 16s ease-in-out infinite; }
+    .blob:nth-child(3) { animation: float-slow 20s ease-in-out infinite reverse; }
+    .slide::after { content:''; position:absolute; inset:0; z-index:1; pointer-events:none; background: radial-gradient(ellipse at center, transparent 55%, rgba(0,0,0,0.04) 100%); }
+    .mouse-spotlight { position:fixed;inset:0;z-index:99;pointer-events:none; }
+
+    /* Title split */
+    .title-split { display:flex; width:100%; height:100vh; }
+    .title-left { flex:0 0 42%; background-size:cover; background-position:center; position:relative; }
+    .title-left::after { content:''; position:absolute; inset:0; background:linear-gradient(to right, rgba(35,55,59,0.18) 0%, transparent 100%); }
+    .title-right { flex:1; display:flex; flex-direction:column; justify-content:center; padding:clamp(2rem,5vw,5rem) clamp(2rem,4vw,4rem); background:#F9F7F4; position:relative; z-index:2; }
+
+    /* Slide labels */
+    .slide-sub { font-size:0.72rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#EB811B; margin-bottom:0.4rem; }
+    .slide-heading { font-size:clamp(1.35rem,2.8vw,2.2rem); font-weight:700; color:#23373B; line-height:1.2; margin-bottom:0.75rem; }
+    .pill { display:inline-block; background:rgba(235,129,27,0.1); color:#EB811B; border:1px solid rgba(235,129,27,0.25); border-radius:20px; padding:0.3rem 0.85rem; font-size:0.72rem; font-weight:600; letter-spacing:0.05em; }
+
+    /* Challenge cards */
+    .challenge-card { background:#fff; border:1px solid rgba(0,0,0,0.07); border-radius:10px; padding:0.9rem 1rem; box-shadow:0 1px 6px rgba(0,0,0,0.05); }
+    .challenge-card h4 { font-size:0.8rem; font-weight:700; color:#23373B; margin-bottom:0.35rem; }
+    .challenge-card p { font-size:clamp(0.65rem,0.85vw,0.75rem); color:#4a5568; line-height:1.5; margin:0; }
+
+    /* Why cards */
+    .why-card { background:#fff; border:1px solid rgba(0,0,0,0.07); border-radius:10px; padding:1rem; text-align:center; box-shadow:0 1px 6px rgba(0,0,0,0.04); }
+    .why-card .icon { font-size:1.6rem; margin-bottom:0.5rem; }
+    .why-card h4 { font-size:0.8rem; font-weight:700; color:#23373B; margin-bottom:0.35rem; }
+    .why-card p { font-size:clamp(0.62rem,0.82vw,0.72rem); color:#4a5568; line-height:1.5; margin:0; }
+
+    /* Pillar cards */
+    .pillar-card { background:#fff; border:1px solid rgba(0,0,0,0.07); border-left:3px solid #EB811B; border-radius:8px; padding:0.85rem 1rem; }
+    .pillar-card h4 { font-size:0.78rem; font-weight:700; color:#23373B; margin-bottom:0.3rem; }
+    .pillar-card ul { margin:0; padding-left:1.1rem; }
+    .pillar-card li { font-size:clamp(0.6rem,0.78vw,0.7rem); color:#4a5568; line-height:1.5; }
+
+    /* Comparison table */
+    .comp-table { width:100%; border-collapse:collapse; font-size:clamp(0.58rem,0.78vw,0.7rem); }
+    .comp-table th { background:#23373B; color:#fff; padding:0.5rem 0.7rem; text-align:left; font-weight:600; font-size:0.65rem; letter-spacing:0.04em; }
+    .comp-table td { padding:0.42rem 0.7rem; border-bottom:1px solid rgba(0,0,0,0.06); color:#3d5154; }
+    .comp-table tr:nth-child(even) td { background:rgba(0,0,0,0.02); }
+    .comp-table .yes { color:#14B2A6; font-weight:700; }
+    .comp-table .no { color:#b43c28; }
+    .comp-table .ours td { background:rgba(235,129,27,0.07) !important; font-weight:600; color:#23373B; }
+
+    /* Novelty cards */
+    .novelty-card { background:#fff; border:1px solid rgba(0,0,0,0.07); border-radius:10px; padding:0.85rem 1rem; box-shadow:0 1px 5px rgba(0,0,0,0.04); }
+    .novelty-card .num { display:inline-block; width:22px; height:22px; border-radius:50%; background:#EB811B; color:#fff; font-size:0.65rem; font-weight:700; text-align:center; line-height:22px; margin-bottom:0.35rem; }
+    .novelty-card h4 { font-size:0.77rem; font-weight:700; color:#23373B; margin-bottom:0.25rem; }
+    .novelty-card p { font-size:clamp(0.6rem,0.78vw,0.7rem); color:#4a5568; line-height:1.5; margin:0; }
+
+    /* Impact cards */
+    .impact-col h4 { font-size:0.8rem; font-weight:700; color:#23373B; margin-bottom:0.55rem; padding-bottom:0.35rem; border-bottom:2px solid #EB811B; display:inline-block; }
+    .impact-col li { font-size:clamp(0.62rem,0.8vw,0.72rem); color:#4a5568; line-height:1.6; margin-bottom:0.2rem; }
+
+    /* Closing dark */
+    .slide.dark-slide { background:#23373B; }
+    .slide.dark-slide .slide-heading { color:#fff; }
+
+    /* Solution flow */
+    .flow-step { background:#fff; border:1px solid rgba(0,0,0,0.07); border-radius:10px; padding:0.75rem 0.85rem; text-align:center; box-shadow:0 1px 5px rgba(0,0,0,0.04); flex:1; }
+    .flow-step .icon { font-size:1.4rem; margin-bottom:0.3rem; }
+    .flow-step h4 { font-size:0.72rem; font-weight:700; color:#23373B; margin-bottom:0.2rem; }
+    .flow-step p { font-size:clamp(0.58rem,0.72vw,0.65rem); color:#4a5568; line-height:1.4; margin:0; }
+    .flow-arrow { color:#EB811B; font-size:1.2rem; flex-shrink:0; align-self:center; padding:0 0.3rem; }
+  </style>
+</head>
+<body>
+<div class="mouse-spotlight"></div>
+<div class="deck">
+
+<!-- SLIDE 1: TITLE -->
+<div class="slide slide-1 active" data-slide="1" style="padding:0;">
+  <div class="gradient-mesh" style="z-index:0;">
+    <div class="blob" style="width:280px;height:280px;top:-50px;right:8%;background:#EB811B;opacity:0.06;"></div>
+    <div class="blob" style="width:180px;height:180px;bottom:20%;right:18%;background:#14B2A6;opacity:0.06;"></div>
+  </div>
+  <div class="title-split">
+    <div class="title-left" style="background-image:url('https://raw.githubusercontent.com/SPS-L/SPS-Lab-Presentation-template/main/logos/cover.jpg');"></div>
+    <div class="title-right">
+      <span class="pill reveal" style="margin-bottom:1.1rem;align-self:flex-start;">CRESYM Collaborative Research Proposal</span>
+      <h1 class="reveal" style="font-size:clamp(1.7rem,3.8vw,3rem);font-weight:700;color:#23373B;line-height:1.1;margin-bottom:0.5rem;">GenDT-Ops</h1>
+      <h2 class="reveal" style="font-size:clamp(0.95rem,1.8vw,1.4rem);font-weight:500;color:#EB811B;line-height:1.35;margin-bottom:0.75rem;">Generative AI-Powered Digital Twin<br>for Transmission Operator Decision Support</h2>
+      <div class="reveal" style="height:3px;width:56px;background:#EB811B;margin-bottom:1.1rem;"></div>
+      <p class="reveal" style="font-size:clamp(0.78rem,1.05vw,0.92rem);color:#3d5154;margin-bottom:0.2rem;"><strong>Dr. Petros Aristidou</strong></p>
+      <p class="reveal" style="font-size:clamp(0.72rem,0.95vw,0.84rem);color:#6b7c7e;margin-bottom:0;">Sustainable Power Systems Lab · Cyprus University of Technology</p>
+      <div class="reveal" style="margin-top:3rem;">
+        <img src="https://raw.githubusercontent.com/SPS-L/SPS-Lab-Presentation-template/main/logos/sps_cut.png" alt="SPS-Lab CUT" style="height:clamp(48px,7vh,72px);object-fit:contain;">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- SLIDE 2: THE PROBLEM -->
+<div class="slide slide-2" data-slide="2">
+  <div class="gradient-mesh">
+    <div class="blob" style="width:320px;height:320px;top:-70px;right:-50px;background:#EB811B;opacity:0.055;"></div>
+    <div class="blob" style="width:220px;height:220px;bottom:-45px;left:-35px;background:#14B2A6;opacity:0.05;"></div>
+  </div>
+  <div class="content">
+    <p class="slide-sub reveal">The Challenge</p>
+    <h2 class="slide-heading reveal">High IBR Penetration Is Breaking Legacy Operator Tools</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.85rem;margin-top:0.9rem;">
+      <div class="challenge-card reveal">
+        <h4>&#9889; Faster, More Complex Dynamics</h4>
+        <p>Inverter-based resources (IBRs) respond in milliseconds — 10–100× faster than synchronous machines. Grid events now unfold on sub-second timescales that legacy stability tools were never designed to handle.</p>
+      </div>
+      <div class="challenge-card reveal">
+        <h4>&#128202; SCADA Data Overload</h4>
+        <p>Operators face vast real-time measurement streams with no integrated, forward-looking tool to anticipate contingency consequences within the tight time windows imposed by IBR-driven grid dynamics.</p>
+      </div>
+      <div class="challenge-card reveal">
+        <h4>&#128269; DSA Tools Ill-Suited for IBR Grids</h4>
+        <p>Commercial DSA platforms were built for synchronous-machine paradigms. They cannot capture IBR control interactions, or evolving topology without expensive manual recalibration.</p>
+      </div>
+      <div class="challenge-card reveal">
+        <h4>&#129302; No Explainable AI in the Control Room</h4>
+        <p>Existing AI security classifiers lack natural-language rationale and audit trails &mdash; making them incompatible with operator trust, override authority, and EU AI Act accountability requirements.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- SLIDE 3: STATUS QUO VS GENDT-OPS -->
+<div class="slide slide-3" data-slide="3">
+  <div class="gradient-mesh">
+    <div class="blob" style="width:300px;height:300px;top:-60px;right:-40px;background:#EB811B;opacity:0.05;"></div>
+    <div class="blob" style="width:200px;height:200px;bottom:-40px;left:10%;background:#14B2A6;opacity:0.05;"></div>
+  </div>
+  <div class="content">
+    <p class="slide-sub reveal">Before &amp; After</p>
+    <h2 class="slide-heading reveal">Today&rsquo;s Workflow vs. GenDT-Ops</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:0.9rem;">
+      <div class="reveal" style="background:rgba(180,60,40,0.05);border:1.5px solid rgba(180,60,40,0.18);border-radius:10px;padding:1rem 1.1rem;">
+        <p style="font-weight:700;color:#b43c28;font-size:0.78rem;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.7rem;">&#10006; Today&rsquo;s Operator Workflow</p>
+        <div style="display:flex;flex-direction:column;gap:0.5rem;">
+          <div style="display:flex;align-items:flex-start;gap:0.5rem;font-size:clamp(0.68rem,0.88vw,0.78rem);color:#4a5568;">
+            <span style="color:#b43c28;font-weight:700;margin-top:1px;flex-shrink:0;">›</span>
+            <span><strong>Manual N-1 screening</strong> — static, deterministic, designed for synchronous machines</span>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:0.5rem;font-size:clamp(0.68rem,0.88vw,0.78rem);color:#4a5568;">
+            <span style="color:#b43c28;font-weight:700;margin-top:1px;flex-shrink:0;">›</span>
+            <span><strong>Hours to run full DSA</strong> — far too slow for IBR-driven sub-second events</span>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:0.5rem;font-size:clamp(0.68rem,0.88vw,0.78rem);color:#4a5568;">
+            <span style="color:#b43c28;font-weight:700;margin-top:1px;flex-shrink:0;">›</span>
+            <span><strong>No IBR scenario coverage</strong> — converter dynamics &amp; renewable variability not modelled</span>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:0.5rem;font-size:clamp(0.68rem,0.88vw,0.78rem);color:#4a5568;">
+            <span style="color:#b43c28;font-weight:700;margin-top:1px;flex-shrink:0;">›</span>
+            <span><strong>Black-box AI classifiers</strong> — no rationale, no audit trail, no operator trust</span>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:0.5rem;font-size:clamp(0.68rem,0.88vw,0.78rem);color:#4a5568;">
+            <span style="color:#b43c28;font-weight:700;margin-top:1px;flex-shrink:0;">›</span>
+            <span><strong>Specialist recalibration</strong> — costly, slow to adapt to topology changes</span>
+          </div>
+        </div>
+      </div>
+      <div class="reveal" style="background:rgba(20,178,166,0.05);border:1.5px solid rgba(20,178,166,0.25);border-radius:10px;padding:1rem 1.1rem;">
+        <p style="font-weight:700;color:#14B2A6;font-size:0.78rem;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.7rem;">&#10004; GenDT-Ops Workflow</p>
+        <div style="display:flex;flex-direction:column;gap:0.5rem;">
+          <div style="display:flex;align-items:flex-start;gap:0.5rem;font-size:clamp(0.68rem,0.88vw,0.78rem);color:#4a5568;">
+            <span style="color:#14B2A6;font-weight:700;margin-top:1px;flex-shrink:0;">›</span>
+            <span><strong>Automated DSA</strong> — N-k screening from live SCADA snapshots</span>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:0.5rem;font-size:clamp(0.68rem,0.88vw,0.78rem);color:#4a5568;">
+            <span style="color:#14B2A6;font-weight:700;margin-top:1px;flex-shrink:0;">›</span>
+            <span><strong>Sub-minute decision support</strong> — faster-than-real-time Dynawo digital twin validation</span>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:0.5rem;font-size:clamp(0.68rem,0.88vw,0.78rem);color:#4a5568;">
+            <span style="color:#14B2A6;font-weight:700;margin-top:1px;flex-shrink:0;">›</span>
+            <span><strong>Full IBR coverage</strong> — diffusion model captures converter dynamics &amp; renewable variability</span>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:0.5rem;font-size:clamp(0.68rem,0.88vw,0.78rem);color:#4a5568;">
+            <span style="color:#14B2A6;font-weight:700;margin-top:1px;flex-shrink:0;">›</span>
+            <span><strong>Explainable LLM rationale</strong> — step-by-step reasoning, EU AI Act compliant audit trail</span>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:0.5rem;font-size:clamp(0.68rem,0.88vw,0.78rem);color:#4a5568;">
+            <span style="color:#14B2A6;font-weight:700;margin-top:1px;flex-shrink:0;">›</span>
+            <span><strong>Self-adapting to topology</strong> — continuous retraining on new SCADA snapshots via LoRA</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- SLIDE 4: WHY NOW -->
+<div class="slide slide-4" data-slide="4">
+  <div class="gradient-mesh">
+    <div class="blob" style="width:280px;height:280px;top:-55px;right:-40px;background:#EB811B;opacity:0.055;"></div>
+    <div class="blob" style="width:200px;height:200px;bottom:-38px;left:12%;background:#14B2A6;opacity:0.05;"></div>
+  </div>
+  <div class="content">
+    <p class="slide-sub reveal">Why Now</p>
+    <h2 class="slide-heading reveal">Three Converging Technologies &mdash; One Opportunity</h2>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0.85rem;margin-top:0.85rem;">
+      <div class="why-card reveal">
+        <div class="icon">&#127754;</div>
+        <h4>Diffusion Models</h4>
+        <p>Score-based diffusion models now capture IBR-driven grid dynamics and synthesise high-fidelity N-k stress scenarios &mdash; ideal for fast scenario generation directly from live SCADA snapshots.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="icon">&#128172;</div>
+        <h4>Open-Weight LLMs</h4>
+        <p>LLaMA 3.x and Mistral enable domain fine-tuning and chain-of-drafts (CoD) reasoning &mdash; delivering step-by-step, auditable rationales directly in the TSO control room interface.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="icon">&#128279;</div>
+        <h4>On-Demand Digital Twins</h4>
+        <p>Faster-than-real-time Dynawo simulation instances provide physics-grounded validation without maintaining an always-running twin.</p>
+      </div>
+    </div>
+    <div class="reveal" style="margin-top:0.9rem;padding:0.65rem 1rem;background:rgba(235,129,27,0.08);border-left:4px solid #EB811B;border-radius:6px;display:flex;align-items:center;gap:0.6rem;">
+      <span style="font-size:1.1rem;">&#128640;</span>
+      <span style="color:#4a5568;font-size:clamp(0.65rem,0.88vw,0.76rem);"><strong style="color:#23373B;">Supported by TRAISIM</strong> (CRESYM-funded, 2025&ndash;2027) &mdash; GenDT-Ops extends TRAISIM&rsquo;s real-time Dynawo infrastructure and solver tuning with generative AI intelligence and explainable operator decision support.</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- SLIDE 5: HOW IT WORKS — THE GENDT-OPS LOOP -->
+<div class="slide slide-5" data-slide="5">
+  <div class="gradient-mesh">
+    <div class="blob" style="width:300px;height:300px;top:-50px;right:-30px;background:#EB811B;opacity:0.055;"></div>
+    <div class="blob" style="width:180px;height:180px;bottom:-30px;left:8%;background:#14B2A6;opacity:0.05;"></div>
+  </div>
+  <div class="content">
+    <p class="slide-sub reveal">The GenDT-Ops Loop</p>
+    <h2 class="slide-heading reveal">From SCADA Snapshot to Operator Decision</h2>
+    <div class="reveal" style="display:flex;align-items:stretch;justify-content:center;gap:0;margin-top:1rem;">
+      <div class="flow-step">
+        <div class="icon">&#128225;</div>
+        <h4>SCADA Snapshot</h4>
+        <p>Live grid state ingested in real time</p>
+      </div>
+      <div class="flow-arrow">&#8594;</div>
+      <div class="flow-step">
+        <div class="icon">&#127774;</div>
+        <h4>Diffusion Model</h4>
+        <p>Generates N diverse IBR-aware stress scenarios</p>
+      </div>
+      <div class="flow-arrow">&#8594;</div>
+      <div class="flow-step">
+        <div class="icon">&#9883;</div>
+        <h4>Digital Twin</h4>
+        <p>Dynawo validates physics &amp; stability margins</p>
+      </div>
+      <div class="flow-arrow">&#8594;</div>
+      <div class="flow-step">
+        <div class="icon">&#128172;</div>
+        <h4>LLM Assistant</h4>
+        <p>Explains risk &amp; recommends control actions</p>
+      </div>
+      <div class="flow-arrow">&#8594;</div>
+      <div class="flow-step">
+        <div class="icon">&#128104;&#8205;&#128187;</div>
+        <h4>Operator Decides</h4>
+        <p>Informed action with full audit trail</p>
+      </div>
+    </div>
+    <div class="reveal" style="display:grid;grid-template-columns:repeat(3,1fr);gap:0.75rem;margin-top:1rem;">
+      <div style="background:rgba(235,129,27,0.07);border-radius:8px;padding:0.65rem 0.9rem;text-align:center;">
+        <p style="font-weight:800;color:#EB811B;font-size:clamp(1rem,1.6vw,1.25rem);margin-bottom:0.1rem;">&lt; 1 min</p>
+        <p style="color:#6b7c7e;font-size:clamp(0.58rem,0.75vw,0.67rem);">End-to-end latency target</p>
+      </div>
+      <div style="background:rgba(20,178,166,0.07);border-radius:8px;padding:0.65rem 0.9rem;text-align:center;">
+        <p style="font-weight:800;color:#14B2A6;font-size:clamp(1rem,1.6vw,1.25rem);margin-bottom:0.1rem;">N-k</p>
+        <p style="color:#6b7c7e;font-size:clamp(0.58rem,0.75vw,0.67rem);">Contingency coverage</p>
+      </div>
+      <div style="background:rgba(235,129,27,0.07);border-radius:8px;padding:0.65rem 0.9rem;text-align:center;">
+        <p style="font-weight:800;color:#EB811B;font-size:clamp(1rem,1.6vw,1.25rem);margin-bottom:0.1rem;">EU AI Act</p>
+        <p style="color:#6b7c7e;font-size:clamp(0.58rem,0.75vw,0.67rem);">Compliant explainability &amp; audit trail</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- SLIDE 6: SOLUTION OVERVIEW -->
+<div class="slide slide-6" data-slide="6">
+  <div class="gradient-mesh">
+    <div class="blob" style="width:300px;height:300px;top:-60px;right:-50px;background:#14B2A6;opacity:0.055;"></div>
+    <div class="blob" style="width:200px;height:200px;bottom:-40px;left:-30px;background:#EB811B;opacity:0.05;"></div>
+  </div>
+  <div class="content">
+    <p class="slide-sub reveal">Architecture</p>
+    <h2 class="slide-heading reveal">Three Pillars of the GenDT-Ops Framework</h2>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0.85rem;margin-top:0.9rem;">
+      <div class="challenge-card reveal" style="border-top:3px solid #EB811B;">
+        <h4>&#127774; Generative State Model</h4>
+        <p>Score-based diffusion model captures IBR-dominated grid dynamics and synthesises high-fidelity N-k stress scenarios. Generates diverse stress scenarios for N-k DSA directly from live SCADA snapshots. Physics consistency layer ensures all trajectories are AC power-flow feasible.</p>
+      </div>
+      <div class="challenge-card reveal" style="border-top:3px solid #14B2A6;">
+        <h4>&#128279; On-Demand Digital Twin</h4>
+        <p>Dynawo-based DT instances instantiated on demand — not always running. Each snapshot spawns parallel faster-than-real-time simulations. Tracks frequency nadir, RoCoF, voltage dips, and stability margins across a critical contingency catalogue.</p>
+      </div>
+      <div class="challenge-card reveal" style="border-top:3px solid #23373B;">
+        <h4>&#128172; LLM Operator Assistant</h4>
+        <p>Open-weight LLM (LLaMA 3.x / Mistral) fine-tuned on TSO operational procedures and ENTSO-E guidelines. Chain-of-Drafts (CoD) reasoning produces step-by-step, auditable rationales. Accepts natural-language queries and fuses them with live DT predictions.</p>
+      </div>
+    </div>
+    <div class="reveal" style="margin-top:0.85rem;padding:0.6rem 1rem;background:rgba(20,178,166,0.07);border-left:3px solid #14B2A6;border-radius:6px;">
+      <span style="font-size:clamp(0.65rem,0.85vw,0.74rem);color:#3d5154;">All components communicate via frozen API contracts — microservice architecture enables modular deployment and integration with existing TSO/DSO EMS/SCADA infrastructure.</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- SLIDE 7: CORE TECHNOLOGY -->
+<div class="slide slide-7" data-slide="7">
+  <div class="gradient-mesh">
+    <div class="blob" style="width:280px;height:280px;top:-55px;right:-35px;background:#EB811B;opacity:0.05;"></div>
+    <div class="blob" style="width:190px;height:190px;bottom:-35px;left:5%;background:#14B2A6;opacity:0.05;"></div>
+  </div>
+  <div class="content">
+    <p class="slide-sub reveal">Under the Hood</p>
+    <h2 class="slide-heading reveal">Four AI Pillars</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;margin-top:0.85rem;">
+      <div class="pillar-card reveal">
+        <h4>&#127774; Diffusion-Based Grid State Model</h4>
+        <ul>
+          <li>Graph Transformer denoising score network on topology-aware grid representation</li>
+          <li>Physics consistency layer: AC power-flow residual penalty + projection at inference</li>
+          <li>LoRA continual adaptation — tracks seasonal changes &amp; new assets without full retraining</li>
+        </ul>
+      </div>
+      <div class="pillar-card reveal" style="border-left-color:#14B2A6;">
+        <h4>&#9883; Faster-Than-Real-Time Digital Twin</h4>
+        <ul>
+          <li>On-demand Dynawo instances from live SCADA snapshots (not always-running)</li>
+          <li>Parallel instances for what-if and N-k DSA</li>
+          <li>Tracks frequency nadir, RoCoF, voltage dips, stability margins</li>
+        </ul>
+      </div>
+      <div class="pillar-card reveal" style="border-left-color:#23373B;">
+        <h4>&#128172; LLM Operator Assistant</h4>
+        <ul>
+          <li>LLaMA 3.x / Mistral fine-tuned on TSO procedures &amp; ENTSO-E guidelines</li>
+          <li>Chain-of-Drafts (CoD) structured reasoning with cross-checked numerical premises</li>
+          <li>RAG fallback on curated Operational Knowledge Base when data is limited</li>
+        </ul>
+      </div>
+      <div class="pillar-card reveal" style="border-left-color:#EB811B;">
+        <h4>&#129302; RL Safety Layer</h4>
+        <ul>
+          <li>RL agent proposes re-dispatch, switching, and storage activation actions</li>
+          <li>Physics-based Dynawo oracle hard-gates any destabilising recommendation</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- SLIDE 8: COMPETITIVE GAP -->
+<div class="slide slide-8" data-slide="8">
+  <div class="gradient-mesh">
+    <div class="blob" style="width:260px;height:260px;top:-50px;right:-30px;background:#EB811B;opacity:0.05;"></div>
+    <div class="blob" style="width:180px;height:180px;bottom:-30px;left:5%;background:#14B2A6;opacity:0.05;"></div>
+  </div>
+  <div class="content">
+    <p class="slide-sub reveal">Competitive Landscape</p>
+    <h2 class="slide-heading reveal">Capability Gap GenDT-Ops Is Designed to Close</h2>
+    <div class="reveal" style="margin-top:0.85rem;overflow:hidden;border-radius:8px;border:1px solid rgba(0,0,0,0.08);box-shadow:0 1px 6px rgba(0,0,0,0.05);">
+      <table class="comp-table">
+        <thead>
+          <tr>
+            <th>Capability</th>
+            <th>Commercial DSA</th>
+            <th>Grid2Op / L2RPN</th>
+            <th>GNN Classifiers</th>
+            <th style="background:#EB811B;">GenDT-Ops</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Real-time DSA on live SCADA</td><td class="yes">Yes (proprietary)</td><td class="no">No</td><td class="no">No (offline)</td><td class="yes" style="background:rgba(235,129,27,0.08);font-weight:700;">Yes</td></tr>
+          <tr><td>Generative scenario synthesis</td><td class="no">No (deterministic)</td><td class="no">No</td><td class="no">No (discriminative)</td><td class="yes" style="background:rgba(235,129,27,0.08);font-weight:700;">Yes</td></tr>
+          <tr><td>Natural-language operator rationale</td><td class="no">No</td><td class="no">No</td><td class="no">No</td><td class="yes" style="background:rgba(235,129,27,0.08);font-weight:700;">Yes (LLM + CoD)</td></tr>
+          <tr><td>Continual adaptation (LoRA)</td><td class="no">No (manual recal.)</td><td class="no">No</td><td class="no">No (full retrain)</td><td class="yes" style="background:rgba(235,129,27,0.08);font-weight:700;">Yes</td></tr>
+          <tr><td>Tested on IBR-dominated systems</td><td class="no">No</td><td class="no">No</td><td class="no">No</td><td class="yes" style="background:rgba(235,129,27,0.08);font-weight:700;">Yes</td></tr>
+          <tr><td>Open-source &amp; auditable</td><td class="no">No</td><td class="yes">Yes</td><td style="color:#888;">Partial</td><td class="yes" style="background:rgba(235,129,27,0.08);font-weight:700;">Yes</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<!-- SLIDE 9: SCIENTIFIC NOVELTY -->
+<div class="slide slide-9" data-slide="9">
+  <div class="gradient-mesh">
+    <div class="blob" style="width:280px;height:280px;top:-55px;right:-40px;background:#14B2A6;opacity:0.055;"></div>
+    <div class="blob" style="width:200px;height:200px;bottom:-40px;left:8%;background:#EB811B;opacity:0.05;"></div>
+  </div>
+  <div class="content">
+    <p class="slide-sub reveal">Scientific Novelty</p>
+    <h2 class="slide-heading reveal">Four Frontier Contributions</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.85rem;margin-top:0.9rem;">
+      <div class="novelty-card reveal">
+        <div class="num">1</div>
+        <h4>Diffusion Models for IBR-Dominated Grids</h4>
+        <p>To our knowledge, no published work has applied score-based diffusion models to the dynamic state evolution of IBR-dominated power systems — where rapid converter-driven state transitions make generative scenario synthesis most impactful.</p>
+      </div>
+      <div class="novelty-card reveal">
+        <div class="num">2</div>
+        <h4>Chain-of-Drafts Explainability for Power Systems</h4>
+        <p>Structured multi-step reasoning traces that generate auditable, operator-facing rationales for power system recommendations — a novel contribution to explainable AI in critical infrastructure, enabling EU AI Act compliance.</p>
+      </div>
+      <div class="novelty-card reveal">
+        <div class="num">3</div>
+        <h4>RL with Verifiable Rewards &amp; Physics Oracle</h4>
+        <p>An RL agent whose candidate control actions are validated by a deterministic Dynawo stability oracle before surfacing to the operator — providing a hard safety gate that prevents destabilising recommendations.</p>
+      </div>
+      <div class="novelty-card reveal">
+        <div class="num">4</div>
+        <h4>Unified DT Orchestration for Operator Decision Support</h4>
+        <p>Integrating a generative state model, LLM assistant, and RL agent within a single DT framework that spawns multiple faster-than-real-time instances from live SCADA snapshots is architecturally novel and operationally significant.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- SLIDE 10: EXPECTED IMPACT -->
+<div class="slide slide-10" data-slide="10">
+  <div class="gradient-mesh">
+    <div class="blob" style="width:280px;height:280px;top:-55px;right:-40px;background:#EB811B;opacity:0.05;"></div>
+    <div class="blob" style="width:200px;height:200px;bottom:-40px;left:8%;background:#14B2A6;opacity:0.05;"></div>
+  </div>
+  <div class="content">
+    <p class="slide-sub reveal">Why It Matters</p>
+    <h2 class="slide-heading reveal">Expected Impact</h2>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:0.9rem;">
+      <div class="impact-col reveal">
+        <h4>&#128218; Scientific</h4>
+        <ul style="list-style:none;padding:0;margin:0;">
+          <li>Publications in IEEE Trans. Smart Grids, PSCC, PowerTech</li>
+          <li>Open-source models, datasets &amp; software under permissive licences</li>
+          <li>Methodological advances in generative AI for critical infrastructure</li>
+        </ul>
+      </div>
+      <div class="impact-col reveal">
+        <h4>&#9889; Operational</h4>
+        <ul style="list-style:none;padding:0;margin:0;">
+          <li>Reduced renewable curtailment via proactive re-dispatch recommendations</li>
+          <li>Real-time DSA with on-demand faster-than-real-time DT instances</li>
+          <li>Target: &gt;85% operator satisfaction in user-acceptance testing</li>
+          <li>Audit-ready rationales for EU AI Act High-Risk compliance</li>
+        </ul>
+      </div>
+      <div class="impact-col reveal">
+        <h4>&#127758; Ecosystem</h4>
+        <ul style="list-style:none;padding:0;margin:0;">
+          <li>Scalable from islanded grids to large interconnected European TSOs &amp; DSOs</li>
+          <li>Open adaptation guide for new TSO/DSO topologies</li>
+          <li>Coherent CRESYM research stack at CUT, maximising synergy with existing infrastructure</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- SLIDE 11: CLOSING -->
+<div class="slide slide-11 dark-slide" data-slide="11">
+  <div class="gradient-mesh">
+    <div class="blob" style="width:400px;height:400px;top:-80px;right:-60px;background:#EB811B;opacity:0.12;"></div>
+    <div class="blob" style="width:280px;height:280px;bottom:-60px;left:-40px;background:#14B2A6;opacity:0.1;"></div>
+    <div class="blob" style="width:180px;height:180px;top:40%;left:20%;background:#EB811B;opacity:0.07;"></div>
+  </div>
+  <canvas class="particle-canvas" style="position:absolute;inset:0;z-index:1;"></canvas>
+  <div class="content" style="text-align:center;z-index:2;">
+    <h2 class="reveal" style="font-size:clamp(2.2rem,5vw,4rem);font-weight:800;color:#fff;margin-bottom:1.2em;">Questions?</h2>
+    <p class="reveal" style="font-size:clamp(0.9rem,1.3vw,1.02rem);color:rgba(255,255,255,0.85);margin-bottom:0.3em;"><strong>Dr. Petros Aristidou</strong></p>
+    <p class="reveal" style="font-size:clamp(0.78rem,1.05vw,0.9rem);color:rgba(255,255,255,0.68);margin-bottom:0;">Assistant Professor / Director of SPS-Lab</p>
+    <p class="reveal" style="font-size:clamp(0.78rem,1.05vw,0.9rem);color:rgba(255,255,255,0.68);margin-bottom:0.9em;">Cyprus University of Technology</p>
+    <p class="reveal" style="font-size:clamp(0.78rem,1.02vw,0.88rem);color:rgba(255,255,255,0.8);margin-bottom:0.2em;">
+      <span aria-hidden="true" style="display:inline-block;vertical-align:-0.16em;margin-right:0.45em;line-height:1;">
+        <svg viewBox="0 0 24 24" width="0.95em" height="0.95em" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" style="color:rgba(255,255,255,0.9);"><rect x="3" y="5" width="18" height="14" rx="2" ry="2"></rect><path d="M3 7l9 6 9-6"></path></svg>
+      </span><a href="mailto:petros.aristidou@cut.ac.cy" style="color:#EB811B;text-decoration:none;">petros.aristidou@cut.ac.cy</a>
+    </p>
+    <p class="reveal" style="font-size:clamp(0.78rem,1.02vw,0.88rem);color:rgba(255,255,255,0.8);margin-bottom:0.2em;">
+      &#127760;&nbsp;&nbsp;<a href="https://sps-lab.org" target="_blank" rel="noopener" style="color:#EB811B;text-decoration:none;">sps-lab.org</a>
+    </p>
+    <p class="reveal" style="font-size:clamp(0.78rem,1.02vw,0.88rem);color:rgba(255,255,255,0.8);margin-bottom:0.8em;">
+      <span aria-hidden="true" style="display:inline-block;vertical-align:-0.18em;margin-right:0.45em;line-height:1;">
+        <svg viewBox="0 0 16 16" width="0.95em" height="0.95em" fill="currentColor" style="color:rgba(255,255,255,0.9);"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.65 7.65 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+      </span><a href="https://github.com/SPS-L" target="_blank" rel="noopener" style="color:#EB811B;text-decoration:none;">github.com/SPS-L</a>
+    </p>
+  </div>
+</div>
+
+</div><!-- end .deck -->
+
+<div class="nav-controls">
+  <button class="nav-btn" onclick="changeSlide(-1)">&#8249;</button>
+  <div class="slide-dots" id="dots"></div>
+  <button class="nav-btn" onclick="changeSlide(1)">&#8250;</button>
+  <span class="slide-counter" id="counter">1 / 11</span>
+</div>
+
+<script>
+  let current = 1;
+  const total = document.querySelectorAll('.slide').length;
+  const dotsContainer = document.getElementById('dots');
+  const counter = document.getElementById('counter');
+  for (let i = 1; i <= total; i++) {
+    const dot = document.createElement('div');
+    dot.className = 'dot' + (i === 1 ? ' active' : '');
+    dot.onclick = () => goToSlide(i);
+    dotsContainer.appendChild(dot);
+  }
+  function goToSlide(n) {
+    const prev = document.querySelector('.slide.active');
+    const next = document.querySelector(`.slide[data-slide="${n}"]`);
+    if (prev) prev.classList.remove('active');
+    if (next) { next.classList.add('active'); animateSlide(next); }
+    current = n; updateNav();
+  }
+  function changeSlide(dir) { let next = current + dir; if (next < 1) next = total; if (next > total) next = 1; goToSlide(next); }
+  function updateNav() {
+    document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i + 1 === current));
+    counter.textContent = current + ' / ' + total;
+  }
+  document.addEventListener('keydown', (e) => { if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); changeSlide(1); } if (e.key === 'ArrowLeft') { e.preventDefault(); changeSlide(-1); } });
+  let touchStartX = 0;
+  document.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; });
+  document.addEventListener('touchend', (e) => { const diff = touchStartX - e.changedTouches[0].clientX; if (Math.abs(diff) > 50) changeSlide(diff > 0 ? 1 : -1); });
+
+  function animateSlide(slide) {
+    slide.querySelectorAll('.reveal').forEach((el, i) => {
+      el.style.transition = 'none';
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(16px)';
+      el.offsetHeight;
+      const delay = i * 0.07;
+      el.style.transition = `opacity 0.32s ease ${delay}s, transform 0.32s ease ${delay}s`;
+      el.style.opacity = '1';
+      el.style.transform = 'translateY(0)';
+    });
+  }
+
+  document.addEventListener('mousemove', (e) => {
+    const s = document.querySelector('.mouse-spotlight');
+    if (s) s.style.background = `radial-gradient(600px circle at ${e.clientX}px ${e.clientY}px, rgba(235,129,27,0.04), transparent 40%)`;
+  });
+
+  window.initParticles = function(canvas, options) {
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    canvas.width = canvas.offsetWidth; canvas.height = canvas.offsetHeight;
+    const count = options.count || 45;
+    let mx = -1000, my = -1000;
+    canvas.addEventListener('mousemove', (e) => { const r = canvas.getBoundingClientRect(); mx = e.clientX - r.left; my = e.clientY - r.top; });
+    canvas.addEventListener('mouseleave', () => { mx = -1000; my = -1000; });
+    const particles = Array.from({length: count}, () => ({ x: Math.random()*canvas.width, y: Math.random()*canvas.height, vx: (Math.random()-0.5)*0.3, vy: (Math.random()-0.5)*0.3, size: Math.random()*2+0.8, alpha: Math.random()*0.3+0.08 }));
+    (function animate() {
+      ctx.clearRect(0,0,canvas.width,canvas.height);
+      particles.forEach(p => {
+        const dx=p.x-mx,dy=p.y-my,dist=Math.sqrt(dx*dx+dy*dy);
+        if(dist<100){const f=(100-dist)/100*1.5;p.vx+=(dx/dist)*f*0.08;p.vy+=(dy/dist)*f*0.08;}
+        p.vx*=0.98;p.vy*=0.98;p.x+=p.vx;p.y+=p.vy;
+        if(p.x<0)p.x=canvas.width;if(p.x>canvas.width)p.x=0;
+        if(p.y<0)p.y=canvas.height;if(p.y>canvas.height)p.y=0;
+        ctx.beginPath();ctx.arc(p.x,p.y,p.size,0,Math.PI*2);
+        ctx.fillStyle=`rgba(235,129,27,${p.alpha})`;ctx.fill();
+      });
+      requestAnimationFrame(animate);
+    })();
+  };
+  document.querySelectorAll('.particle-canvas').forEach(c => window.initParticles(c, {count:45}));
+  try { animateSlide(document.querySelector('.slide.active')); } catch(e) {}
+</script>
+</body>
+</html>
