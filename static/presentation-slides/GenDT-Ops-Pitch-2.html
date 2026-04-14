@@ -249,7 +249,7 @@
       <div class="why-card reveal">
         <div class="icon">&#127754;</div>
         <h4>Diffusion Models</h4>
-        <p>Score-based diffusion models now capture IBR-driven grid dynamics and synthesise high-fidelity N-k stress scenarios &mdash; ideal for fast scenario generation directly from live SCADA snapshots.</p>
+        <p>Score-based diffusion models now capture IBR-driven grid dynamics and sample diverse near-future operating points &mdash; ideal for probabilistic state forecasting directly from live SCADA snapshots.</p>
       </div>
       <div class="why-card reveal">
         <div class="icon">&#128172;</div>
@@ -289,7 +289,7 @@
       <div class="flow-step">
         <div class="icon">&#127774;</div>
         <h4>Diffusion Model</h4>
-        <p>Generates N diverse IBR-aware stress scenarios</p>
+        <p>Samples diverse near-future grid states from live data</p>
       </div>
       <div class="flow-arrow">&#8594;</div>
       <div class="flow-step">
@@ -340,7 +340,7 @@
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0.85rem;margin-top:0.9rem;">
       <div class="challenge-card reveal" style="border-top:3px solid #EB811B;">
         <h4>&#127774; Generative State Model</h4>
-        <p>Score-based diffusion model captures IBR-dominated grid dynamics and synthesises high-fidelity N-k stress scenarios. Generates diverse stress scenarios for N-k DSA directly from live SCADA snapshots. Physics consistency layer ensures all trajectories are AC power-flow feasible.</p>
+        <p>Score-based diffusion model conditioned on live SCADA and NWP forecasts samples diverse near-future operating points capturing IBR-dominated grid dynamics. Physics consistency layer ensures all generated trajectories are AC power-flow feasible. Generated states seed the Digital Twin for N-k DSA.</p>
       </div>
       <div class="challenge-card reveal" style="border-top:3px solid #14B2A6;">
         <h4>&#128279; On-Demand Digital Twin</h4>
@@ -453,7 +453,7 @@
       <div class="novelty-card reveal">
         <div class="num">1</div>
         <h4>Diffusion + GNN + NWP for Low-Inertia Grids</h4>
-        <p>Score-based diffusion conditioned jointly on live SCADA and NWP ensembles, with topology-aware GNN denoising and medoid-selected Dynawo training data. Concurrent work addresses physics-constrained generation (Hoseinpour &amp; Dvorkin 2025) and LLM grid control (Zhang et al. 2025) separately; GenDT-Ops integrates these end-to-end.</p>
+        <p>Score-based diffusion conditioned jointly on live SCADA and NWP ensembles, with topology-aware GNN denoising and medoid-selected Dynawo training data. Concurrent work addresses physics-constrained generation and LLM grid control separately; GenDT-Ops integrates these capabilities end-to-end.</p>
       </div>
       <div class="novelty-card reveal">
         <div class="num">2</div>
@@ -463,12 +463,12 @@
       <div class="novelty-card reveal">
         <div class="num">3</div>
         <h4>Advisory RL with Verifiable Physics Oracle</h4>
-        <p>RL agent trained over the diffusion-sampled state distribution — not just the current snapshot — with a two-tier oracle (GNN surrogate + Dynawo). Positioned as advisory, not autonomous, consistent with the field’s proof-of-concept stage (Peere &amp; Ernst 2024).</p>
+        <p>RL agent trained over the diffusion-sampled state distribution — not just the current snapshot — with a two-tier oracle (GNN surrogate + Dynawo). Positioned as advisory, not autonomous, consistent with the field’s current proof-of-concept stage.</p>
       </div>
       <div class="novelty-card reveal">
         <div class="num">4</div>
         <h4>On-Demand DT Orchestration with Generative State Input</h4>
-        <p>DT instances created from diffusion-model-sampled operating points enable probabilistic DSA: “what fraction of the near-future state distribution is secure?” — a qualitative extension over persistent-mirror DT frameworks (Brosinsky et al. 2024, Zomerdijk et al. 2024).</p>
+        <p>DT instances created from diffusion-model-sampled operating points enable probabilistic DSA: “what fraction of the near-future state distribution is secure?” — a qualitative extension over persistent-mirror DT frameworks.</p>
       </div>
     </div>
   </div>
