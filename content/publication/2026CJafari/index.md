@@ -1,6 +1,6 @@
 +++
 title = "Simplified Simulation of Digital Controllers in Power System Dynamic Studies"
-date = "2026-06-01"
+date = "2026-04-01"
 authors = ["M. Jafari","G. Bureau","M. Chiaramello","A. Guironnet","P. Panciatici","P. Aristidou"]
 tags = ["differential-algebraic equations","digital controllers","simplified simulation","interpolation methods","discontinuities","pscc26"]
 publication_types = ["paper-conference"]

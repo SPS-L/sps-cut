@@ -1,6 +1,6 @@
 +++
 title = "Towards an Open-Source Real-Time Operator-Training Platform: Analysis of Computational Efficiency"
-date = "2026-06-01"
+date = "2026-04-01"
 authors = ["S. Panagi","T. Vermeulen","G. Joseph","P. Aristidou"]
 tags = ["Dynamic simulation", "Operator training", "Performance profiling", "Real-time simulation", "pscc26"]
 publication_types = ["paper-conference"]
