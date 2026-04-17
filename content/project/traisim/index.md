@@ -60,8 +60,6 @@ The physical simulator targets the full **RTE French Transmission Network** (63 
 - 7,075 branches · 335 synchronous generators · 3,039 dynamic loads · 839 load tap changers
 - Three model fidelity levels: **Model 1** (80 k variables, ✓ real-time), **Model 2** (210 k, △ marginal), **Model 3** (320 k, × requires optimisation)
 
-![TRAISIM Architecture](traisim_architecture.png)
-
 ---
 
 ### Benchmarking Results — Year 1 (Phase 1, Jan–Dec 2025)

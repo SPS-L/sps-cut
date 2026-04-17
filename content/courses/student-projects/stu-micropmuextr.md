@@ -44,4 +44,4 @@ In this project, you have to investigate different phasor extraction techniques 
 [^GitHubLIC]: [GitHub: Licensing a repository](https://help.github.com/articles/licensing-a-repository/)
 [^ZenDOI]: [Zenodo help](http://help.zenodo.org/)
 
-Please, before asking any questions, please check the [FAQ]({{< ref "stu-faq.md" >}}).
+Please, before asking any questions, please check the [FAQ]({{< ref "faq.md" >}}).
