@@ -8,3 +8,4 @@ assets/jsconfig.json
 
 # Local Netlify folder
 .netlify
+.hugo_build.lock
