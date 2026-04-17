@@ -1,0 +1,26 @@
++++
+title = "Towards an Open-Source Real-Time Operator-Training Platform: Analysis of Computational Efficiency"
+date = "2026-06-01"
+authors = ["S. Panagi","T. Vermeulen","G. Joseph","P. Aristidou"]
+tags = ["Dynamic simulation", "Operator training", "Performance profiling", "Real-time simulation", "pscc26"]
+publication_types = ["paper-conference"]
+publication = "24th Power Systems Computation Conference (PSCC 2026)"
+publication_short = ""
+abstract = "Real-time operator-training platforms require dynamic power-system simulation that executes within strict SCADA refresh-rate constraints while preserving high modeling fidelity. This challenge is particularly critical for Transmission System Operators, who must train personnel to manage large-scale transmission networks under realistic contingency scenarios and topology changes. This paper evaluates the real-time performance of the time-domain power system simulator underpinning an operator-training environment. Using Dynawo as the dynamic simulation engine, we quantify solver efficiency, stability, and scalability on commodity hardware under event-driven scenarios (loss of busbar section, line, and generator). A benchmarking protocol stabilizes the environment and profiles the time-domain integration window. Performance is assessed via step solving times and headroom relative to SCADA-rate synchronization. Results show faster-than-real-time execution in normal operation and for simplified substation-detail configurations, with brief spikes at disturbance instants linked to Jacobian restructuring. Increasing topology retention preserves operational fidelity but expands the number of discrete and continuous states, causing occasional real-time violations during events. We analyze hotspots and outline optimization levers, including solver tolerances, time-step control, sparse linear algebra, and event handling. The study demonstrates the feasibility of open-source dynamic simulation for operator training while identifying operational boundaries and practical paths to robust sustained real-time performance."
+summary = ""
+featured = false
+projects = ['traisim']
+slides = ""
+doi = ""
+url_code = ""
+url_dataset = ""
+url_poster = ""
+url_slides = ""
+url_source = ""
+url_video = ""
+math = true
+highlight = true
+[image]
+image = ""
+caption = ""
++++
