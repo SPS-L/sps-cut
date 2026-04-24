@@ -22,11 +22,12 @@ bio:
 
 # List each interest with a dash
 interests:
-- Power System Stability
 - Power System Dynamics
-- Active Transmission Network Control
-- Smart Grids
-- Artificial Intelligent
+- Real-Time Simulation
+- Contingency Analysis
+- Graph Neural Networks
+- Machine Learning for Power Systems
+- Adaptive Model Selection
 
 education:
   courses:
