@@ -57,4 +57,4 @@ user_groups:
 - PhD Candidates
 ---
 
-Stefanos Eleftheriadis received his B.Sc. in Electrical  Engineering from the Cyprus University of Technology in 2025. He currently works for Sustainable Power System Lab of Cyprus Universty of Technology. His primary research interests include smart grids, power system stability and artificial intelligence. His main area of research is control of power systems.
+Stefanos Eleftheriadis received his B.Sc. in Electrical Engineering from the Cyprus University of Technology in 2025. He is currently a PhD Candidate at the Sustainable Power Systems Lab of the Cyprus University of Technology. His research focuses on real-time power system simulation and contingency analysis, with emphasis on applying Graph Neural Networks (GNNs) for adaptive model selection in large-scale transmission networks.
