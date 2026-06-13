@@ -22,8 +22,6 @@ From **8–12 June 2026**, the **24th Power Systems Computation Conference ([PSC
 
 PSCC 2026 was **jointly hosted by the two public universities of Cyprus**, the [University of Cyprus (UCY)](https://www.ucy.ac.cy/) in Nicosia and the [Cyprus University of Technology (CUT)](https://www.cut.ac.cy/) in Limassol, with our lab director {{% mention "p.-aristidou" %}} and Prof. Mathaios Panteli (UCY) serving as **Local Organising Committee co-chairs**. Members of the SPS Lab and our colleagues at EAC and CUT formed the backbone of the LOC.
 
-![Petros Aristidou opening PSCC 2026 at the St. Raphael Resort](featured.jpg)
-
 ## A truly international gathering
 
 The numbers from the opening session tell the story:
@@ -46,10 +44,6 @@ The week followed the classic PSCC structure, with a few Cyprus-flavoured additi
 
 The social programme matched the science: a Welcome Cocktail at the venue on Tuesday, a guided **Mid-Conference Excursion** through Limassol's old town on Wednesday, and the **Gala Dinner** at the [Dafermou Winery](https://dafermouwinery.com/) in the Lefkara hills on Thursday, with a keynote dinner speech by **Frank Haeger (Gurobi)**.
 
-## Why Cyprus
-
-It is hard to imagine a better backdrop for PSCC. Cyprus operates **one of the most challenging power systems in Europe**: a small, isolated grid with **no interconnections**, that must integrate a growing share of distributed PV, storage, and electric mobility. In many ways it is **a microcosm of what every grid will look like in 20 years**, which made the venue and the science feed each other all week. About 320 days of sunshine a year and 28–33 °C in June did the rest.
-
 ## Thanks to our sponsors and the LOC
 
 PSCC 2026 would not have been possible without our sponsors and exhibitors:
@@ -58,7 +52,6 @@ PSCC 2026 would not have been possible without our sponsors and exhibitors:
 - **Silver:** [DIgSILENT](https://www.digsilent.de/)
 - **Bronze:** [Réseau de Transport d'Électricité (RTE)](https://www.rte-france.com/) and the [Electricity Authority of Cyprus (EAC)](https://www.eac.com.cy/)
 - **Exhibitors:** Artelys, Citizens in Power, FLEXCHESS
-- **Travel sponsor:** Lufthansa Group (Austrian, Lufthansa, SWISS, Brussels Airlines, Eurowings)
 
 And to the people who made the week run: the **Local Organising Committee** (Mathaios Panteli, UCY, co-chair; {{% mention "p.-aristidou" %}}, CUT, co-chair; {{% mention "p.-therapontos" %}}, EAC; {{% mention "c.-spanias" %}}, EAC; Neophytos Lophitis, CUT; Charalambos Charalambous, UCY), the **PSCC Executive Board** chaired by Anjan Bose, **President** Patrick Panciatici, **TPC Chair** Louis Wehenkel and **Vice-Chair** Florin Capitanescu, the 65+ TPC members across 20+ countries, the survey & tutorial authors, session chairs, student volunteers, and the **EasyConferences** staff.
 
