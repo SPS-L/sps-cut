@@ -10,12 +10,12 @@ authors:
 superuser: false
 
 # Role/position
-role: PhD Canditate @ UCY
+role: Research Associate @ CUT
 
 # Organizations/Affiliations
 organizations:
-- name: University of Cyprus
-  url: "https://www.ucy.ac.cy/"
+- name: Electricity Authority of Cyprus
+  url: "https://eac.com.cy"
 
 # Short bio (displayed in user profile at end of posts)
 bio: 
@@ -31,10 +31,13 @@ education:
   courses:
   - course: PhD in Electrical Engineering
     institution: University of Cyprus, Cyprus
-    year: Ongoing
-  - course: Master's in Energy and Suistainability with Electrical Power Engineering
+    year: 2026
+  - course: MSc in Energy and Sustainability with Electrical Power Engineering
     institution: University of Southampton, UK
     year: 2017
+  - course: BSc in Electrical Engineering
+    institution: University of Cyprus, Cyprus
+    year: 2016
 
 
 # Social/Academic Networking
@@ -53,7 +56,7 @@ email: ""
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- PhD Candidates
+- Research Associates
 ---
 
-He obtained his BSc degree in Electrical Engineering from the University of Cyprus in 2016 and his MSc degree in 2017 from the University of Southampton in Energy and Sustainability with Electrical Power Engineering. He is currently pursuing his Ph.D at the Department of Electrical and Computer Engineering of the University of Cyprus. He currently works for the Distribution System Operator (DSO) of the Electricity Authority of Cyprus (EAC).
+Phivos Therapontos obtained his BSc in Electrical Engineering from the University of Cyprus in 2016 and his MSc in Energy and Sustainability with Electrical Power Engineering from the University of Southampton in 2017. He received his PhD from the Department of Electrical and Computer Engineering, University of Cyprus, in 2026, under the co-supervision of Dr. {{% mention "p.-aristidou" %}}. His doctoral research focused on the equivalencing of active distribution networks, TSO-DSO coordination, and the integration of renewable energy sources in isolated, low-inertia power systems. He works for the Distribution System Operator (DSO) of the Electricity Authority of Cyprus (EAC) and remains a Research Associate at the Sustainable Power Systems Lab of the Cyprus University of Technology.
