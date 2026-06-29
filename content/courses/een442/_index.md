@@ -47,7 +47,7 @@ differential, digital relays)
 
 - Theory delivered through lectures (in class ≈ 24 hours)
 - Practical examples (online ≈ 8 hours)
-- Hardware laboratory work (in lab ≈ 12 hours)
+- Hardware laboratory work (≈ 12 hours, delivered as a [one-week Erasmus mobility visit to h_da Darmstadt, Germany](./lab/); pending university approval)
 - Software laboratory work (in lab ≈ 10 hours)
 - [Moodle Link](https://elearning.cut.ac.cy/course/view.php?id=775)
 
@@ -57,5 +57,5 @@ differential, digital relays)
 |-----------------|------------|
 | Mid-term exam | 20          |
 | Software lab exam | 20          |
-| Hardware lab report | 20         |
+| Hardware lab report (based on the [hardware lab week at h_da](./lab/)) | 20         |
 | Final exam      | 40         |

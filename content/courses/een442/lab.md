@@ -1,10 +1,10 @@
 ---
-title: Laboratory
-linktitle: Laboratory
+title: Hardware laboratory
+linktitle: Hardware laboratory
 toc: true
 type: docs
-date: "2021-01-05T00:00:00Z"
-draft: true
+date: "2026-06-29T00:00:00Z"
+draft: false
 menu:
   een442:
     parent: Learning resources
@@ -14,48 +14,54 @@ menu:
 weight: 5
 ---
 
-The labs take place in Ttofis building 2nd floor Energy Systems Lab.
+## Overview
 
-{{% callout warning %}}
-A mask is mandatory for the lab. No food or drinks are allowed. This is a 400V three-phase lab with rotating machines, any behaviour deemed to endanger your colleagues will lead to expulsion from the lab and a 0% mark for the lab component.
+The hardware laboratory of EEN442 is delivered through a **one-week Erasmus mobility visit to the [University of Applied Sciences Darmstadt (h_da)](https://h-da.de/)** in Germany, in collaboration with the Department of Electrical Engineering and Information Technology. The visit is planned for the autumn semester and is **pending final approval by the University**.
+
+During the week, students complete the hardware laboratory component of the course (approximately 12 hours) using the dedicated power systems teaching laboratories at h_da, which are not available on our campus. The activities are coordinated by [Prof. Petros Aristidou](/authors/p.-aristidou/) (CUT, course coordinator) together with the host academics at h_da.
+
+{{% callout note %}}
+Travel, accommodation, and a daily allowance are covered through the **Erasmus+ short-term student mobility** scheme. Detailed instructions on the application paperwork, deadlines, and reimbursement procedure are communicated through Moodle and during the lectures.
 {{% /callout %}}
 
-<!-- ## Part 1 (pre-restrictions)
+## Mandatory attendance
 
-### Lab groups
+Participation in the hardware laboratory week in Germany is **mandatory** for all students enrolled in EEN442. The hardware lab report (20% of the final grade) is based on the exercises completed during this week and cannot be reproduced on campus.
 
-|No | Student 1 | Student 2 | Student 3 |
-|-----------------|------------|------------|------------|
-|A1|12522 | 12068|12279 |
-|A2| 15809| 12396 | |
-|A3| 12013| 6817|6788 |
-|A4|15107 |12153 |12165 |
-|B1| 6898|11979 |12168 |
-|B2|6816 |6775 |6756 |
-|B3|13695 |6778 | 12415|
-|B4| 14669|14456 | 4770 |
+Exemptions are granted **only in two cases** and require **written documentation submitted to the course coordinator in advance**:
 
-### Timetable
+1. **Documented medical reasons** that prevent travel or participation, supported by an official medical certificate.
+2. **Serious family reasons** (for example, bereavement or care obligations for an immediate family member), supported by appropriate documentation.
 
-|Date | Groups| Lab exercise|
-|------------|------------|------------|
-|29/09/2020|A1+A2|Three-Phase AC Power Circuits (Ex. 1) and Power Factor Correction (Ex. 1)|
-|29/09/2020|A3+A4|ACDC Motors and Generators (Ex. 1.2-1.3, 4.1)|
-|06/10/2020|B1+B2|Three-Phase AC Power Circuits (Ex. 1) and Power Factor Correction (Ex. 1)|
-|06/10/2020|B3+B4|ACDC Motors and Generators (Ex. 1.2-1.3, 4.1)|
+Requests for exemption must be submitted in writing to the course coordinator as soon as the circumstances become known, and no later than the deadlines announced on Moodle. Students who are granted an exemption will be assigned an **equivalent individual assignment** to cover the learning outcomes of the hardware laboratory.
 
-## Part 2 (post-restrictions)
+Students who fail to attend without an approved exemption will receive **0% for the hardware lab component** of the course.
 
-### Lab groups
+## Indicative weekly schedule
 
-|No | Student 1 | Student 2 | Student 3 | Student 4 | Student 5 |
-|-----------------|------------|------------|------------|------------|------------|
-|G1| ΕΛΕΥΘΕΡΙΟΥ, Σ. | ΑΒΡΑΑΜ, Ν.| ΔΙΟΝΥΣΙΟΥ, Μ. | ΑΝΔΡΕΟΥ, Δ.| ΑΝΤΩΝΙΟΥ, Π.|
-|G2| ΑΝΤΩΝΙΑΔΗΣ, Α.| ΣΤΑΣΗ, Ε. |ΚΑΨΑΛΗΣ, Α. |ΖΑΧΑΡΙΑΣ, Σ. |ΙΑΚΩΒΟΥ, Ι. |
-|G3| ΣΟΦΟΚΛΕΟΥΣ, Μ.|ΜΙΧΑΗΛ, Α. | ΛΟΥΚΑ, Σ. |ΣΚΑΛΙΩΝΤΑΣ, Α. |------------|
-|G4| ΚΟΥΛΛΑΣ, Π. | ΠΑΝΤΕΛΗ, Σ. |ΠΑΝΑΡΕΤΟΥ, Γ. | ΦΕΙΔΙΟΥ, Β.|------------|
-|G5| ΧΡΙΣΤΟΥ, Π. |ΠΙΣΣΑΡΙΔΗΣ, Χ. |ΜΗΝΑ, Ι.|ΝΕΟΦΥΤΟΥ, Μ. | ΚΩΝΣΤΑΝΤΙΝΟΥ, ΤZ. Γ. |
+The exact programme is confirmed each year with the host institution. The schedule below is **indicative** and based on the most recent visit; details may change subject to host availability and final Erasmus approval.
 
-### Timetable
+| Day | Morning | Afternoon |
+|-----|---------|-----------|
+| Sunday | Travel and check-in | Free time in Darmstadt and welcome dinner |
+| Monday | Official welcome at h_da, preparation classes for the laboratory exercises | Guided walking tour through Darmstadt |
+| Tuesday | Introduction and safety briefing for the power system protection laboratory | Power system protection exercises |
+| Wednesday | Introduction and safety briefing for the high-voltage laboratory | High-voltage laboratory exercises (in two rotating groups) |
+| Thursday | Guided walking tour through Frankfurt | Power system SCADA laboratory |
+| Friday | Post-processing of the laboratory exercises and award of attendance certificates | Return travel to Cyprus |
 
-To be arranged with the lecturer between each group. -->
+## Host laboratories at h_da
+
+The visit covers three complementary teaching laboratories operated by the Department of Electrical Engineering and Information Technology at h_da:
+
+- **Power system protection laboratory**: hands-on experiments with overcurrent, distance, and differential protection on a reduced-scale transmission line model.
+- **High-voltage laboratory**: practical exposure to high-voltage testing, insulation behaviour, and safety procedures.
+- **Power system SCADA laboratory**: supervisory control and data acquisition exercises on a laboratory-scale power system, including monitoring, control, and visualisation.
+
+## Deliverables
+
+Each student must submit a **hardware laboratory report** covering the exercises completed during the week, following the template and deadlines distributed on Moodle. The report counts for **20% of the final grade** of EEN442.
+
+## Contact
+
+For any questions regarding the trip, the Erasmus paperwork, or the mandatory attendance policy, please contact [Prof. Petros Aristidou](mailto:petros.aristidou@cut.ac.cy).
