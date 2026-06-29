@@ -1,0 +1,12 @@
+@INPROCEEDINGS{2026CEleftheriadis,
+author = {Stefanos Eleftheriadis  and Mohammad Hashemnezhad  and Savvas Panagi  and Thibaut Vermeulen  and Geethu Joseph  and Petros Aristidou },
+title = { {Adaptive Reduced System Modeling for Real-time Dynamic Simulations}},
+journal = {Power System Dynamic Summit (PoSyDyS 2026)},
+volume = {},
+issue = {},
+pages = {},
+year = {2026},
+doi = {},
+URL = { },
+abstract = {Real-time dynamic simulation requires that each simulated time interval complete within the equivalent wall-clock CPU time, a strict budget that large power system models, with hundreds of thousands of state variables, cannot meet. Existing model reduction methods either sacrifice internal network detail, are valid only near a fixed operating point, or cannot adapt to changing contingencies online. This paper proposes an Adaptive Model Selection (AMS) framework that automatically reduces a full-detail dynamic model to a smaller, contingency-specific model by identifying which substations require full fidelity and simplifying the rest. Given the pre-disturbance operating state and event location, a pair of Graph Attention Network (GAT)-based ordinal predictors classify each component’s expected dynamic activity level; substations predicted to be inactive are simplified from node-breaker to bus-breaker representation. Applied to a realistic French transmission network model (over 6,000 buses), AMS reduces continuous and discrete model variables by approximately 60%, achieves up to 2.6x simulation speedup, and maintains trajectory errors below the numerical solver tolerance, demonstrating a practical route toward real-time operation of large-scale dynamic simulation.}
+}
