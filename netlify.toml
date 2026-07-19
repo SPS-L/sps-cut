@@ -38,7 +38,7 @@
 
 [[redirects]]
   from = "/jhub-nordic"
-  to = "https://jhub.sps-lab.org/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FSPS-L%2FIEEE-Nordic-Test-system&urlpath=lab%2Ftree%2FIEEE-Nordic-Test-system%2Fjupyterhub-tutorial%2FExecute.ipynb&branch=main"
+  to = "https://jhub.sps-lab.org/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FSPS-L%2Fstepss-IEEE-Nordic-Test-system&urlpath=lab%2Ftree%2Fstepss-IEEE-Nordic-Test-system%2Fjupyterhub-tutorial%2FExecute.ipynb&branch=main"
   status = 302
   
 [[redirects]]
@@ -53,5 +53,5 @@
 
 [[redirects]]
   from = "/jhub-5-bus"
-  to = "https://jhub.sps-lab.org/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FSPS-L%2F5_bus_test_system&urlpath=lab%2Ftree%2F5_bus_test_system%2FCase+2.ipynb&branch=main"
+  to = "https://jhub.sps-lab.org/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FSPS-L%2Fstepss-5_bus_test_system&urlpath=lab%2Ftree%2Fstepss-5_bus_test_system%2FCase+2.ipynb&branch=main"
   status = 302 
