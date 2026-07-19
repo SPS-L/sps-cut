@@ -18,7 +18,7 @@ image:
   focal_point: Smart
 ---
 
-**Project external link**: https://pyramses.sps-lab.org/
+**Project external link**: https://stepss.sps-lab.org/pyramses/
 
 ## Overview
 

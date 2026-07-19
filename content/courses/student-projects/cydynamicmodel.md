@@ -29,6 +29,6 @@ In this project, you have to translate the dynamic model of the Cyprus into the 
 - Background in electric power systems (minimum [Power Systems I]({{< ref "/courses/een320/_index.md">}})).
 
 [^lowinertia]: Milano, F., Dörfler, F., Hug, G., Hill, D. J., & Verbič, G. (2018, June). [Foundations and challenges of low-inertia systems](https://people.ee.ethz.ch/~floriand/docs/Articles/PSCC_2018_Survey.pdf). In 2018 power systems computation conference (PSCC) (pp. 1-25). IEEE.
-[^PyRAMSES]: [RAMSES: RApid Multithreaded Simulation of Electric power Systems](http://pyramses.sps-lab.org)
+[^PyRAMSES]: [RAMSES: RApid Multithreaded Simulation of Electric power Systems](https://stepss.sps-lab.org/pyramses/)
 
 Before asking any questions, please check the [FAQ]({{< relref "faq.md" >}}).
