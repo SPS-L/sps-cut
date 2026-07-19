@@ -53,5 +53,5 @@
 
 [[redirects]]
   from = "/jhub-5-bus"
-  to = "https://jhub.sps-lab.org/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FSPS-L%2Fstepss-5_bus_test_system&urlpath=lab%2Ftree%2Fstepss-5_bus_test_system%2FCase+2.ipynb&branch=main"
+  to = "https://jhub.sps-lab.org/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FSPS-L%2Fstepss-5-bus-test-system&urlpath=lab%2Ftree%2Fstepss-5-bus-test-system%2FCase+2.ipynb&branch=main"
   status = 302 
