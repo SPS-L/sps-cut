@@ -24,7 +24,7 @@ image:
 
 ### Latest files
 
-- [Download STEPSS.jar](./STEPSS.jar)
+- [Download STEPSS.jar](https://github.com/SPS-L/stepss-java-ui/raw/main/dist/stepss.jar)
 - [Video Guide for use of Codegen in STEPSS](https://youtu.be/q5EFn2pdkCg)
 - [Download Documentation](./stepss_doc.pdf)
 - [Download License](./licence.pdf)
