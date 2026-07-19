@@ -152,4 +152,4 @@ sudo tljh-config reload
 sudo tljh-config reload proxy
 ```
 
-This should resolve the dependencies for PyRAMSES. You can click [here](https://sps.cut.ac.cy/Nordic_JhubStart) to clone the [repository with the Nordic system](https://github.com/SPS-L/Nordic_JhubStart) to get started.
+This should resolve the dependencies for PyRAMSES. You can click [here](https://sps-lab.org/jhub-nordic) to clone the [repository with the Nordic system](https://github.com/SPS-L/IEEE-Nordic-Test-system) to get started.
