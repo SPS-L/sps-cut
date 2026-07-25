@@ -27,7 +27,8 @@ interests:
 - Contingency Analysis
 - Graph Neural Networks
 - Machine Learning for Power Systems
-- Adaptive Model Selection
+- Adaptive System Model Reduction
+- Dynamic behavior forecasting
 
 education:
   courses:
@@ -57,4 +58,4 @@ user_groups:
 - PhD Candidates
 ---
 
-Stefanos Eleftheriadis received his B.Sc. in Electrical Engineering from the Cyprus University of Technology in 2025. He is currently a PhD Candidate at the Sustainable Power Systems Lab of the Cyprus University of Technology. His research focuses on real-time power system simulation and contingency analysis, with emphasis on applying Graph Neural Networks (GNNs) for adaptive model selection in large-scale transmission networks.
+Stefanos Eleftheriadis received his B.Sc. in Electrical Engineering from the Cyprus University of Technology in 2025. He is currently a PhD Candidate at the Sustainable Power Systems Lab of the Cyprus University of Technology. His research focuses on real-time power system simulation and contingency analysis, with emphasis on applying Graph Neural Networks (GNNs) for adaptive system model reduction and dynamic response forecasting in large-scale transmission networks.
