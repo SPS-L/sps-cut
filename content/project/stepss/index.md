@@ -22,7 +22,7 @@ STEPSS is developed by [Dr. Petros Aristidou](https://sps-lab.org) (Cyprus Unive
 
 ### Core modules
 
-- **PFC / HELIOS** (Power Flow Computation) determines the initial operating point of a dynamic simulation using the Newton-Raphson method in polar coordinates, with optional transformer ratio adjustment. Two engines read the same data and give numerically equivalent results: the original Fortran PFC and [HELIOS](https://stepss.sps-lab.org/user-guide/pfc/), a modern C++ reimplementation which is the recommended engine going forward.
+- **[HELIOS](https://stepss.sps-lab.org/user-guide/pfc/)** performs the power flow computation that determines the initial operating point of a dynamic simulation, using the Newton-Raphson method in polar coordinates and with optional transformer ratio adjustment.
 - **RAMSES** (RApid Multithreaded Simulation of Electric power Systems) simulates the dynamic evolution of the power system in response to disturbances and actions specified by the user. It offers Backward Euler, Trapezoidal and BDF2 integration, and exploits multi-core processors through OpenMP parallelism.
 - **CODEGEN** (CODE GENerator) translates a model described by the user in a text file into its equivalent in Fortran 2003, ready to be compiled and linked into a user-defined version of RAMSES. Models can also be assembled graphically with [CODEGEN Studio](https://stepss.sps-lab.org/developer/cg-studio/).
 
