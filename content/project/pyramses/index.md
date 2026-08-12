@@ -18,7 +18,17 @@ image:
   focal_point: Smart
 ---
 
-**Project external link**: https://stepss.sps-lab.org/pyramses/
+{{% callout note %}}
+**PyRAMSES is now STEPSS for Python.** The package was renamed at version 3.58 and is
+published on PyPI as `stepss`: install it with `pip install stepss`. Existing code
+keeps working, since `pip install pyramses` now installs a shim that forwards to it.
+
+See the [STEPSS project page](/project/stepss/) and the
+[Python documentation](https://stepss.sps-lab.org/python/). This page is kept as a
+record of the project under its former name.
+{{% /callout %}}
+
+**Project external link**: https://stepss.sps-lab.org/python/
 
 ## Overview
 

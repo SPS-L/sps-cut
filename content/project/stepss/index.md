@@ -20,22 +20,33 @@ STEPSS (Static and Transient Electric Power Systems Simulation) is a power syste
 
 STEPSS is developed by [Dr. Petros Aristidou](https://sps-lab.org) (Cyprus University of Technology) and Dr. Thierry Van Cutsem (University of Liège), and is distributed under the STEPSS Academic Public License: free of charge for teaching, academic research and personal non-profit use.
 
+### Two editions
+
+STEPSS names the platform, not any one program. It comes in two editions, which drive the same engines and read the same data files, so a case built in one runs unchanged in the other.
+
+- **STEPSS for Java** is a desktop application, distributed as a single `stepss.jar`. Load a network, run static and dynamic simulations, plot live curves and build your own models, without touching a command line. [Download it](https://github.com/SPS-L/stepss-java-ui/releases/latest/download/stepss.jar).
+- **STEPSS for Python** is the `stepss` package: `pip install stepss`. Script simulations, sweep parameters and work directly with NumPy, SciPy and Jupyter. It bundles the RAMSES and Helios engines, so it needs no separate solver installation. [Documentation](https://stepss.sps-lab.org/python/).
+
+The Java edition additionally carries CODEGEN, so building your own device models is done there.
+
+Up to version 3.58 the Python edition was published as `pyramses`; installing that name still works and forwards to `stepss`.
+
 ### Core modules
 
-- **[HELIOS](https://stepss.sps-lab.org/user-guide/pfc/)** performs the power flow computation that determines the initial operating point of a dynamic simulation, using the Newton-Raphson method in polar coordinates and with optional transformer ratio adjustment.
+- **[HELIOS](https://stepss.sps-lab.org/user-guide/power-flow/)** performs the power flow computation that determines the initial operating point of a dynamic simulation, using the Newton-Raphson method in polar coordinates and with optional transformer ratio adjustment.
 - **RAMSES** (RApid Multithreaded Simulation of Electric power Systems) simulates the dynamic evolution of the power system in response to disturbances and actions specified by the user. It offers Backward Euler, Trapezoidal and BDF2 integration, and exploits multi-core processors through OpenMP parallelism.
 - **CODEGEN** (CODE GENerator) translates a model described by the user in a text file into its equivalent in Fortran 2003, ready to be compiled and linked into a user-defined version of RAMSES. Models can also be assembled graphically with [CODEGEN Studio](https://stepss.sps-lab.org/developer/cg-studio/).
 
 ### Also included
 
-- **[PyRAMSES](https://stepss.sps-lab.org/pyramses/installation/)** is the Python interface to the simulation engine, for scripting simulations, extracting results and working with the scientific Python ecosystem. Install it with `pip install pyramses`.
-- **[URAMSES](https://stepss.sps-lab.org/developer/uramses/)** lets you compile your own Fortran device models and link them against a pre-compiled RAMSES library, as a shared library for PyRAMSES or a standalone executable.
+- **[URAMSES](https://stepss.sps-lab.org/developer/uramses/)** lets you compile your own Fortran device models and link them against a pre-compiled RAMSES library, as a shared library for the Python edition or a standalone executable.
 - **DYNGRAPH** extracts and plots time-series curves from the binary observable files produced by RAMSES.
 - **[Eigenanalysis](https://stepss.sps-lab.org/user-guide/eigenanalysis/)** is a MATLAB-based tool for small-signal stability studies, computing eigenvalues and eigenvectors of power system models extracted from RAMSES.
 
 ### Downloads and documentation
 
-- [Download STEPSS](https://github.com/SPS-L/stepss-java-ui/releases/latest/download/stepss.jar) — always the latest release; see the [installation guide](https://stepss.sps-lab.org/getting-started/installation/) for the Java prerequisites
+- [Download STEPSS for Java](https://github.com/SPS-L/stepss-java-ui/releases/latest/download/stepss.jar) — always the latest release; see the [installation guide](https://stepss.sps-lab.org/getting-started/installation/) for the Java prerequisites
+- STEPSS for Python: `pip install stepss` — see the [Python installation guide](https://stepss.sps-lab.org/python/installation/) for the system libraries Linux and macOS need
 - [Online documentation](https://stepss.sps-lab.org/) and [Quick Start](https://stepss.sps-lab.org/getting-started/quickstart/)
 - [Complete User Guide (PDF)](https://stepss.sps-lab.org/stepss_docs.pdf)
 - [Video guide for the use of CODEGEN in STEPSS](https://youtu.be/q5EFn2pdkCg)
