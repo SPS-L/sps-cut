@@ -18,18 +18,18 @@ image:
 
 STEPSS (Static and Transient Electric Power Systems Simulation) is a power system simulation platform for static and dynamic studies of electrical grids. It computes the power flow of a network and simulates its dynamic response to disturbances under the phasor (RMS) approximation.
 
-STEPSS is developed by [Dr. Petros Aristidou](https://sps-lab.org) (Cyprus University of Technology) and Dr. Thierry Van Cutsem (University of Liège), and is distributed under the STEPSS Academic Public License: free of charge for teaching, academic research and personal non-profit use.
+STEPSS is developed by [Dr. Petros Aristidou](https://sps-lab.org/author/petros-aristidou/) (Cyprus University of Technology) and [Dr. Thierry Van Cutsem](https://thierryvancutsem.github.io/home/), consultant to transmission system operators and formerly Research Director at the Fund for Scientific Research (FNRS) and Adjunct Professor at the University of Liège.
+
+It is free of charge for teaching, academic research and personal non-profit use. The platform is not under one single licence, because each component carries its own: the two user interfaces are Apache 2.0, the RAMSES solver is the property of the University of Liège and free for non-commercial use only, and Helios and CODEGEN are under Academic Public Licences. The free version of RAMSES is limited to 1000 buses and two cores. The [licence terms](https://stepss.sps-lab.org/getting-started/license/) set out what applies to what, and how to ask about commercial use.
 
 ### Two editions
 
 STEPSS names the platform, not any one program. It comes in two editions, which drive the same engines and read the same data files, so a case built in one runs unchanged in the other.
 
-- **STEPSS for Java** is a desktop application, distributed as a single `stepss.jar`. Load a network, run static and dynamic simulations, plot live curves and build your own models, without touching a command line. [Download it](https://github.com/SPS-L/stepss-java-ui/releases/latest/download/stepss.jar).
-- **STEPSS for Python** is the `stepss` package: `pip install stepss`. Script simulations, sweep parameters and work directly with NumPy, SciPy and Jupyter. It bundles the RAMSES and Helios engines, so it needs no separate solver installation. [Documentation](https://stepss.sps-lab.org/python/).
+- **STEPSS GUI** is a desktop application. Install it from a Windows, macOS or Linux installer that needs nothing else on the machine, from the APT repository on Debian and Ubuntu, from the Scoop bucket on Windows, or run `stepss.jar` on a Java runtime you already have. Load a network, run static and dynamic simulations, plot live curves and build your own models, without touching a command line. [Install it](https://stepss.sps-lab.org/getting-started/installation/), or [open one of the bundled test systems](https://stepss.sps-lab.org/gui/first-run/) and simulate it without preparing any data of your own.
+- **STEPSS in Python** is the `stepss` package: `pip install stepss`. Script simulations, sweep parameters and work directly with NumPy, SciPy and Jupyter. It bundles the RAMSES and Helios engines, so it needs no separate solver installation. [Documentation](https://stepss.sps-lab.org/python/).
 
-The Java edition additionally carries CODEGEN, so building your own device models is done there.
-
-Up to version 3.58 the Python edition was published as `pyramses`; installing that name still works and forwards to `stepss`.
+STEPSS GUI additionally carries CODEGEN, so building your own device models is done there.
 
 ### Core modules
 
@@ -41,12 +41,12 @@ Up to version 3.58 the Python edition was published as `pyramses`; installing th
 
 - **[URAMSES](https://stepss.sps-lab.org/developer/uramses/)** lets you compile your own Fortran device models and link them against a pre-compiled RAMSES library, as a shared library for the Python edition or a standalone executable.
 - **DYNGRAPH** extracts and plots time-series curves from the binary observable files produced by RAMSES.
-- **[Eigenanalysis](https://stepss.sps-lab.org/user-guide/eigenanalysis/)** is a MATLAB-based tool for small-signal stability studies, computing eigenvalues and eigenvectors of power system models extracted from RAMSES.
+- **[Small-signal stability analysis](https://stepss.sps-lab.org/user-guide/eigenanalysis/)** is performed by RAMSES itself, computing the eigenvalues, eigenvectors and participation factors of the system at a chosen instant of a run. It is driven from the Analysis tab of STEPSS GUI, or from a disturbance record, and needs no other software.
 
 ### Downloads and documentation
 
-- [Download STEPSS for Java](https://github.com/SPS-L/stepss-java-ui/releases/latest/download/stepss.jar) — always the latest release; see the [installation guide](https://stepss.sps-lab.org/getting-started/installation/) for the Java prerequisites
-- STEPSS for Python: `pip install stepss` — see the [Python installation guide](https://stepss.sps-lab.org/python/installation/) for the system libraries Linux and macOS need
+- [Install STEPSS GUI](https://stepss.sps-lab.org/getting-started/installation/): installers for Windows, macOS and Linux, the APT repository on Debian and Ubuntu, the Scoop bucket on Windows, and `stepss.jar`
+- STEPSS in Python: `pip install stepss`, and see the [Python installation guide](https://stepss.sps-lab.org/python/installation/) for the system libraries Linux and macOS need
 - [Online documentation](https://stepss.sps-lab.org/) and [Quick Start](https://stepss.sps-lab.org/getting-started/quickstart/)
 - [Complete User Guide (PDF)](https://stepss.sps-lab.org/stepss_docs.pdf)
 - [Video guide for the use of CODEGEN in STEPSS](https://youtu.be/q5EFn2pdkCg)

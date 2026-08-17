@@ -101,55 +101,33 @@ Once JupyterHub is up and running, install the necessary packages for your cours
 - **Pandas**: For energy analytics.
 - **Pyomo, IPOPT, CoinCBC**: For optimization problems.
 - **Pandapower**: For power-flow and short-circuit analysis.
-- **PyPSA, PyRAMSES**: For power system dynamics.
+- **PyPSA, STEPSS**: For power system dynamics.
 
 Install these packages as follows:
 
 ```bash
 sudo -E conda install -c conda-forge scipy numpy pandas numba matplotlib pyomo ipopt glpk coincbc pypsa networkx cartopy
 sudo -E pip install pandapower
-sudo -E conda install -c apetros pyramses
+sudo -E pip install stepss
 ```
 
-### Setting Up PyRAMSES
+### Setting Up STEPSS
 
-[PyRAMSES](https://pyramses.netlify.app/) requires Intel Redistributable libraries ([more information](https://www.intel.com/content/www/us/en/docs/oneapi/installation-guide-linux/2023-0/apt.html)). To install these, add the Intel repository and update:
-
-```bash
-# download the key to system keyring
-wget -O- https://apt.repos.intel.com/intel-gpg-keys/GPG-PUB-KEY-INTEL-SW-PRODUCTS.PUB |
-gpg --dearmor | sudo tee /usr/share/keyrings/oneapi-archive-keyring.gpg > /dev/null
-
-# add signed entry to apt sources and configure the APT client to use Intel repository:
-echo "deb [signed-by=/usr/share/keyrings/oneapi-archive-keyring.gpg] https://apt.repos.intel.com/oneapi all main" | sudo tee /etc/apt/sources.list.d/oneAPI.list
-```
-
-Then update and install:
+[STEPSS in Python](https://stepss.sps-lab.org/python/) bundles the RAMSES and Helios
+engines, so there is no separate solver to install. On Linux it links against three
+system runtime libraries, which are not always present on a server image:
 
 ```bash
 sudo apt-get update
-sudo apt-get install intel-oneapi-runtime-libs
+sudo apt-get install libopenblas0 libgfortran5 libgomp1
 ```
 
-Create a Python file to add the runtime library paths for all JupyterHub users:
+These provide the BLAS/LAPACK routines the solver uses, the GNU Fortran runtime, and
+the OpenMP runtime for multi-core execution. Nothing needs adding to
+`LD_LIBRARY_PATH`: they install into the standard system paths, so JupyterHub picks
+them up with no spawner configuration. If `import stepss` fails with a
+shared-library error, these are what is missing. See the
+[Python installation guide](https://stepss.sps-lab.org/python/installation/) for the
+macOS equivalents and for pinning a particular engine version.
 
-```bash
-sudo nano /opt/tljh/config/jupyterhub_config.d/path.py
-```
-
-Add the following:
-
-```python
-c.Spawner.environment = {
-    'LD_LIBRARY_PATH': '/opt/intel/oneapi/redist/lib'
-}
-```
-
-Save and reload the hub:
-
-```bash
-sudo tljh-config reload
-sudo tljh-config reload proxy
-```
-
-This should resolve the dependencies for PyRAMSES. You can click [here](https://sps-lab.org/jhub-nordic) to clone the [repository with the Nordic system](https://github.com/SPS-L/IEEE-Nordic-Test-system) to get started.
+To get started, click [here](https://sps-lab.org/jhub-nordic) to clone the [repository with the Nordic system](https://github.com/SPS-L/stepss-IEEE-Nordic-Test-system).

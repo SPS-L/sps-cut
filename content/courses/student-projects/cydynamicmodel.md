@@ -13,12 +13,12 @@ The high penetration of RES in Modern [Smart Grids](https://en.wikipedia.org/wik
 
 ## Objectives
 
-In this project, you have to translate the dynamic model of the Cyprus into the dynamic simulator PyRAMSES[^PyRAMSES]. Following, an analysis will be performed using different future energy scenarios and solutions will be provided to enhance the stability of the Cyprus system.
+In this project, you have to translate the dynamic model of the Cyprus into the dynamic simulator STEPSS[^STEPSS]. Following, an analysis will be performed using different future energy scenarios and solutions will be provided to enhance the stability of the Cyprus system.
 
 ## Deliverables
 
 - A complete literature review on the problems of future low-inertia grids, like the Cyprus system[^lowinertia].
-- A Python-based translator from DigSilent PowerFactory format to PyRAMSES[^PyRAMSES]. This translator will be used to generate the Cyprus dynamic system in PyRAMSES format.
+- A Python-based translator from DigSilent PowerFactory format to STEPSS[^STEPSS]. This translator will be used to generate the Cyprus dynamic system in STEPSS format.
 - An analysis of the system behaviour (transient behaviour to disturbances, load variation, etc.)
 - Proposed solutions based on storage or artificial inertia.
 
@@ -29,6 +29,6 @@ In this project, you have to translate the dynamic model of the Cyprus into the 
 - Background in electric power systems (minimum [Power Systems I]({{< ref "/courses/een320/_index.md">}})).
 
 [^lowinertia]: Milano, F., Dörfler, F., Hug, G., Hill, D. J., & Verbič, G. (2018, June). [Foundations and challenges of low-inertia systems](https://people.ee.ethz.ch/~floriand/docs/Articles/PSCC_2018_Survey.pdf). In 2018 power systems computation conference (PSCC) (pp. 1-25). IEEE.
-[^PyRAMSES]: [RAMSES: RApid Multithreaded Simulation of Electric power Systems](https://stepss.sps-lab.org/pyramses/)
+[^STEPSS]: [STEPSS in Python](https://stepss.sps-lab.org/python/)
 
 Before asking any questions, please check the [FAQ]({{< relref "faq.md" >}}).

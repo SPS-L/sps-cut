@@ -17,7 +17,7 @@ As this procedure is extremely time consuming, cluster computing is frequently u
 
 ## Objectives
 
-In this project, you have to develop a security assessment platform that exploits parallel computing on the university cluster computer to check N-1 conditions in a realistic Smart Grid. You will use the dynamic simulator PyRAMSES[^PyRAMSES] to perform the actual simulations and get the results through a Python-based interface. The platform should be implemented in Python.
+In this project, you have to develop a security assessment platform that exploits parallel computing on the university cluster computer to check N-1 conditions in a realistic Smart Grid. You will use the dynamic simulator STEPSS[^STEPSS] to perform the actual simulations and get the results through a Python-based interface. The platform should be implemented in Python.
 
 {{< figure src="../img/HPC_decorative_photos.png" title="The ARC HPC systems [Source: ARC]" >}}
 
@@ -34,6 +34,6 @@ In this project, you have to develop a security assessment platform that exploit
 - Knowledge in Linux is desirable (or willingness to learn fast).
 - Good background in electric power systems (minimum [Power Systems I]({{< ref "/courses/een320/_index.md">}})).
 
-[^PyRAMSES]: [PyRAMSES: Python-based RApid Multithreaded Simulation of Electric power Systems](https://pyramses.paristidou.info/)
+[^STEPSS]: [STEPSS in Python](https://stepss.sps-lab.org/python/)
 
 Before asking any questions, please check the [FAQ]({{< relref "faq.md" >}}).

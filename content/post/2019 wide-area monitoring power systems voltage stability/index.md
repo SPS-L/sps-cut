@@ -10,7 +10,10 @@ categories: ['blog']
 date: 2019-09-30T14:26:29+02:00
 lastmod: 2019-09-30T14:26:29+02:00
 featured: false
-draft: false
+# Retired. Documents 2019 work under the package's former name, which is no
+# longer used anywhere on this site. Left unmodified as a record rather than
+# rewritten, and unpublished rather than deleted.
+draft: true
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.

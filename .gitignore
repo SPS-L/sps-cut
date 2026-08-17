@@ -9,3 +9,8 @@ assets/jsconfig.json
 # Local Netlify folder
 .netlify
 .hugo_build.lock
+
+# local Claude Code / MCP configuration (never commit: a committed .claude
+# gitlink once broke recursive cloning of the SPS-L umbrella repo)
+.claude/
+.mcp.json

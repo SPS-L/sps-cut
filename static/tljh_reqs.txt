@@ -1,6 +1,6 @@
 mkl==2024.2.2
 pandapower
-pyramses
+stepss
 pyomo
 ipopt
 glpk
