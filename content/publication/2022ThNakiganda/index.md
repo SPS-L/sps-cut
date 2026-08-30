@@ -1,5 +1,5 @@
 +++
-title = "Resilient Operation of Microgrids: Optimisation Models for Steady-State and Transiently Secure Operation "
+title = "Resilient Operation of Microgrids: Optimisation Models for Steady-State and Transiently Secure Operation"
 date = "2022-06-01"
 authors = ["A. Nakiganda"]
 tags = ["Convex Optimization", "Distributionally Robust Optimisation", "Frequency Security", "Investment Planning", "Low-Inertia Systems", "Microgrids", "Operational Planning", "Resilience", "Stochastic Optimisation", "Unscheduled Islanding", "Voltage Security"]
