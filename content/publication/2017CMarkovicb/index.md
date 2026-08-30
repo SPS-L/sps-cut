@@ -11,6 +11,7 @@ summary = ""
 featured = false
 projects = []
 slides = ""
+doi = "10.1109/ptc.2017.7981147"
 url_code = ""
 url_dataset = ""
 url_poster = ""
@@ -26,3 +27,7 @@ award = "true"
 +++
 
 colorbluetextbf(High Quality Paper award)colorblack
+
+{{< rawhtml >}}
+<a href="https://plu.mx/plum/a/?doi=10.1109/ptc.2017.7981147" class="plumx-details"></a>
+{{< /rawhtml >}}

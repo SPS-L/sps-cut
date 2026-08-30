@@ -11,6 +11,7 @@ summary = ""
 featured = false
 projects = ["cresum-hyres","low-inertia","pyeplan","tresies"]
 slides = ""
+doi = "10.1049/icp.2021.1240"
 url_code = ""
 url_dataset = ""
 url_poster = ""
@@ -24,3 +25,6 @@ image = ""
 caption = ""
 +++
 
+{{< rawhtml >}}
+<a href="https://plu.mx/plum/a/?doi=10.1049/icp.2021.1240" class="plumx-details"></a>
+{{< /rawhtml >}}

@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Hugo static site for the Sustainable Power Systems Laboratory (SPS Lab) at Cyprus University of Technology. Uses Hugo Blox Builder (Academic theme) with Go modules. Deployed on Netlify; also has a GitHub Pages workflow.
+Hugo static site for the Sustainable Power Systems Laboratory (SPS Lab) at Cyprus University of Technology. Uses Hugo Blox Builder (Academic theme) with Go modules. Deployed on Netlify.
 
 ## Development Commands
 
@@ -23,7 +23,7 @@ hugo mod get
 hugo mod clean
 ```
 
-Hugo version: **0.135.0** (extended). Go 1.15+. Node 22 (for Netlify build environment).
+Hugo version: Netlify pins **0.135.0** (extended) via `HUGO_VERSION` in `netlify.toml`. Go 1.15+. Node 22 (for Netlify build environment). Local toolchains may be newer — check `hugo version` and keep the Netlify pin authoritative.
 
 ## Architecture
 
@@ -31,7 +31,7 @@ Hugo version: **0.135.0** (extended). Go 1.15+. Node 22 (for Netlify build envir
 
 All content lives under `content/` as Markdown with YAML frontmatter:
 
-- **`publication/`** — 129+ entries. Named `YearTypeAuthor/` (e.g. `2024JTherapontos/`). Auto-generated from `publications.bib` via GitHub Actions workflow (`import-publications.yml`) using `academic import`. Do not hand-edit generated files; update the `.bib` instead.
+- **`publication/`** — 134 entries. Named `YearTypeAuthor/` (e.g. `2024JTherapontos/`). Each folder holds `index.md` (TOML frontmatter), `cite.bib`, and usually a PDF named after the folder. Maintained by hand — see "How to Add a New Publication".
 - **`authors/`** — Team member profiles. Each is a directory with `_index.md` and `avatar.jpg`. Author slugs use format `first-initial.-lastname` (e.g. `p.-aristidou`).
 - **`project/`** — Research projects. Filtered on homepage by tags: `themes`, `Current projects`, `Software tools`, `Past projects`.
 - **`post/`** — Blog posts.
@@ -63,16 +63,17 @@ Three Hugo Blox modules: `blox-bootstrap/v5`, `blox-plugin-decap-cms`, `blox-plu
 
 ## Deployment
 
-- **Netlify** (primary): Auto-deploys on push to `main`. Config in `netlify.toml`. Build: `hugo --gc --minify -b $URL`.
-- **GitHub Pages** (secondary): Workflow in `.github/workflows/publish.yaml`, triggered on push to `main`.
+- **Netlify** (only target): Auto-deploys on push to `main`. Config in `netlify.toml`. Build: `hugo --gc --minify -b $URL`.
 - **Redirects**: Defined in `netlify.toml` — `/jhub`, `/meet`, `/open-positions`, and several JupyterHub notebook links.
+- There are no GitHub Actions workflows in this repo (`.github/` holds only `FUNDING.yml`).
 
 ## Publications Workflow
 
-1. Edit `publications.bib` at the repo root.
-2. Push to `main` (or trigger manually).
-3. GitHub Actions runs `academic import publications.bib content/publication/ --compact` (Python 3.12, `academic==0.10.0`).
-4. A PR is auto-created on branch `hugoblox-import-publications` for review.
+Publications are maintained **by hand**, one folder per entry under `content/publication/`. There is no root `publications.bib` and no `academic import` automation — earlier revisions of this file described such a pipeline, but it does not exist. See "How to Add a New Publication" for the current procedure.
+
+Two helper scripts live alongside the entries:
+- `content/publication/add_plumx.py` — appends the PlumX `rawhtml` block to entries that have a DOI.
+- `content/publication/change_pub_types.py` — bulk-rewrites `publication_types` values.
 
 ## Key Conventions
 
@@ -89,17 +90,18 @@ Three Hugo Blox modules: `blox-bootstrap/v5`, `blox-plugin-decap-cms`, `blox-plu
 
 ### How to Add a New Publication
 
-Publications are auto-generated from BibTeX. **Do not create publication folders by hand.**
+1. **Create the folder** `content/publication/YearTypeAuthor/` (e.g. `2026CHashemnezhad/`). Append `B`, `C`, … when year+type+author collide (e.g. `2026CHashemnezhadB`).
+2. **Write `index.md`** with TOML (`+++`) frontmatter — see the reference below.
+3. **Write `cite.bib`** in the same folder. The **cite key must equal the folder name**, and its title, authors, year, venue and DOI must match `index.md`.
+4. **Add the PDF** named exactly after the folder: `YearTypeAuthor.pdf` (case included). Hugo auto-detects it and renders the PDF button — a mismatched name silently drops that button.
+5. Optionally add `projects = ["project-slug"]` (slug must match a folder under `content/project/`, lowercase) and a `featured.png`.
 
-1. **Add the BibTeX entry** to `publications.bib` at the repo root.
-2. **Push to `main`** (or trigger the workflow manually).
-3. GitHub Actions (`import-publications.yml`) runs `academic import publications.bib content/publication/ --compact` and opens a PR on branch `hugoblox-import-publications`.
-4. **Review and merge** the PR. Each publication gets a folder named `YearTypeAuthor/` containing `index.md` and `cite.bib`.
-
-**After the import**, you can optionally enhance the generated folder:
-- Add a PDF named `YearTypeAuthor.pdf` (e.g. `2025CHashemnezhad.pdf`).
-- Link to projects by adding `projects: ['project-slug']` in the frontmatter.
-- Add a `featured.png` image.
+**Consistency rules** (these have been a recurring source of drift):
+- Folder name, cite key, and PDF filename must all agree.
+- `index.md` uses initials (`"P. Aristidou"`); `cite.bib` uses full names (`Aristidou, Petros`). Surnames must match.
+- The folder's type code must agree with `publication_types` (see mapping below).
+- Files must be UTF-8. Put rendered characters (`Québec`, `–`) in `index.md` and LaTeX escapes (`{Hydro-Qu\'ebec}`) in `cite.bib`.
+- If the entry has a DOI, set `doi = "..."` in `index.md` **and** append the PlumX block (see below).
 
 **Publication type codes and frontmatter mapping:**
 

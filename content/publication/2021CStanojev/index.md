@@ -11,6 +11,7 @@ summary = ""
 featured = false
 projects = ["low-inertia"]
 slides = ""
+doi = "10.1109/powertech46648.2021.9494764"
 url_code = ""
 url_dataset = ""
 url_poster = ""
@@ -24,3 +25,6 @@ image = ""
 caption = ""
 +++
 
+{{< rawhtml >}}
+<a href="https://plu.mx/plum/a/?doi=10.1109/powertech46648.2021.9494764" class="plumx-details"></a>
+{{< /rawhtml >}}

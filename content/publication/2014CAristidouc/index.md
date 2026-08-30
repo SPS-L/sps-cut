@@ -11,6 +11,7 @@ summary = ""
 featured = false
 projects = ["mod-sim","stepss"]
 slides = ""
+doi = "10.1109/pesgm.2014.6938851"
 url_code = ""
 url_dataset = ""
 url_poster = ""
@@ -24,3 +25,6 @@ image = ""
 caption = ""
 +++
 
+{{< rawhtml >}}
+<a href="https://plu.mx/plum/a/?doi=10.1109/pesgm.2014.6938851" class="plumx-details"></a>
+{{< /rawhtml >}}

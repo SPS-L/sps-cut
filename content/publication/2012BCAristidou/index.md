@@ -11,6 +11,7 @@ summary = ""
 featured = false
 projects = ["mod-sim"]
 slides = ""
+doi = "10.1007/978-3-319-05789-7_69"
 url_code = ""
 url_dataset = ""
 url_poster = ""
@@ -24,3 +25,6 @@ image = ""
 caption = ""
 +++
 
+{{< rawhtml >}}
+<a href="https://plu.mx/plum/a/?doi=10.1007/978-3-319-05789-7_69" class="plumx-details"></a>
+{{< /rawhtml >}}

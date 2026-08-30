@@ -11,6 +11,7 @@ summary = ""
 featured = false
 projects = ["low-inertia"]
 slides = ""
+doi = "10.1109/pesgm.2018.8586114"
 url_code = ""
 url_dataset = ""
 url_poster = ""
@@ -26,3 +27,7 @@ award = "true"
 +++
 
 colorbluetextbf(Best Conference Papers on Power System Stability, Control, and Protection)colorblack
+
+{{< rawhtml >}}
+<a href="https://plu.mx/plum/a/?doi=10.1109/pesgm.2018.8586114" class="plumx-details"></a>
+{{< /rawhtml >}}

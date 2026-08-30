@@ -11,6 +11,7 @@ summary = ""
 featured = false
 projects = []
 slides = ""
+doi = "10.1109/isgt-asia.2018.8467920"
 url_code = ""
 url_dataset = ""
 url_poster = ""
@@ -24,3 +25,6 @@ image = ""
 caption = ""
 +++
 
+{{< rawhtml >}}
+<a href="https://plu.mx/plum/a/?doi=10.1109/isgt-asia.2018.8467920" class="plumx-details"></a>
+{{< /rawhtml >}}

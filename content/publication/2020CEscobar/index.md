@@ -11,6 +11,7 @@ summary = ""
 featured = false
 projects = ["mod-sim","stepss"]
 slides = ""
+doi = ""
 url_code = ""
 url_dataset = ""
 url_poster = ""
@@ -23,4 +24,3 @@ highlight = true
 image = ""
 caption = ""
 +++
-

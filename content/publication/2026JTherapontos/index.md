@@ -26,6 +26,6 @@ caption = ""
 +++
 
 {{< rawhtml >}}
-<a href="https://plu.mx/plum/a/?doi=10.1016/j.seja.2025.100097" class="plumx-details"></a>
+<a href="https://plu.mx/plum/a/?doi=10.1016/j.segan.2026.102124" class="plumx-details"></a>
 {{< /rawhtml >}}
 

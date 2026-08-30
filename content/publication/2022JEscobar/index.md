@@ -1,7 +1,7 @@
 +++
 title = "Coordination of DERs and Flexible Loads to Support Transmission Voltages in Emergency Conditions"
 date = "2022-07-01"
-authors = ["F. Escobar","J. M. Viquez","J. Garcia","P. Aristidou","G. Valverde"]
+authors = ["F. Escobar","J. M. Víquez","J. García","P. Aristidou","G. Valverde"]
 tags = ["ancillary services","demand response","distributed energy resources","flexible loads","transmission and distribution","tso-dso coordination","voltage stability","ieeetse"]
 publication_types = ["article-journal"]
 publication = "_IEEE Transactions on Sustainable Energy_"

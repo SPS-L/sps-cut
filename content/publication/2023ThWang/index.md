@@ -1,0 +1,26 @@
++++
+title = "Economic Operation of Virtual Power Plants with Electric Vehicle Charging Stations"
+date = "2023-01-01"
+authors = ["H. Wang"]
+tags = ["virtual power plant","electric vehicle charging","energy management","distributed energy resources","stochastic optimisation"]
+publication_types = ["thesis"]
+publication = "_PhD thesis at University of Leeds_"
+publication_short = ""
+abstract = "Energy management of distributed energy resources (DERs) is challenging due to the distributed and uncertain nature of DERs. To optimally operate DERs and trade their energy as well as energy flexibility for financial benefits, energy management for virtual power plants (VPPs) and electric vehicle (EV) charging stations are investigated in this thesis. The research in this thesis can be summarized into three parts. Part I provides a VPP operation strategy in the electricity market environment. Part II proposes an EV charging station operation strategy considering EV user incentives. Part III develops a coordinated VPP and EV charging station operation framework based on the methods proposed in parts I and II. (1) Economic VPP operation In this part, an optimal VPP operation regime is proposed considering multiple electricity markets and multiple uncertainties. The proposed operation regime handles both the VPP market bidding and unit dispatching problems. To deal with uncertainties, a hybrid stochastic minimax regret optimization model is proposed. To reduce the conservativeness of the formulated optimization models, a self-adaptive algorithm is proposed. (2) Economic EV charging station operation In this part, an EV charging station operation strategy with an EV user incentive program is proposed to improve the EV charging station economic benefit. To maximize the long-term profit of the EV charging station, an optimal incentive price selection model is developed. In the solution methodology, a problem linearization method is first proposed. Then, a distributed solution methodology is developed based on the proposed adaptive alternating-direction-methodof-multipliers algorithm. (3) Economic VPP operation considering EV charging stations i In this part, a multi-stakeholder VPP-charging station system is investigated. Firstly, a coordinated operation framework is proposed for the VPP-charging station system to maximize the total benefit of the system. Then, an improved EV user incentive program is proposed for acquiring EV energy flexibility. At the cost allocation stage, a τ -value cost allocation method is developed. To alleviate the computation burden in calculating the τ -values, a τ -values estimation approach is proposed. The effectiveness of the energy management methods proposed in this thesis is verified through theoretical analysis and numerical simulations. Significant results suggest high potential for practical application in certain scenarios."
+summary = ""
+featured = false
+projects = ["vpp-ems"]
+slides = ""
+doi = ""
+url_code = ""
+url_dataset = ""
+url_poster = ""
+url_slides = ""
+url_source = "https://etheses.whiterose.ac.uk/32854/"
+url_video = ""
+math = true
+highlight = true
+[image]
+image = ""
+caption = ""
++++

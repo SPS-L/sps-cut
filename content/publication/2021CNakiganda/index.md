@@ -11,6 +11,7 @@ summary = ""
 featured = false
 projects = ["cresum-hyres","low-inertia","pyeplan"]
 slides = ""
+doi = "10.1109/powertech46648.2021.9494823"
 url_code = ""
 url_dataset = ""
 url_poster = ""
@@ -26,3 +27,7 @@ award = "true"
 +++
 
 colorbluetextbf(High Quality Paper Award)colorblack
+
+{{< rawhtml >}}
+<a href="https://plu.mx/plum/a/?doi=10.1109/powertech46648.2021.9494823" class="plumx-details"></a>
+{{< /rawhtml >}}
