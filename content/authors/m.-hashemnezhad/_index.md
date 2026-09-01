@@ -2,6 +2,9 @@
 # Display name
 title: Mohammad Hashemnezhad
 
+# Short link: https://sps-lab.org/mhashemnezhad (rendered into public/_redirects by the Netlify plugin)
+aliases: ["/mhashemnezhad"]
+
 # Username (this should match the folder name and the name on publications)
 authors:
 - "m.-hashemnezhad"

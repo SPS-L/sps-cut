@@ -2,6 +2,9 @@
 # Display name
 title: Petros Aristidou
 
+# Short link: https://sps-lab.org/paristidou (rendered into public/_redirects by the Netlify plugin)
+aliases: ["/paristidou"]
+
 # Username (this should match the folder name and the name on publications)
 authors:
 - "P. Aristidou"

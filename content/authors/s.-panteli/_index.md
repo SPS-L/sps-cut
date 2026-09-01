@@ -2,6 +2,9 @@
 # Display name
 title: Sokratis Panteli
 
+# Short link: https://sps-lab.org/spanteli (rendered into public/_redirects by the Netlify plugin)
+aliases: ["/spanteli"]
+
 # Username (this should match the folder name and the name on publications)
 authors:
 - "S. Panteli"

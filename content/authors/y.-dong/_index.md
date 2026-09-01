@@ -2,6 +2,9 @@
 # Display name
 title: Yazhou Dong
 
+# Short link: https://sps-lab.org/ydong (rendered into public/_redirects by the Netlify plugin)
+aliases: ["/ydong"]
+
 # Username (this should match the folder name and the name on publications)
 authors:
 - "Y. Dong"

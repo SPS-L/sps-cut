@@ -2,6 +2,9 @@
 # Display name
 title: Stefanos Eleftheriadis
 
+# Short link: https://sps-lab.org/seleftheriadis (rendered into public/_redirects by the Netlify plugin)
+aliases: ["/seleftheriadis"]
+
 # Username (this should match the folder name and the name on publications)
 authors:
 - "s.-eleftheriadis"

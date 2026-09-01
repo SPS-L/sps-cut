@@ -2,6 +2,9 @@
 # Display name
 title: Agnes Marjorie Nakiganda
 
+# Short link: https://sps-lab.org/anakiganda (rendered into public/_redirects by the Netlify plugin)
+aliases: ["/anakiganda"]
+
 # Username (this should match the folder name and the name on publications)
 authors:
 - "A. Nakiganda"

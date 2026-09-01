@@ -2,6 +2,9 @@
 # Display name
 title: Chrysovalantis Spanias
 
+# Short link: https://sps-lab.org/cspanias (rendered into public/_redirects by the Netlify plugin)
+aliases: ["/cspanias"]
+
 # Username (this should match the folder name and the name on publications)
 authors:
 - "C. Spanias"

@@ -2,6 +2,9 @@
 # Display name
 title: Sultan Alghamdi
 
+# Short link: https://sps-lab.org/salghamdi (rendered into public/_redirects by the Netlify plugin)
+aliases: ["/salghamdi"]
+
 # Username (this should match the folder name and the name on publications)
 authors:
 - "S. Alghamdi"

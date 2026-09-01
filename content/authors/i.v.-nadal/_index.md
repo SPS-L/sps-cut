@@ -2,6 +2,9 @@
 # Display name
 title: Ignasi Ventura Nadal
 
+# Short link: https://sps-lab.org/ivnadal (rendered into public/_redirects by the Netlify plugin)
+aliases: ["/ivnadal"]
+
 # Username (this should match the folder name and the name on publications)
 authors:
 - "I. V. Nadal"

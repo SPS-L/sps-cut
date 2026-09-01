@@ -2,6 +2,9 @@
 # Display name
 title: Ifeoma Onugha
 
+# Short link: https://sps-lab.org/ionugha (rendered into public/_redirects by the Netlify plugin)
+aliases: ["/ionugha"]
+
 # Username (this should match the folder name and the name on publications)
 authors:
 - "I. Onugha"

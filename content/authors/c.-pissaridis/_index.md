@@ -2,6 +2,9 @@
 # Display name
 title: Charalambos Pissaridis
 
+# Short link: https://sps-lab.org/cpissaridis (rendered into public/_redirects by the Netlify plugin)
+aliases: ["/cpissaridis"]
+
 # Username (this should match the folder name and the name on publications)
 authors:
 - "C. Pissaridis"

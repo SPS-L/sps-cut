@@ -2,6 +2,9 @@
 # Display name
 title: Savvas Panagi
 
+# Short link: https://sps-lab.org/spanagi (rendered into public/_redirects by the Netlify plugin)
+aliases: ["/spanagi"]
+
 # Username (this should match the folder name and the name on publications)
 authors:
 - "s.-panagi"

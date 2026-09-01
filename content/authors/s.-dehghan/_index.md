@@ -2,6 +2,9 @@
 # Display name
 title: Shahab Dehghan
 
+# Short link: https://sps-lab.org/sdehghan (rendered into public/_redirects by the Netlify plugin)
+aliases: ["/sdehghan"]
+
 # Username (this should match the folder name and the name on publications)
 authors:
 - "S. Dehghan"

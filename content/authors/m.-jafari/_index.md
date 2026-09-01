@@ -2,6 +2,9 @@
 # Display name
 title: Mehran Jafari
 
+# Short link: https://sps-lab.org/mjafari (rendered into public/_redirects by the Netlify plugin)
+aliases: ["/mjafari"]
+
 # Username (this should match the folder name and the name on publications)
 authors:
 - "M. Jafari"

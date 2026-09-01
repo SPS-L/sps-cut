@@ -264,8 +264,10 @@ Optional bio paragraph in Markdown.
 ```
 
 3. **Add `avatar.jpg`** (or `.png`) — profile photo in the same folder.
-4. **User groups** control the team page grouping: `Principal Investigator`, `PostDocs`, `PhD Candidates`, `Research Associates`, `Alumni`.
-5. **To move a member to alumni**, change `user_groups` to `["Alumni"]`.
+4. **Add a short link** with `aliases: ["/flastname"]` in the frontmatter (first initial(s) + surname, i.e. the folder name without dots/hyphens: `p.-aristidou` → `/paristidou`, `i.v.-nadal` → `/ivnadal`). The `blox-plugin-netlify` module renders every page alias into `public/_redirects` (301, see `outputs.home` in `hugo.yaml`), so `https://sps-lab.org/paristidou` → `/author/petros-aristidou/` with no change to `netlify.toml`. Check the slug does not collide with an existing top-level path or a `netlify.toml` redirect.
+5. **Add `qr.png`** — a QR code for the short link (generate with `content/authors/make_qr.py`, which reads the alias from `_index.md`).
+6. **User groups** control the team page grouping: `Principal Investigator`, `PostDocs`, `PhD Candidates`, `Research Associates`, `Alumni`.
+7. **To move a member to alumni**, change `user_groups` to `["Alumni"]`.
 
 ### How to Add Course Materials
 

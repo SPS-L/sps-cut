@@ -2,6 +2,9 @@
 # Display name
 title: Phivos Therapontos
 
+# Short link: https://sps-lab.org/ptherapontos (rendered into public/_redirects by the Netlify plugin)
+aliases: ["/ptherapontos"]
+
 # Username (this should match the folder name and the name on publications)
 authors:
 - "P. Therapontos"

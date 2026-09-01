@@ -2,6 +2,9 @@
 # Display name
 title: Stavros Karagiannopoulos
 
+# Short link: https://sps-lab.org/skaragiannopoulos (rendered into public/_redirects by the Netlify plugin)
+aliases: ["/skaragiannopoulos"]
+
 # Username (this should match the folder name and the name on publications)
 authors:
 - "S. Karagiannopoulos"

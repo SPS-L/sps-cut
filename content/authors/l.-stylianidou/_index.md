@@ -2,6 +2,9 @@
 # Display name
 title: Louiza Stylianidou
 
+# Short link: https://sps-lab.org/lstylianidou (rendered into public/_redirects by the Netlify plugin)
+aliases: ["/lstylianidou"]
+
 # Username (this should match the folder name and the name on publications)
 authors:
 - "l.-stylianidou"

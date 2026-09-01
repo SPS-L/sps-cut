@@ -2,6 +2,9 @@
 # Display name
 title: Ambreen Khurram
 
+# Short link: https://sps-lab.org/akhurram (rendered into public/_redirects by the Netlify plugin)
+aliases: ["/akhurram"]
+
 # Username (this should match the folder name and the name on publications)
 authors:
 - "A. Khurram"
