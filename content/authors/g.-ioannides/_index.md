@@ -13,7 +13,7 @@ authors:
 superuser: false
 
 # Role/position
-role: Research Assistant (BSc thesis student)
+role: Research Assistant @ CUT
 
 # Organizations/Affiliations
 organizations:
