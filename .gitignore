@@ -14,3 +14,6 @@ assets/jsconfig.json
 # gitlink once broke recursive cloning of the SPS-L umbrella repo)
 .claude/
 .mcp.json
+
+# Python bytecode from helper scripts under content/
+__pycache__/

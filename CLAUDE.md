@@ -264,10 +264,39 @@ Optional bio paragraph in Markdown.
 ```
 
 3. **Add `avatar.jpg`** (or `.png`) — profile photo in the same folder.
-4. **Add a short link** with `aliases: ["/flastname"]` in the frontmatter (first initial(s) + surname, i.e. the folder name without dots/hyphens: `p.-aristidou` → `/paristidou`, `i.v.-nadal` → `/ivnadal`). The `blox-plugin-netlify` module renders every page alias into `public/_redirects` (301, see `outputs.home` in `hugo.yaml`), so `https://sps-lab.org/paristidou` → `/author/petros-aristidou/` with no change to `netlify.toml`. Check the slug does not collide with an existing top-level path or a `netlify.toml` redirect.
-5. **Add `qr.png`** — a QR code for the short link (generate with `content/authors/make_qr.py`, which reads the alias from `_index.md`).
-6. **User groups** control the team page grouping: `Principal Investigator`, `PostDocs`, `PhD Candidates`, `Research Associates`, `Alumni`.
-7. **To move a member to alumni**, change `user_groups` to `["Alumni"]`.
+4. **Add the short link and QR code** — follow "How to Add a Short Link and QR Code" below (two script commands; do not hand-write the alias).
+5. **User groups** control the team page grouping: `Principal Investigator`, `PostDocs`, `PhD Candidates`, `Research Associates`, `Alumni`.
+6. **To move a member to alumni**, change `user_groups` to `["Alumni"]`. Keep the alias and `qr.png` — printed QR codes stay valid.
+
+### How to Add a Short Link and QR Code
+
+Every team member has a short profile URL, `https://sps-lab.org/flastname` → `/author/full-name/`, plus a matching `qr.png`. Both are derived from the author folder name by **one rule**, so never invent a slug by hand:
+
+> **Rule:** short link = folder name with dots and hyphens removed, lowercase.
+> `p.-aristidou` → `/paristidou` · `i.v.-nadal` → `/ivnadal` · `s.-karagiannopoulos` → `/skaragiannopoulos`
+
+**Procedure** (after creating `content/authors/<folder>/_index.md`; needs `pip install "qrcode[pil]"`):
+
+```bash
+python3 content/authors/make_qr.py --add-alias   # 1. inserts `aliases: ["/flastname"]` after `title:` where missing
+python3 content/authors/make_qr.py               # 2. writes qr.png for every member that lacks one
+python3 content/authors/make_qr.py --check       # 3. must print "check: OK"
+hugo --gc --minify && grep '^/flastname ' public/_redirects   # 4. confirm the redirect line exists
+```
+
+Then commit `_index.md` + `qr.png` together.
+
+**How it works** — there is nothing to add to `netlify.toml`. `config/_default/hugo.yaml` sets `outputs.home: [..., redirects]` and `disableAliases: true`; the `blox-plugin-netlify` module renders every page alias into `public/_redirects` (`/paristidou /author/petros-aristidou/`, status 301). Netlify applies `_redirects` first, then the hand-written rules in `netlify.toml`. The target comes from the page's `RelPermalink`, so it stays correct if a display name changes.
+
+**Uniformity rules** (enforced by `--check`):
+- The alias must equal the rule applied to the folder name — one alias per member, `aliases: ["/flastname"]` placed directly after `title:` (this is what `--add-alias` writes).
+- No two members share an alias, and no `netlify.toml` `from = "..."` path equals an alias (a hand-written rule would shadow the profile).
+- Every member with an alias has a `qr.png`.
+- Never rename a folder or alias once published — the short link and printed QR codes are permanent identifiers. If a folder must be renamed, keep the old alias as a second entry in `aliases` so old links still resolve.
+
+**QR appearance** is fixed by the script so all codes match: 1200 px wide, navy modules `#1B365D`, teal lab icon `#007FA3` (`assets/media/icon.png`) on a white centre plate, name in Open Sans Bold and `sps-lab.org/flastname` below, error correction H. To change the look for everyone, edit the constants at the top of `make_qr.py` and regenerate all codes with `--force` — do not edit individual PNGs.
+
+`qr.png` is a page resource, so it is also served at `https://sps-lab.org/author/<full-name>/qr.png`.
 
 ### How to Add Course Materials
 
