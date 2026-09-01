@@ -45,15 +45,18 @@ WHITE = (255, 255, 255)
 FONT_BOLD = "/usr/share/fonts/truetype/open-sans/OpenSans-Bold.ttf"
 FONT_REG = "/usr/share/fonts/truetype/open-sans/OpenSans-Regular.ttf"
 
-# Output geometry (px)
-W = 1200                  # canvas width
+# Output geometry (px). Margins are trimmed: the code's own 4-module quiet zone
+# (required for scanning) is the only white border; the text sits right under
+# the last row of modules.
+W = 1000                  # canvas width = QR width (quiet zone included)
 QR_W = 1000               # rendered QR width (incl. quiet zone)
-PAD_TOP = 60
-GAP_NAME = 40             # QR -> name
-GAP_URL = 12              # name -> url
-PAD_BOTTOM = 70
-NAME_PT = 78
-URL_PT = 48
+PAD_TOP = 0
+GAP_NAME = 28             # last dark module row -> name
+GAP_URL = 10              # name -> url
+PAD_BOTTOM = 36
+TEXT_MAX_W = W - 40       # long names shrink to fit this width
+NAME_PT = 72
+URL_PT = 44
 ICON_FRAC = 0.22          # icon plate width as fraction of the QR width (<30% keeps ECC-H happy)
 
 
@@ -120,17 +123,19 @@ def make_qr(title: str, alias: str, out: Path) -> None:
 
     # Text block
     tmp = ImageDraw.Draw(Image.new("RGB", (1, 1)))
-    name_font = fit_text(tmp, title, FONT_BOLD, NAME_PT, W - 120)
+    name_font = fit_text(tmp, title, FONT_BOLD, NAME_PT, TEXT_MAX_W)
     url_text = SITE_SHORT + alias
-    url_font = fit_text(tmp, url_text, FONT_REG, URL_PT, W - 120)
+    url_font = fit_text(tmp, url_text, FONT_REG, URL_PT, TEXT_MAX_W)
     name_h = name_font.getbbox(title)[3]
     url_h = url_font.getbbox(url_text)[3]
 
-    H = PAD_TOP + QR_W + GAP_NAME + name_h + GAP_URL + url_h + PAD_BOTTOM
+    quiet = qr.border * qr.box_size              # white quiet zone baked into the code image
+    code_top = PAD_TOP + (QR_W - side) // 2
+    y = code_top + side - quiet + GAP_NAME       # first text baseline area, just under the modules
+    H = y + name_h + GAP_URL + url_h + PAD_BOTTOM
     canvas = Image.new("RGB", (W, H), WHITE)
-    canvas.paste(code, ((W - side) // 2, PAD_TOP + (QR_W - side) // 2))
+    canvas.paste(code, ((W - side) // 2, code_top))
     d = ImageDraw.Draw(canvas)
-    y = PAD_TOP + QR_W + GAP_NAME
     d.text((W // 2, y), title, font=name_font, fill=NAVY, anchor="ma")
     y += name_h + GAP_URL
     d.text((W // 2, y), url_text, font=url_font, fill=TEAL, anchor="ma")
