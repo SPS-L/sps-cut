@@ -270,7 +270,7 @@ Optional bio paragraph in Markdown.
 
 ### How to Add a Short Link and QR Code
 
-Every team member has a short profile URL, `https://sps-lab.org/flastname` → `/author/full-name/`, plus a matching `qr.png`. Both are derived from the author folder name by **one rule**, so never invent a slug by hand:
+Every team member has a short profile URL, `https://sps-lab.org/flastname` → `/author/full-name/`, a matching `qr.png`, and a QR button (`fas` `qrcode` icon) in their `social:` list next to the other profile icons. All three are derived from the author folder name and title by **one rule**, so never invent a slug or hand-write the button:
 
 > **Rule:** short link = folder name with dots and hyphens removed, lowercase.
 > `p.-aristidou` → `/paristidou` · `i.v.-nadal` → `/ivnadal` · `s.-karagiannopoulos` → `/skaragiannopoulos`
@@ -278,7 +278,7 @@ Every team member has a short profile URL, `https://sps-lab.org/flastname` → `
 **Procedure** (after creating `content/authors/<folder>/_index.md`; needs `pip install "qrcode[pil]"`):
 
 ```bash
-python3 content/authors/make_qr.py --add-alias   # 1. inserts `aliases: ["/flastname"]` after `title:` where missing
+python3 content/authors/make_qr.py --add-alias   # 1. inserts `aliases: ["/flastname"]` after `title:` and the QR button in `social:` where missing
 python3 content/authors/make_qr.py               # 2. writes qr.png for every member that lacks one
 python3 content/authors/make_qr.py --check       # 3. must print "check: OK"
 hugo --gc --minify && grep '^/flastname ' public/_redirects   # 4. confirm the redirect line exists
@@ -291,7 +291,7 @@ Then commit `_index.md` + `qr.png` together.
 **Uniformity rules** (enforced by `--check`):
 - The alias must equal the rule applied to the folder name — one alias per member, `aliases: ["/flastname"]` placed directly after `title:` (this is what `--add-alias` writes).
 - No two members share an alias, and no `netlify.toml` `from = "..."` path equals an alias (a hand-written rule would shadow the profile).
-- Every member with an alias has a `qr.png`.
+- Every member with an alias has a `qr.png` and a `social:` entry `icon: qrcode` / `icon_pack: fas` linking to `/author/<title-slug>/qr.png` (absolute path — Blox passes relative links through `relLangURL`, which would map a bare `qr.png` to the site root). The slug is the title lower-cased with non-alphanumerics collapsed to `-`, exactly as Hugo builds the author URL.
 - Never rename a folder or alias once published — the short link and printed QR codes are permanent identifiers. If a folder must be renamed, keep the old alias as a second entry in `aliases` so old links still resolve.
 
 **QR appearance** is fixed by the script so all codes match: 1200 px wide, navy modules `#1B365D`, teal lab icon `#007FA3` (`assets/media/icon.png`) on a white centre plate, name in Open Sans Bold and `sps-lab.org/flastname` below, error correction H. To change the look for everyone, edit the constants at the top of `make_qr.py` and regenerate all codes with `--force` — do not edit individual PNGs.
