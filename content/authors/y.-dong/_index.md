@@ -54,7 +54,7 @@ email: ""
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- Research Assistants
+- Alumni
 ---
 
 Yazhou Dong is a researcher at the Center for Integrated Spintronic Devices, Hangzhou Dianzi University, and a Research Assistant at the Sustainable Power Systems Lab of the Cyprus University of Technology. His work focuses on the design of tunneling magnetoresistance (TMR) current sensors and magnetic ring structures for high-precision, interference-resistant current measurement in smart power systems and new energy applications.
