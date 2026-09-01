@@ -13,8 +13,7 @@ authors:
 superuser: false
 
 # Role/position
-role: Research Assistant @ CUT
-
+role: Research Assistant @ CUT (Alumni)
 # Organizations/Affiliations
 organizations:
 - name: Hangzhou Dianzi University
