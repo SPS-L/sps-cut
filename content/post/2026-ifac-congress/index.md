@@ -63,7 +63,7 @@ The proposed approach first determines a cost-effective day-ahead operating sche
 
 Results on a realistic Cyprus low-voltage distribution network demonstrate that network constraints become increasingly important at high heat-pump penetration, particularly for upward flexibility, highlighting the difference between the theoretical flexibility potential and the flexibility that can actually be securely activated by the power system.
 
-![jpg](jpg1.png)
+![jpg](jpg1.jpeg)
 
 
 
