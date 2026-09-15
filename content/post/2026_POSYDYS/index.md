@@ -29,7 +29,7 @@ image:
 projects: ["traisim", "DENSE"]
 ---
 
-The Sustainable Power Systems Lab participated in the first [Power System Dynamics Summit (PoSyDyS)](https://posydys.tugraz.at/), held from 9–11 September 2026 in Graz, Austria. Organised by Graz University of Technology, PoSyDyS is an international gathering of the power-system dynamics community, bringing together researchers, engineers, and students from around the world to exchange recent scientific developments and emerging ideas in modelling, simulation, and stability of modern power systems.
+The Sustainable Power Systems Lab participated in the 1st [Power System Dynamics Summit (PoSyDyS)](https://posydys.tugraz.at/), held from 9–11 September 2026 in Graz, Austria. Organised by Graz University of Technology, PoSyDyS is an international gathering of the power-system dynamics community, bringing together researchers, engineers, and students from around the world to exchange recent scientific developments and emerging ideas in modelling, simulation, and stability of modern power systems.
 
 SPS-Lab was represented by PhD researchers Stefanos Eleftheriadis and Mohammad Hashemnezhad, who presented their latest research on real-time dynamic simulation and post-fault voltage recovery in active distribution networks.
 
