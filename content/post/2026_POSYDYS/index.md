@@ -41,7 +41,7 @@ The work, carried out within the TRAISIM and DENSE projects, proposes an Adaptiv
 
 Applied to a realistic French transmission network model with more than 6,000 buses, AMS reduces continuous and discrete model variables by approximately 60%, achieves up to 2.6× simulation speedup, and keeps trajectory errors below the numerical solver tolerance.
 
-![jpg](jpg2.jpeg)
+![jpg](jpg1.jpeg)
 
 ## MARL-Based Supervisory Reactive Power Control for Post-Fault Voltage Recovery — Mohammad Hashemnezhad
 
@@ -51,10 +51,10 @@ The work, carried out within the DENSE – Dependable Smart Energy Systems MSCA 
 
 The approach is evaluated with RMS dynamic simulations on a modified IEEE 33-bus distribution network over 101 operating and fault scenarios. Compared with droop and fixed-parameter PI baselines, the learned policies mainly improve transient recovery behaviour, particularly in terms of settling time, post-fault time within the admissible voltage band, and voltage-violation area. Fast MARL provides the strongest recovery-oriented performance, while Balanced MARL offers a more conservative response with lower voltage peaks and reduced peak reactive-power injection.
 
-![jpg](jpg1.jpeg)
+![jpg](jpg2.jpeg)
 
 ## Best Paper Award
 
 We are pleased to share that the paper “Adaptive Reduced System Modeling for Real-time Dynamic Simulations” received the Best Paper Award of the first PoSyDyS.
 
-![jpg](best-paper-award.jpeg)
+![jpg](jpg3.jpeg)
