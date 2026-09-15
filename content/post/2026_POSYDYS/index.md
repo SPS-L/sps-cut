@@ -1,7 +1,7 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "SPS-Lab at the first PoSyDyS Graz 2026"
+title: "SPS-Lab at the 1st PoSyDyS Graz 2026"
 subtitle: ""
 summary: ""
 authors: ["s.-eleftheriadis"]
@@ -17,7 +17,7 @@ draft: false
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
 image:
   caption: ""
-  focal_point: ""
+  focal_point: "Smart"
   preview_only: true
 
 # Projects (optional).
@@ -33,7 +33,7 @@ The Sustainable Power Systems Lab participated in the 1st [Power System Dynamics
 
 SPS-Lab was represented by PhD researchers Stefanos Eleftheriadis and Mohammad Hashemnezhad, who presented their latest research on real-time dynamic simulation and post-fault voltage recovery in active distribution networks.
 
-## Adaptive Reduced System Modeling for Real-time Dynamic Simulations — Stefanos Eleftheriadis (TRAISIM, DENSE)
+## Adaptive Reduced System Modeling for Real-time Dynamic Simulations — Stefanos Eleftheriadis
 
 Stefanos Eleftheriadis presented the paper “Adaptive Reduced System Modeling for Real-time Dynamic Simulations,” co-authored with Mohammad Hashemnezhad, Savvas Panagi, Thibaut Vermeulen, Geethu Joseph, and Petros Aristidou.
 
