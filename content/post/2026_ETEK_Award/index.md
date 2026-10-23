@@ -11,7 +11,7 @@ featured: true
 draft: false
 
 image:
-  caption: "Awardees of the ETEK Engineering Award 2026 at ETEK's review ceremony, Nicosia, 6 October 2026"
+  caption: "Petros Aristidou receiving the ETEK Engineering Award 2026 at ETEK's review ceremony, Nicosia, 6 October 2026"
   focal_point: "Center"
   preview_only: false
 
@@ -19,8 +19,6 @@ projects: []
 ---
 
 Our lab director {{% mention "p.-aristidou" %}} received the **ETEK Engineering Award 2026** from the [Cyprus Scientific and Technical Chamber (ETEK)](https://www.etek.org.cy/). The award was presented on **6 October 2026** in Nicosia, at ETEK's review ceremony for the 2023–2026 term.
-
-By decision of ETEK's Evaluation Committee, the 2026 award was shared equally between Petros Aristidou and the **KIOS4WaterLoss** initiative of the KIOS Water Intelligent Systems group at the University of Cyprus.
 
 ## Why the award
 
@@ -36,8 +34,6 @@ Read the announcement on the [ETEK website](https://www.etek.org.cy/en/news-deta
 ## Βραβείο Μηχανικής ΕΤΕΚ 2026
 
 Ο Διευθυντής του εργαστηρίου μας, Δρ Πέτρος Αριστείδου, Επίκουρος Καθηγητής στο Τμήμα Ηλεκτρολόγων Μηχανικών και Μηχανικών Ηλεκτρονικών Υπολογιστών και Πληροφορικής του Τεχνολογικού Πανεπιστημίου Κύπρου, τιμήθηκε με το **Βραβείο Μηχανικής ΕΤΕΚ 2026** από το [Επιστημονικό Τεχνικό Επιμελητήριο Κύπρου (ΕΤΕΚ)](https://www.etek.org.cy/el/). Το βραβείο απονεμήθηκε στις **6 Οκτωβρίου 2026** στη Λευκωσία, κατά την Τελετή Απολογισμού του ΕΤΕΚ για την τριετία 2023–2026.
-
-Με απόφαση της Επιτροπής Αξιολόγησης, το βραβείο του 2026 μοιράστηκε εξίσου μεταξύ του Πέτρου Αριστείδου και της δράσης **KIOS4WaterLoss** της Ομάδας Ευφυών Συστημάτων Νερού του Κέντρου «ΚΟΙΟΣ» του Πανεπιστημίου Κύπρου.
 
 Το βραβείο αναγνωρίζει την ερευνητική μας εργασία για την **ασφαλή ένταξη περισσότερων ανανεώσιμων πηγών ενέργειας στο ηλεκτρικό σύστημα της Κύπρου**, ένα απομονωμένο σύστημα χωρίς διασυνδέσεις με γειτονικά δίκτυα. Η εργασία αυτή αναπτύσσει μεθόδους και εργαλεία που επιτρέπουν μεγαλύτερη αξιοποίηση των ανανεώσιμων πηγών, διατηρώντας την ευστάθεια και την αξιοπιστία του συστήματος. Από το 2018 έως το 2026 πραγματοποιήθηκε σε στενή συνεργασία με τον Διαχειριστή Συστήματος Μεταφοράς Κύπρου (ΔΣΜΚ) και την Αρχή Ηλεκτρισμού Κύπρου (ΑΗΚ), με αποτέλεσμα εργαλεία λογισμικού και 20 επιστημονικές και τεχνικές δημοσιεύσεις σε συνεργασία με μηχανικούς των δύο οργανισμών.
 
