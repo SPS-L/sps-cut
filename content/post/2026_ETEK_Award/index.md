@@ -11,9 +11,9 @@ featured: true
 draft: false
 
 image:
-  caption: ""
-  focal_point: ""
-  preview_only: true
+  caption: "Awardees of the ETEK Engineering Award 2026 at ETEK's review ceremony, Nicosia, 6 October 2026"
+  focal_point: "Center"
+  preview_only: false
 
 projects: []
 ---
