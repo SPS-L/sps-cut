@@ -55,6 +55,6 @@ The approach is evaluated with RMS dynamic simulations on a modified IEEE 33-bus
 
 ## Best Paper Award
 
-We are pleased to share that the paper “Adaptive Reduced System Modeling for Real-time Dynamic Simulations” received the Best Paper Award of the first PoSyDyS.
+We are pleased to share that the paper “Adaptive Reduced System Modeling for Real-time Dynamic Simulations” received the [Best Paper Award](/post/2026_posydys_award/) of the first PoSyDyS.
 
 ![jpg](jpg3.jpeg)
