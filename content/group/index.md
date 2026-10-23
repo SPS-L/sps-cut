@@ -1,5 +1,5 @@
 ---
-title: People
+title: Group
 date: 2022-10-24
 
 type: landing

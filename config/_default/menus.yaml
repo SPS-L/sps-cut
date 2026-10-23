@@ -16,7 +16,7 @@ main:
   - name: Publications
     url: "#publications"
     weight: 40
-  - name: People
+  - name: Group
     url: "group/"
     weight: 50
   - name: Teaching
