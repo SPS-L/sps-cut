@@ -64,7 +64,7 @@ Three Hugo Blox modules: `blox-bootstrap/v5`, `blox-plugin-decap-cms`, `blox-plu
 ## Deployment
 
 - **Netlify** (only target): Auto-deploys on push to `main`. Config in `netlify.toml`. Build: `hugo --gc --minify -b $URL`.
-- **Redirects**: Defined in `netlify.toml` — `/jhub`, `/meet`, `/open-positions`, several JupyterHub notebook links, and `/author/*` → `/group/:splat` (member pages moved to `/group/` in Oct 2026; `content/authors/` keeps its name, only the URL changed) plus bare `/group/` → `/people/`.
+- **Redirects**: Defined in `netlify.toml` — `/jhub`, `/meet`, `/open-positions`, several JupyterHub notebook links, and `/author/*` → `/group/:splat` (member pages moved to `/group/` in Oct 2026; `content/authors/` keeps its name, only the URL changed) plus `/people/` → `/group/` (the team page, `content/group/index.md`, moved there too).
 - There are no GitHub Actions workflows in this repo (`.github/` holds only `FUNDING.yml`).
 
 ## Publications Workflow

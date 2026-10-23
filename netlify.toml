@@ -27,15 +27,16 @@
   to = "/group/:splat"
   status = 301
 
+# Team page moved from /people/ to /group/ (Oct 2026).
 [[redirects]]
-  from = "/group"
-  to = "/people/"
-  status = 302
+  from = "/people"
+  to = "/group/"
+  status = 301
 
 [[redirects]]
-  from = "/group/"
-  to = "/people/"
-  status = 302
+  from = "/people/"
+  to = "/group/"
+  status = 301
 
 [[redirects]]
   from = "/open-positions"
