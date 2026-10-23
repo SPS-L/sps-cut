@@ -23,7 +23,7 @@ Afterwards, I took a position as postdoctoral researcher at the group of <a href
 
 Between 2016 and 2019, I was an Assistant Professor at the <a href="https://engineering.leeds.ac.uk/electronic" target="_blank">School of Electronic and Electrical Engineering</a> of the <a href="https://www.leeds.ac.uk" target="_blank">University of Leeds</a> in the UK.
 
-Since January 2020, I am an Assistant at the [Cyprus University of Technology](https://cut.ac.cy). I mainly work on the modelling, simulation and control of electric power systems. With the advent of Smart Grids and the extended reliance on ICTs for their operation, my research has spanned a broad spectrum of topics evolving around cyber-physical systems. Check out my [research interests](/#projects) and [my publications](/publication/) for more details.
+Since January 2020, I am an Assistant Professor at the Department of Electrical Engineering, Computer Engineering and Informatics of the [Cyprus University of Technology](https://cut.ac.cy), where I am the Director of the [Sustainable Power Systems Lab (SPS-Lab)](/). I mainly work on the modelling, simulation and control of electric power systems. With the advent of Smart Grids and the extended reliance on ICTs for their operation, my research has spanned a broad spectrum of topics evolving around cyber-physical systems. Check out my [research interests](/#projects) and [my publications](/publication/) for more details.
 
 I've put together a timeline below with some milestones of my life. You can also read my [Full CV](/files/Petros_Aristidou_CV.pdf).
 
