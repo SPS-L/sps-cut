@@ -18,7 +18,7 @@ image:
 
 STEPSS (Static and Transient Electric Power Systems Simulation) is a power system simulation platform for static and dynamic studies of electrical grids. It computes the power flow of a network and simulates its dynamic response to disturbances under the phasor (RMS) approximation.
 
-STEPSS is developed by [Dr. Petros Aristidou](https://sps-lab.org/author/petros-aristidou/) (Cyprus University of Technology) and [Dr. Thierry Van Cutsem](https://thierryvancutsem.github.io/home/), consultant to transmission system operators and formerly Research Director at the Fund for Scientific Research (FNRS) and Adjunct Professor at the University of Liège.
+STEPSS is developed by [Dr. Petros Aristidou](/group/petros-aristidou/) (Cyprus University of Technology) and [Dr. Thierry Van Cutsem](https://thierryvancutsem.github.io/home/), consultant to transmission system operators and formerly Research Director at the Fund for Scientific Research (FNRS) and Adjunct Professor at the University of Liège.
 
 It is free of charge for teaching, academic research and personal non-profit use. The platform is not under one single licence, because each component carries its own: the two user interfaces are Apache 2.0, the RAMSES solver is the property of the University of Liège and free for non-commercial use only, and Helios and CODEGEN are under Academic Public Licences. The free version of RAMSES is limited to 1000 buses and two cores. The [licence terms](https://stepss.sps-lab.org/getting-started/license/) set out what applies to what, and how to ask about commercial use.
 

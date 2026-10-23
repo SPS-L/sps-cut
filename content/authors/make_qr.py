@@ -150,11 +150,11 @@ def short_alias(folder: str) -> str:
 
 
 def author_url(title: str) -> str:
-    """The author page URL Hugo derives from `title` (permalink /author/:slug/, removePathAccents)."""
+    """The author page URL Hugo derives from `title` (permalink /group/:slug/, removePathAccents)."""
     t = unicodedata.normalize("NFKD", title)
     t = "".join(c for c in t if not unicodedata.combining(c)).lower()
     t = re.sub(r"[^a-z0-9]+", "-", t).strip("-")
-    return f"/author/{t}/"
+    return f"/group/{t}/"
 
 
 def qr_button(title: str) -> str:

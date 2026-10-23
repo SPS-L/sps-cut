@@ -64,7 +64,7 @@ Three Hugo Blox modules: `blox-bootstrap/v5`, `blox-plugin-decap-cms`, `blox-plu
 ## Deployment
 
 - **Netlify** (only target): Auto-deploys on push to `main`. Config in `netlify.toml`. Build: `hugo --gc --minify -b $URL`.
-- **Redirects**: Defined in `netlify.toml` — `/jhub`, `/meet`, `/open-positions`, and several JupyterHub notebook links.
+- **Redirects**: Defined in `netlify.toml` — `/jhub`, `/meet`, `/open-positions`, several JupyterHub notebook links, and `/author/*` → `/group/:splat` (member pages moved to `/group/` in Oct 2026; `content/authors/` keeps its name, only the URL changed) plus bare `/group/` → `/people/`.
 - There are no GitHub Actions workflows in this repo (`.github/` holds only `FUNDING.yml`).
 
 ## Publications Workflow
@@ -270,7 +270,7 @@ Optional bio paragraph in Markdown.
 
 ### How to Add a Short Link and QR Code
 
-Every team member has a short profile URL, `https://sps-lab.org/flastname` → `/author/full-name/`, a matching `qr.png`, and a QR button (`fas` `qrcode` icon) in their `social:` list next to the other profile icons. All three are derived from the author folder name and title by **one rule**, so never invent a slug or hand-write the button:
+Every team member has a short profile URL, `https://sps-lab.org/flastname` → `/group/full-name/`, a matching `qr.png`, and a QR button (`fas` `qrcode` icon) in their `social:` list next to the other profile icons. All three are derived from the author folder name and title by **one rule**, so never invent a slug or hand-write the button:
 
 > **Rule:** short link = folder name with dots and hyphens removed, lowercase.
 > `p.-aristidou` → `/paristidou` · `i.v.-nadal` → `/ivnadal` · `s.-karagiannopoulos` → `/skaragiannopoulos`
@@ -286,17 +286,17 @@ hugo --gc --minify && grep '^/flastname ' public/_redirects   # 4. confirm the r
 
 Then commit `_index.md` + `qr.png` together.
 
-**How it works** — there is nothing to add to `netlify.toml`. `config/_default/hugo.yaml` sets `outputs.home: [..., redirects]` and `disableAliases: true`; the `blox-plugin-netlify` module renders every page alias into `public/_redirects` (`/paristidou /author/petros-aristidou/`, status 301). Netlify applies `_redirects` first, then the hand-written rules in `netlify.toml`. The target comes from the page's `RelPermalink`, so it stays correct if a display name changes.
+**How it works** — there is nothing to add to `netlify.toml`. `config/_default/hugo.yaml` sets `outputs.home: [..., redirects]` and `disableAliases: true`; the `blox-plugin-netlify` module renders every page alias into `public/_redirects` (`/paristidou /group/petros-aristidou/`, status 301). Netlify applies `_redirects` first, then the hand-written rules in `netlify.toml`. The target comes from the page's `RelPermalink`, so it stays correct if a display name changes.
 
 **Uniformity rules** (enforced by `--check`):
 - The alias must equal the rule applied to the folder name — one alias per member, `aliases: ["/flastname"]` placed directly after `title:` (this is what `--add-alias` writes).
 - No two members share an alias, and no `netlify.toml` `from = "..."` path equals an alias (a hand-written rule would shadow the profile).
-- Every member with an alias has a `qr.png` and a `social:` entry `icon: qrcode` / `icon_pack: fas` linking to `/author/<title-slug>/qr.png` (absolute path — Blox passes relative links through `relLangURL`, which would map a bare `qr.png` to the site root). The slug is the title lower-cased with non-alphanumerics collapsed to `-`, exactly as Hugo builds the author URL.
+- Every member with an alias has a `qr.png` and a `social:` entry `icon: qrcode` / `icon_pack: fas` linking to `/group/<title-slug>/qr.png` (absolute path — Blox passes relative links through `relLangURL`, which would map a bare `qr.png` to the site root). The slug is the title lower-cased with non-alphanumerics collapsed to `-`, exactly as Hugo builds the author URL.
 - Never rename a folder or alias once published — the short link and printed QR codes are permanent identifiers. If a folder must be renamed, keep the old alias as a second entry in `aliases` so old links still resolve.
 
 **QR appearance** is fixed by the script so all codes match: 1200 px wide, navy modules `#1B365D`, teal lab icon `#007FA3` (`assets/media/icon.png`) on a white centre plate, name in Open Sans Bold and `sps-lab.org/flastname` below, error correction H. To change the look for everyone, edit the constants at the top of `make_qr.py` and regenerate all codes with `--force` — do not edit individual PNGs.
 
-`qr.png` is a page resource, so it is also served at `https://sps-lab.org/author/<full-name>/qr.png`.
+`qr.png` is a page resource, so it is also served at `https://sps-lab.org/group/<full-name>/qr.png`.
 
 ### How to Add Course Materials
 

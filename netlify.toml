@@ -21,6 +21,22 @@
   [plugins.inputs]
     debug = true
 
+# Lab member pages moved from /author/ to /group/ (Oct 2026); keep old links working.
+[[redirects]]
+  from = "/author/*"
+  to = "/group/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/group"
+  to = "/people/"
+  status = 302
+
+[[redirects]]
+  from = "/group/"
+  to = "/people/"
+  status = 302
+
 [[redirects]]
   from = "/open-positions"
   to = "/categories/open-positions/"
