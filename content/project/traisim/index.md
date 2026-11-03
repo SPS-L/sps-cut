@@ -91,6 +91,7 @@ TRAISIM's public outputs showcase both the project vision and its technical prog
 - [Adaptive Reduced System Modeling for Real-time Dynamic Simulations](/publication/2026celeftheriadis/), accepted at PoSyDyS 2026
 - [Towards an Open-Source Real-Time Operator-Training Platform: Analysis of Computational Efficiency](/publication/2026cpanagi/), accepted at PSCC 2026
 - [TRAISIM: Training Simulator for Power System Operators](/publication/2026trpanagi/), poster presented at CRESROADS 2026
+- [TRAISIM: Adaptive Model Selection for Real-Time Operator Training Platforms](/publication/2026treleftheriadis/), technical report
 
 These publications present the benchmark results, explain the platform concept, and report the adaptive model selection method that keeps large-scale simulation responsive.
 
