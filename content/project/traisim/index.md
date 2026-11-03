@@ -61,7 +61,7 @@ TRAISIM combines several key elements into one training environment:
 - orchestration tools that align simulation time and operator interaction
 - trainer and scenario-management functions for guided exercises
 - protection and automation behaviour for more credible event progression
-- AI-enabled model adaptation to improve responsiveness where it matters most
+- AI-enabled adaptive model selection that keeps full detail only where a disturbance matters, so large networks stay responsive in real time
 
 Together, these capabilities help create a platform that is realistic enough for serious training, flexible enough for research, and open enough to grow with new operational needs.
 
@@ -80,18 +80,19 @@ Current work is focused on:
 - strengthening coordination between the simulator and the training environment
 - preparing reusable methods, software improvements, and research outputs for the wider community
 
-Early results from the adaptive model selection work are especially encouraging, showing major reductions in model size while maintaining very high predictive accuracy.
+Adaptive model selection, accepted at PoSyDyS 2026, cuts continuous and discrete model variables by about 60% on a realistic French transmission network of more than 6,000 buses. It reaches up to 2.6× simulation speedup while keeping trajectory errors below the numerical solver tolerance.
 
 ---
 
 ### Publications
 
-TRAISIM's first public outputs are already available and showcase both the project vision and its early technical progress:
+TRAISIM's public outputs showcase both the project vision and its technical progress:
 
+- [Adaptive Reduced System Modeling for Real-time Dynamic Simulations](/publication/2026celeftheriadis/), accepted at PoSyDyS 2026
 - [Towards an Open-Source Real-Time Operator-Training Platform: Analysis of Computational Efficiency](/publication/2026cpanagi/), accepted at PSCC 2026
 - [TRAISIM: Training Simulator for Power System Operators](/publication/2026trpanagi/), poster presented at CRESROADS 2026
 
-These publications present the first benchmark results, explain the platform concept, and outline the next steps in solver optimisation, AI-enabled model adaptation, and open-source dissemination.
+These publications present the benchmark results, explain the platform concept, and report the adaptive model selection method that keeps large-scale simulation responsive.
 
 ---
 
