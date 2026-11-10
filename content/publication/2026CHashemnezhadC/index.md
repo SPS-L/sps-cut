@@ -1,5 +1,5 @@
 +++
-title = "DATA-DRIVEN DECENTRALIZED SUPERVISORY VOLT/WATT CONTROL IN PV-RICH ACTIVE DISTRIBUTION NETWORKS"
+title = "Data-Driven Decentralized Supervisory Volt/Watt Control in PV-Rich Active Distribution Networks"
 date = "2026-11-06"
 authors = ["M. Hashemnezhad","P. Aristidou"]
 tags = ["Volt/Watt Control (VWC)","Active Distribution Networks (ADNs)","Multi-Agent Reinforcement Learning (MARL)","PV inverter control","Safe RL"]
