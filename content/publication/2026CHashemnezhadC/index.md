@@ -1,0 +1,26 @@
++++
+title = "DATA-DRIVEN DECENTRALIZED SUPERVISORY VOLT/WATT CONTROL IN PV-RICH ACTIVE DISTRIBUTION NETWORKS"
+date = "2026-11-06"
+authors = ["M. Hashemnezhad","P. Aristidou"]
+tags = ["Volt/Watt Control (VWC)","Active Distribution Networks (ADNs)","Multi-Agent Reinforcement Learning (MARL)","PV inverter control","Safe RL"]
+publication_types = ["paper-conference"]
+publication = "_MEDPOWER 2026 CONFERENCE_"
+publication_short = ""
+abstract = "   High PV penetration in low-voltage feeders can push bus voltages beyond secure limits. Conventional mitigation uses fixed Volt/Watt droop curves tuned offline, which can underperform as operating conditions vary. We propose a Multi-Agent Reinforcement Learning (MARL) controller that adjusts PV active-power setpoints online based on current operating conditions to maintain voltages, maximize PV utilization, and promote fairness among units. A shared policy is trained on diverse PV/load profiles with a reward penalizing voltage violations, curtailed energy, and availability-weighted curtailment disparity. A Deep Neural Network (DNN)-based safety layer filters potentially unsafe actions using a learned approximation of a voltage-feasibility projection. On a realistic residential feeder with measured-style time series, the proposed method outperforms tuned Volt/Watt droop and a sensitivity-based equal-curtailment baseline under quasi-static operating conditions, reducing violation magnitude and duration, increasing injected PV energy, and equalizing curtailment without per-scenario retuning. These results indicate that learning-based control can deliver adaptive and fair supervisory Volt/Watt behavior in PV-rich low-voltage feeders."
+summary = ""
+featured = false
+projects = ['machine-learning','dense']
+slides = ""
+doi = ""
+url_code = ""
+url_dataset = ""
+url_poster = ""
+url_slides = ""
+url_source = ""
+url_video = ""
+math = true
+highlight = true
+[image]
+image = ""
+caption = ""
++++
