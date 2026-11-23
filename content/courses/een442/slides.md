@@ -15,6 +15,8 @@ weight: 20
 |5| [Fault analysis](./lecture_part5_presentation.pdf) |  Book 1 - Chapters 8.1-8.4, Book 2 - Chapter 7  | 
 |6| [Protection fundamentals](./lecture_part6_presentation.pdf) |  Book 1 - Chapter 8.6-8.12, Book 2 - Chapter 10 |
 
+All parts as one text document (study notes): [EEN442 lecture notes](./EEN442_lecture_notes.pdf)
+
 ## Reference books
 
 1. A. Gómez-Expósito, A. J. Conejo, and C. A. Canizares, Electric Energy Systems Analysis and Operation, 2nd edition, CRC Press, 2018.

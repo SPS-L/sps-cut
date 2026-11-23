@@ -14,7 +14,8 @@ weight: 20
 |4| [Voltage control](./lecture_part4_presentation.pdf) | Book 1 - Ch. 9.4 |
 |5| [Economics of electricity generation](./lecture_part5_presentation.pdf) | Book 1 - Ch. 5.1-5.4, Book 2 - Ch. 12.4, Book 3 - Ch.  3.1-3.2, 4.1-4.2  |
 |6| [Power system stability fundamentals](./lecture_part6_presentation.pdf) | Book 1 - Ch. 10, Book 2 - Ch. 11.1-11.3  |
-|7| [Current and future trends in power system operation - the path to the smart grid](./lecture_part_smart_grid.pdf) |   |
+
+All parts as one text document (study notes): [EEN452 lecture notes](./EEN452_lecture_notes.pdf)
 
 ## Reference books
 

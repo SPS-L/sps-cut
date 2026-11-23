@@ -17,6 +17,8 @@ weight: 20
 |7| [Induction machine](./lecture_part7_presentation.pdf) |  Book 2 - Ch 6   |
 |8| [The transmission line characteristics](./lecture_part8_presentation.pdf) |  Book 1 - Ch 4   |
 
+All parts as one text document (study notes): [EEN320 lecture notes](./EEN320_lecture_notes.pdf)
+
 ## Reference books
 
 1. D. Glover, M. S. Sarma and T. Overbye, "Power System Analysis \& Design", 6th edition, Cengage Learning, 2017
