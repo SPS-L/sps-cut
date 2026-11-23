@@ -11,6 +11,7 @@ summary = ""
 featured = false
 projects = ["traisim"]
 slides = ""
+doi = "10.82463/9qn6-pq47"
 url_code = ""
 url_dataset = ""
 url_pdf = ""
